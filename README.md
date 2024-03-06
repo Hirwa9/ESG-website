@@ -35,9 +35,9 @@ Of course contributions are welcome! If you'd like to contribute to this project
 
 #### You can likely contribute to the following areas:
   - [Holly mass songs](https://esgrprwanda.rf.gd/esgrp/Services/CHM_Songs),
-  - [solfeggio courses](https://esgrprwanda.rf.gd/esgrp/solfeggio),
+  - [Solfeggio courses](https://esgrprwanda.rf.gd/esgrp/solfeggio),
   - [Our Gallery](https://esgrprwanda.rf.gd/esgrp/Events/ESG_Gallery),
-  - ...
+  - ... and more
 
 <!-- ## License
 Include information about the project's license, if applicable. -->
