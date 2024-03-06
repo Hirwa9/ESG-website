@@ -13,7 +13,7 @@ _ESG is a Rwandan Catholic singing group devoted to the Christian faith, and we 
 <!-- - [License](#license) -->
 
 ## Installation
-You can download the project files and work on them locally. You can also request images and more large files of the project by [directly messaging us](tel:+250785459848).
+You can download the project files and work on them locally. You can also request images and more large files of the project by directly messaging us at **+250785459848**.
 
 ## Usage
 
@@ -22,7 +22,7 @@ To use the project,
 2. Modify the project files as needed.
 3. Test your changes locally by running the project.
 
-If you encounter any issues, have suggestions for improvements, need assistance or have questions about how to use the project, feel free to [reach out](tel:+250785459848) to us.
+If you encounter any issues, have suggestions for improvements, need assistance or have questions about how to use the project, feel free to reach out.
 
 ## Contributing
 Of course contributions are welcome! If you'd like to contribute to this project.
