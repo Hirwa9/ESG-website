@@ -1,7 +1,7 @@
 # ESG (Eastern Singers Group) project
 
 ## Description
-This project marks the beginning of my first personal project! I've gathered all the necessary documentation and made the project public. I'm excited to share it and thus would greatly appreciate any contributions for further development on certain parts/pages of the project. We can make this even better! 🚀. See [Hosted version](https://esgrprwanda.rf.gd){:target="_blank"}.
+This project marks the beginning of my first personal project! I've gathered all the necessary documentation and made the project public. I'm excited to share it and thus would greatly appreciate any contributions for further development on certain parts/pages of the project. We can make this even better! 🚀. See [Hosted version](https://esgrprwanda.rf.gd).
 
 _ESG is a Rwandan Catholic singing group devoted to the Christian faith, and we take joy in singing praises to God, enriching the spiritual lives of all humanity. ESG also offers an extensive library of Holy Mass songs and Liturgy documents, providing the best in worship music_
 
@@ -34,9 +34,9 @@ Of course contributions are welcome! If you'd like to contribute to this project
 6. Create a new Pull Request.
 
 #### You can likely contribute to the following areas:
-  - [Holly mass songs](https://esgrprwanda.rf.gd/esgrp/Services/CHM_Songs){:target="_blank"},
-  - [Solfeggio courses](https://esgrprwanda.rf.gd/esgrp/solfeggio){:target="_blank"},
-  - [Our Gallery](https://esgrprwanda.rf.gd/esgrp/Events/ESG_Gallery){:target="_blank"},
+  - [Holly mass songs](https://esgrprwanda.rf.gd/esgrp/Services/CHM_Songs),
+  - [Solfeggio courses](https://esgrprwanda.rf.gd/esgrp/solfeggio),
+  - [Our Gallery](https://esgrprwanda.rf.gd/esgrp/Events/ESG_Gallery),
   - ... and more
 
 <!-- ## License
