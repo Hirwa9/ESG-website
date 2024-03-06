@@ -1,0 +1,82 @@
+@import "../all.css?v=1.0873";
+
+/**
+* ESG_Uploads
+*/
+
+#UploadS {
+	top: 0;
+	background-image: linear-gradient( to top, black 20%, var(--myBlue) 70%);
+	animation: none !important;
+	transition: none;
+	z-index: 21000;
+}
+#UploadS .modal-dialog > .modal-header {
+	perspective: 500px;
+}
+#UploadS .modal-dialog > .modal-header h3 {
+	animation: shakeX 10s infinite;
+	animation-delay: 1.5s;
+}
+#UploadS > div > div.modal-content {
+	font-family: sans-serif, 'Roboto';
+	background-color: var(--white);
+}
+#UploadS  mark {
+	background-color: var(--wheat);
+	border-radius: 5px;
+	color: var(--black_c);
+}
+#UploadS > div > div.modal-content > p:nth-of-type(2) {
+	border-radius: 5px;
+	font-weight: bolder;
+}
+#UploadS > div > div.modal-content > form {
+	border: 1px solid var(--black2);
+	border-radius: 5px;
+}
+#UploadS button {
+	color: black;
+}
+#UploadS1 > div > div:first-of-type {
+	background-color: #f8d7da;
+	color: black;
+}
+
+#UploadS1 > div > div:nth-of-type(2) {
+	background-color: #d4edda;
+	border-color: #c3e6cb;
+	color: #155724
+}
+@media screen and (max-width: 576px) {	
+	#UploadS1 > div > div:nth-child(4) > ul {
+		padding-left: 1.5rem;
+	}
+}
+.fileUploader {
+	box-shadow: 0 0 7px 2px var(--black3);
+	background-color: var(--appColor_cons);
+}
+.fileUploader > p:first-of-type {
+	background-color: rgba(0, 0, 0, .5);
+	color: black;
+}
+.fileUploader form > p:last-of-type {
+	border: 1px solid #28a745;
+	border-radius: 5px;
+}
+#newSongSelect {
+	color: goldenrod;
+	border: none;
+}
+#newSongSelect:hover {
+	color: green;
+}
+#newSongUpload {
+	border: none;
+}
+#newSongUpload:hover {
+	background-color: rgba(56, 200, 40, .9);
+	border: none;
+	border-radius: 4px;
+}
