@@ -110,11 +110,12 @@ const songsArray = [
             { sname: 'Kyrie - Guillaume Tuyizere', slink: '11K1kb0tcFZFNPBcsmadul1QzQJAlZNjz' },
             { sname: 'Kyrie - J.Damascène Maniraho', slink: '1FkoyE3WIqcyQp8dz1zf13Ejp-y0oehA2' },
             { sname: 'Kyrie - Diacre J.Bosco Mbonigaba', slink: '1sCiFVx44Ediy7_RPYa6HOgcMrhj4V0jU' },
-            { sname: 'Kyrie - Messe VIII Des Anges', slink: '1UMOnEb1Lal8q0n8FzRtMQg4iNUcaP_0x' },
             { sname: 'Kyrie - Abbé Théodose Mwitegere', slink: '1KtTYkzhI_u4_PLpJhlk6vT4_U_C_gLeF' },
             { sname: 'Kyrie - Jean D\'Amour Niyikiza', slink: '1H_W8wHRL6Ph2ddB0xfAmX0HjeR87QUA7' },
             { sname: 'Kyrie - Sylvestre Ntabajyana', slink: '1d9ZZTRyF3sPHkeFn3Bt4DESeH2FRklH4' },
             { sname: 'Kyrie - Maurice Umuhuza', slink: '1NFvFvqk4zB5TktqsEp2mBylujNTxSQzZ' },
+            { sname: 'Kyrie - Messe VIII Des Anges', slink: '1UMOnEb1Lal8q0n8FzRtMQg4iNUcaP_0x' },
+            { sname: 'Kyrie - Nimusiima Prosper', slink: '1PEIRRnHHhf8gQi29am27cUwOg7678itz' },
             { sname: 'Kyrie |MISSA BREVIS IN B| - Wolfgang Amadeus Mozart', slink: '1sOWZhloN4XuF1oRyjKHKS1ssc9X6TDFQ' },
             { sname: 'Kyrie |Mass for peace| - I.Barnabe Gacanizi', slink: '1bGYmJW46HC_RjbHgHfTaCt3MUZ7FRMCo' },
             { sname: 'Kyrie |Misa ya Regina Angelorum| - J.D. Mkomagu', slink: '1onDlMY-Oyx9pGbLQqcyACE4b7fABkYTs' },
@@ -962,6 +963,7 @@ const songsArray = [
             { sname: 'Kuzwa Iteka _Arr_ Jérémie Bizimana', slink: '19OBJ1BVTuLLdj1I5rPH23BSplOfigv6b' },
             { sname: 'Mana dukunda - François Xavier Nsabimana', slink: '1qKvVweIbPOzBpHCCjHMxgOnqRjExKAJw' },
             { sname: 'Mana Idukunda - Wellars Bahati', slink: '1ZEMjX9tH9GIkrRE4qfMlzSZcyshOLiAe' },
+            { sname: 'Mana nzima, Mana ishobora byose - Abbé Faustin Nyombayire', slink: '1CtA3aTU6oj2D1YaEtSrs7qAO1k_vFG4V' },
             { sname: 'Mfalme wa Wafalme - Joseph Hategekimana', slink: '1PvA7HRGeY9TcW7FyNTe6WMrAeNyRi7YP' },
             { sname: 'Mpa guhora nkushimira - Alphonse Niyoyirorera', slink: '1H6h3BNvXuMntom-J4Ido6A3dMNvg2WPA' },
             { sname: 'Mu maboko yawe - Wellars Bahati', slink: '1--iGHBbc1D5pQTwc3opASrE6iXrqLVKr' },
@@ -1005,6 +1007,7 @@ const songsArray = [
             { sname: 'Nzahora nkuramya - J.Damascene Rwakunda', slink: '1g4NMSrje8f-02H4tPF8-PXLKqdMyZDt0' },
             { sname: 'Nzajya ngusingiza - Placide Byukusenge _Harm_ Ignace Twizererugira', slink: '1Vbb4_AbWsKPq0fvaUMKDZsQAhKEMQBBg' },
             { sname: 'Nzashimira Imana _Adapt_ Roberto Lambert Nayituriki', slink: '182CzKxI0hFyEsZbt08Cz2o3UdTvvkhBm' },
+            { sname: 'Nzashimira Imana _Arr_ Didier G. Mbahishaka', slink: '1AIP7gddcs7sRtJODxmGxs9B8i9O1gfLg' },
             { sname: 'Nzashimira Imana Nyagasani _Arr_ J.Claude Mbakeshayezu', slink: '1hKZFLmBzyDP-X5RjgOGl_twTj_NcPqdE' },
             { sname: 'Nzashimira Imana nzayisingiza _Harm_ Jean de Dieu Ngendahayo', slink: '1NagZ31PKXeipxC4AbnXH5DB27W0Ka4pc' },
             { sname: 'Nzashimira Imana Umuremyi wacu _Harm_ Oscar Nsabimana', slink: '1SN4ok6wrXlpH3qTsGajImgBFDfiZo0cD' },
@@ -1119,6 +1122,7 @@ const songsArray = [
             { sname: 'Mariya uri Umubyeyi - Appolinaire Habyarimana', slink: '1FJhTaGFsPxBX5ENBzrvharoL0WMw678u' },
             { sname: 'Mariya wajyanywe mu Ijuru - Ariston Ndayiringiye', slink: '1Bw1evTua0MopLNQH0iEgLGr1gTw64w4v' },
             { sname: 'Mariya warahiriwe - Valens Munana', slink: '1R6cEWcyRVAxp8z_chjME_sqHOQJenaGW' },
+            { sname: 'Mariya yajyanywe mu Ijuru - J.Claude Hodari & Dr. Alfred Ngirababyeyi', slink: '1D6YBRrACuK3hem2Le24FNYxmhi7ODf4L' },
             { sname: 'Mawe Mariya - Desire Kanyamahanga', slink: '1IRu9tKoB4RgCNYa15ItNaUXXDgchXDlf' },
             { sname: 'Mawe Mariya - Innocent Habimana', slink: '1odIGYcUfoTu-bQJZsbk0Hw8TqJz7ZbGo' },
             { sname: 'Mawe Mariya - J.Paul Iyamuremye', slink: '1uJJPuZmBHGLS0hLHGb42a5khal9BKXkX' },
@@ -1706,6 +1710,7 @@ const songsArray = [
             { sname: 'Urukundo - Ambassadors of Christ Choir _Arr_ Oreste Niyonzima', slink: '11Jvm96jVw16wBD1gU9mH1A84OnxPr9GQ' },
             { sname: 'Urukundo ni Ubuzima - Anicet B. Sadiki', slink: '1fvuXdkBmKWDuH8jqAZwqJWHMUvc-yxSs' },
             { sname: 'Urukundu n\'ubwuzu - Valentin Mukiza', slink: '1DneC1duPW-iNweK4Qq2LPIyeg-cKW2mM' },
+            { sname: 'Uyu ni umunsi Nyagasani yigeneye - Mathieu Ngirumpatse', slink: '1YJ8CNMkBibZjSQhspdqjf6oc2VJT3ECN' },
             { sname: 'Wahisemo kudupfira - Firmin Ikundwe', slink: '1u_UsWjTVCy_tRHswOPR33RPtHaqXzQL3' },
             { sname: 'Wohereza Nyagasani |Pentekosti| - Egide Nduwayezu', slink: '1GOQ85eB2DIQTbrvi3Gd_K0OQOkqiElOZ' },
             { sname: 'Yemwe bakuru bacu - Abbé Joseph Hitimana _Harm_ Wellars Bahati', slink: '1hizGkJjR9wo5C8tj-u-q6I1Am3RjlDVB' },
@@ -2835,9 +2840,9 @@ function alert_song_download() {
 }
 
 // New songs upload
-$('.new-added-songs').html(sum_CHM_songs() - 1701);
+$('.new-added-songs').html(sum_CHM_songs() - 1705);
 // Date update for new songs upload
-count_elapsed_time('03/06/2024', $('.Notif_Elem-uploads').find('.upToToday'));
+count_elapsed_time('03/08/2024', $('.Notif_Elem-uploads').find('.upToToday'));
 // Date update for ESG new video songs
 count_elapsed_time('02/09/2024', $('.Notif_Elem-stream').find('.upToToday'));
 
