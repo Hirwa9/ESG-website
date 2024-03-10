@@ -605,6 +605,7 @@ const songsArray = [
             { sname: 'Majeshi Kuu ya Mbinguu |Sanctus Mtakatifu| _Trans & Harm_ Jean de Dieu Twagirimana', slink: '1jnXVY7K1gB82c_xdG2xbSHGTE9iyXZOJ' },
             { sname: 'Mana yacu turagusingiza |TE DEUM| - Mathieu Ngirumpatse', slink: '1K1RS3DSPUmUdN6RNN84kbhnADMO-z99U' },
             { sname: 'Mana yacu turagusingiza |TE DEUM| - Mathieu Ngirumpatse _Musc & Harm_ Diacre Pie Nyandwi', slink: '1KvRxrNhmncGdAGaHs2mbto_2ZNZO6P1z' },
+            { sname: 'Nyir\'ubutagatifu - Desire Kanyamahanga', slink: '1um_YwEVfUTEOiG--0jgtIUCM1lkJXIJ6' },
             { sname: 'Nyirubutagatifu |1| - Abbé Benoit Sebyatsi _Harm_ Pacifique Tunezerwe', slink: '1mja7zgSqm3dqwoDuaDr5m5oaQs1SaFwq' },
             { sname: 'Nyirubutagatifu |2| - Abbé Benoit Sebyatsi _Harm_ Pacifique Tunezerwe', slink: '1N3b8rGiwReE8jTGuDTCUMmU5aLG_Ilof' },
             { sname: 'Nyirubutagatifu |1| - Abbé Théogène Nzuwonemeye', slink: '1UD2Ocd_G_qa5NH1IoRyICKV-R42oeQLr' },
@@ -1388,6 +1389,7 @@ const songsArray = [
             { sname: 'Alleluia, turirimbe Pasika - Didier Tuyiringire', slink: '1obSwJLndSgQUAF6FwXD3qJohhLK042NH' },
             { sname: 'Aleluya Kristu yatsinze urupfu - Adeodatus Mugisha', slink: '1uk0lNUek9Jpn4Mm5_NXI2ggd43HhBuI-' },
             { sname: 'Aleluya, Yezu ni muzima - Abbé C. Niwencuti', slink: '1ElS0sGB0at1wfKA56HJVCThWwPWfOG5K' },
+            { sname: 'Alleluia |Pasika yacu| - Mathieu Ngirumpatse', slink: '1ZV_9Qcew-htnXFpmUM62ANooSDAzqrsq' },
             { sname: 'Alleluia, Yezu yazutse - Cassien Nsengiyumva Manzi', slink: '1T07HctRI_Dk2bAoXUt62zciUwhxPlOMX' },
             { sname: 'Alleluya Kristu yazutse - J.Damascène Maniraho', slink: '1wloq3qix9aJEcRawwPM8ki7PaY5rtf1R' },
             { sname: 'Alleluya ni muzima - Abbé Fabien Hagenimana', slink: '1uhUM9Q7la9PlUSy0SfrGeF_ilZuBfZg3' },
@@ -1657,12 +1659,13 @@ const songsArray = [
             { sname: 'Ndasabagizwa - Abbé Théodose Mwitegere', slink: '1BTVSJJ3zFih9OT0etxaesbrooVBc3Vkn' },
             { sname: 'Ndashaka kugukorera - Abbé J.M Bonaventure Ndayambaje', slink: '1XJXu1Kt5kEKSC6Im3uogJztY4AsFc8BF' },
             { sname: 'Ndi Umushumba mwiza - Abbé Léandre Nshimyiyaremye', slink: '15nZafbM50ztnTDzQZkASY9LvGdr5MA0D' },
-            { sname: 'Ngira Imbata yawe - Firmin Ikundwe', slink: '1kWQiyTvKvWOxbc39oXlfBcwFoMiTmRdZ' },
+            { sname: 'Ngira imbata yawe - Firmin Ikundwe', slink: '1kWQiyTvKvWOxbc39oXlfBcwFoMiTmRdZ' },
             { sname: 'Ni Jye Mushumba mwiza - Cassien Nsengiyumva Manzi', slink: '1kEKAPHygkkeaoH_aRp3w_c_YNnh8QSH0' },
             { sname: 'Niho nzibera - Bright Five Singers _Arr_ Oreste Niyonzima', slink: '1YVBHjsT8uYJ96t2R96I6eEgKl9cqXy0L' },
             { sname: 'Nimukomeze urugendo - Fulgence Umuhoza & Abbé Gilbert Ntirandekura', slink: '1mLgqYVg9wZxl5wWj2_LKQ_qjD8COwYWS' },
             { sname: 'Nimwigane Imana - Anthony Musekura', slink: '1DFF89MXdoVs9qHWKQSlZRGh9_S1Ykcvl' },
             { sname: 'Nisunze impuhwe zawe Yezu - J.Paul Iyamuremye', slink: '14xyAo3p9dHx7cgiXc6Lh_3gxhCcx23Mf' },
+            { sname: 'Nkiza Yezu |Ubishatse wankiza| - Abbé Gilbert Ntirandekura', slink: '16Qowi9PRRUJVEw6XVBBifcSC84XSQ35a' },
             { sname: 'Nkomeza - Firmin Ikundwe', slink: '1lQgBb3UUDoHi14bXDabhLyxlf9z5rgDW' },
             { sname: 'Nkweguriye umutima - Firmin Ikundwe', slink: '1IriIRJtxFhbgrUjohZMbbtfX23l7-1IV' },
             { sname: 'Nta wundi twagana - Eliazar Ndayisabye', slink: '1rN3MxQ7OJVVCeMjBWCNQXoBC_RR67FLj' },
@@ -1695,6 +1698,7 @@ const songsArray = [
             { sname: 'Twivugurure _Harm_ Floduard Rugerinyange', slink: '1IaUr4qygT2WTuzx2eg6RNdKxc_u12oZy' },
             { sname: 'Tworose Urukundo rwawe - Jean Claude Iyakunze', slink: '175nJlGX6dFyvdslZj4T21p9l79s_Vj9n' },
             { sname: 'Ubuhanga nyakuri - J. Pierre Uwurukundo', slink: '1i8QT8RZ4a9bQo8JRBidZvkZD-Gx2cFBy' },
+            { sname: 'Uhoraho nzakwitura iki - J.Damascène Ntakirutimana', slink: '1M-7jztWUO7BEIS7cZBQ-S8iHg3AziThM' },
             { sname: 'Uhoraho nzakwituriki - Claude Iyampayibihe', slink: '1WD08A2Z7A6U6ivY05cxrswQjpMNqrdGP' },
             { sname: 'Umushumba mwiza - Aimé Gustave Iragena', slink: '1aPNycJv15io_oAyjRN7aFdbT3yyby20Q' },
             { sname: 'Umushumba mwiza - Robert Bellarmin Ruzigamanzi', slink: '1jljWfsdyhJtToIF2RkPvgWvFnVQbiCl8' },
@@ -2725,7 +2729,7 @@ function favorite_selected_song() {
             $('.star-song-notice').removeClass('view').remove();
         }, 3000);
     } else {
-        alert('This song is already in your list of favorites');
+        alert('This song is already enlisted in your favorites');
     }
 }
 $('.starChmSong').click(favorite_selected_song);
@@ -2840,9 +2844,9 @@ function alert_song_download() {
 }
 
 // New songs upload
-$('.new-added-songs').html(sum_CHM_songs() - 1705);
+$('.new-added-songs').html(sum_CHM_songs() - 1711);
 // Date update for new songs upload
-count_elapsed_time('03/08/2024', $('.Notif_Elem-uploads').find('.upToToday'));
+count_elapsed_time('03/10/2024', $('.Notif_Elem-uploads').find('.upToToday'));
 // Date update for ESG new video songs
 count_elapsed_time('02/09/2024', $('.Notif_Elem-stream').find('.upToToday'));
 
