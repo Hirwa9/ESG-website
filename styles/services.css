@@ -1,63 +1,10 @@
-@import "../all.css?v=1.0873";
+@import "../all.css?v=1.0943";
 
 /**
 * ESG_Services
 */
 
-/* main.grids-main {
-	display: grid;
-	grid-template-columns: 20% 80%;
-	grid-template-rows: auto auto auto;
-}
-main.grids-main > #pageAbout {
-	grid-area: 1 / 2 / 1 / 2;
-}
-main.grids-main > nav#sideNav {
-	grid-area: 1 / 1 / 3 / 1;
-	position: sticky;
-	top: 40px;
-	height: 100vh;
-	height: 100dvh;
-	min-height: 300px;
-	overflow-x: visible;
-	border-right: 3px solid var(--myBlue4);
-	isolation: isolate;
-}
-main.grids-main > #pageAbout > p:first-of-type {
-	font-size: 1.15rem;
-}
-main.grids-main > #mainContent {
-	grid-area: 2 / 2 / 3 / 2;
-}
-@media screen and (max-width: 768px) {
-	main.grids-main {
-		grid-template-columns: none;
-		grid-template-rows: auto auto auto;
-	}
-	main.grids-main > #pageAbout, main.grids-main > nav#sideNav,main.grids-main > #mainContent {
-		grid-column: span 1;
-		grid-row: span 1;
-	}
-	main.grids-main > nav#sideNav {
-		position: static;
-		height: auto;
-	}
-} */
-
-
-/* main.grids-main {
-	grid-template-columns: none;
-	grid-template-rows: auto auto auto;
-}
-main.grids-main > #pageAbout, main.grids-main > nav#sideNav,main.grids-main > #mainContent {
-	grid-column: span 1;
-	grid-row: span 1;
-}
-main.grids-main > nav#sideNav {
-	position: static;
-	height: auto;
-} */
-main.grids-main > nav#sideNav {
+main.grids-main > nav#pageSidenav {
 	height: auto;
 }
 
@@ -70,7 +17,7 @@ main.grids-main > nav#sideNav {
 	main.grids-main > #pageAbout {
 		grid-area: 1 / 2 / 1 / 2;
 	}
-	main.grids-main > nav#sideNav {
+	main.grids-main > nav#pageSidenav {
 		grid-area: 1 / 1 / 3 / 1;
 		position: sticky;
 		top: 40px;
@@ -84,15 +31,15 @@ main.grids-main > nav#sideNav {
 	main.grids-main > #pageAbout > p:first-of-type {
 		font-size: 1.15rem;
 	}
-	main.grids-main > #mainContent {
+	main.grids-main > #pageMainContent {
 		grid-area: 2 / 2 / 3 / 2;
 	}
 }
 
-main.grids-main > nav#sideNav > div > div {
+main.grids-main > nav#pageSidenav > div > div {
 	position: relative;
 }
-main.grids-main > nav#sideNav .servive-menu-title {
+main.grids-main > nav#pageSidenav .servive-menu-title {
 	position: relative;
 	padding-block: 1.5rem;
 	padding-left: clamp(.5rem, 3vw, 3rem);
@@ -102,7 +49,7 @@ main.grids-main > nav#sideNav .servive-menu-title {
 	transition: .15s;
 	border-bottom: 1px solid var(--black3);
 }
-main.grids-main > nav#sideNav .servive-menu-title::before {
+main.grids-main > nav#pageSidenav .servive-menu-title::before {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -116,12 +63,12 @@ main.grids-main > nav#sideNav .servive-menu-title::before {
 	z-index: -1;
 }
 @media screen and (max-width: 768px) {
-	main.grids-main > nav#sideNav .servive-menu-title::before {
+	main.grids-main > nav#pageSidenav .servive-menu-title::before {
 		left: auto;
 		right: 7%;
 	}
 }
-main.grids-main > nav#sideNav .servive-menu-action {
+main.grids-main > nav#pageSidenav .servive-menu-action {
 	display: none;
 	position: absolute;
 	top: 0;
@@ -138,20 +85,20 @@ main.grids-main > nav#sideNav .servive-menu-action {
 	transition: .2s;
 }
 @media screen and (max-width: 768px) {
-	main.grids-main > nav#sideNav .servive-menu-action {
+	main.grids-main > nav#pageSidenav .servive-menu-action {
 		display: none !important;
 		animation: flyInBottom .3s 1;
 		left: 0;
 	}
 }
-main.grids-main > nav#sideNav .servive-menu-action > small {
+main.grids-main > nav#pageSidenav .servive-menu-action > small {
 	font-weight: bolder;
 	white-space: nowrap;
 }
-main.grids-main > nav#sideNav .servive-menu-action > div {
+main.grids-main > nav#pageSidenav .servive-menu-action > div {
 	margin-top: 1rem;
 }
-main.grids-main > nav#sideNav .servive-menu-action button {
+main.grids-main > nav#pageSidenav .servive-menu-action button {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -161,20 +108,20 @@ main.grids-main > nav#sideNav .servive-menu-action button {
 	background-color: goldenrod;
 	color: white;
 }
-main.grids-main > nav#sideNav .servive-menu-action button:hover {
+main.grids-main > nav#pageSidenav .servive-menu-action button:hover {
 	background-color: #57420c;
 }
-main.grids-main > nav#sideNav > div > div:hover > .servive-menu-title {
+main.grids-main > nav#pageSidenav > div > div:hover > .servive-menu-title {
 	display: flex;
 	justify-content: center;
 	padding-inline: .25rem;
 	border: none;
 	color: var(--white_var);
 }
-/* main.grids-main > nav#sideNav > div > div:hover > .servive-menu-action {
+/* main.grids-main > nav#pageSidenav > div > div:hover > .servive-menu-action {
 	display: block;
 } */
-main.grids-main > nav#sideNav > div > div:hover > .servive-menu-title::before {
+main.grids-main > nav#pageSidenav > div > div:hover > .servive-menu-title::before {
 	left: 50%;
 	translate: -50% -50%;
 	width: 100%;
@@ -184,26 +131,26 @@ main.grids-main > nav#sideNav > div > div:hover > .servive-menu-title::before {
 	outline-color: rgba(255, 217, 0, 0.5);
 	outline-width: 30px;
 }
-main.grids-main > nav#sideNav .servive-menu-title:active {
+main.grids-main > nav#pageSidenav .servive-menu-title:active {
 	text-decoration: underline;
 	text-underline-offset: .25rem;
 }
-main.grids-main #mainContent h2 {
+main.grids-main #pageMainContent h2 {
 	color: var(--myBlue_cons);
 }
-main.grids-main #mainContent img {
+main.grids-main #pageMainContent img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
-main.grids-main #mainContent > div {
+main.grids-main #pageMainContent > div {
 	position: relative;
 	min-height: 40vh;
 	min-height: 40dvh;
 	overflow: hidden;
 	isolation: isolate;
 }
-main.grids-main #mainContent > div > div:first-child {
+main.grids-main #pageMainContent > div > div:first-child {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -212,7 +159,7 @@ main.grids-main #mainContent > div > div:first-child {
 	background-image: linear-gradient(to right, transparent, var(--black));
 	z-index: -1;
 }
-main.grids-main #mainContent > div > div:last-child {
+main.grids-main #pageMainContent > div > div:last-child {
 	width: 60%;
 	margin-left: auto;
 	padding-left: 15%;
@@ -224,16 +171,16 @@ main.grids-main #mainContent > div > div:last-child {
 	transition: background .2s;
 	z-index: inherit;
 }
-main.grids-main #mainContent > div > div:last-child:hover {
+main.grids-main #pageMainContent > div > div:last-child:hover {
 	background-color: var(--myBlue1);
 }
 @media screen and (max-width: 768px) {
-	main.grids-main #mainContent img {
+	main.grids-main #pageMainContent img {
 		object-fit: contain;
 	}
 }
 @media screen and (max-width: 576px) {
-	main.grids-main #mainContent > div > div:first-child {
+	main.grids-main #pageMainContent > div > div:first-child {
 		position: static;
 		width: 100%;
 		border-start-end-radius: 10px;
@@ -242,7 +189,7 @@ main.grids-main #mainContent > div > div:last-child:hover {
 		background-image: none;
 		animation: flyInBottomSM 1s 1;
 	}
-	main.grids-main #mainContent > div > div:last-child {
+	main.grids-main #pageMainContent > div > div:last-child {
 		width: 100%;
 		margin-left: 0;
 		margin-top: auto;
@@ -256,6 +203,6 @@ main.grids-main #mainContent > div > div:last-child:hover {
 		animation: none;
 	}
 }
-main.grids-main #mainContent > div > div:last-child p {
+main.grids-main #pageMainContent > div > div:last-child p {
 	line-height: 1.7;
 }

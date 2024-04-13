@@ -234,7 +234,7 @@ body.no-animation *:not(.switch) {
 		padding-top: 2.5rem;
 	}
 }
-nav {
+nav#Main_nav {
 	height: 3.75rem;
 	/* background-image: url(Pics/Es88.jpg) !important; */
 	background-color: var(--bodi);
@@ -246,11 +246,11 @@ nav {
 	transition: height .3s, top .3s;
 	/* box-shadow: 0 .125rem .25rem var(--black3_cons); */
 }
-nav.short {
+nav#Main_nav.short {
 	height: 2.5rem;
 	/* box-shadow: none; */
 }
-nav::before {
+nav#Main_nav::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -262,19 +262,19 @@ nav::before {
 	z-index: -1;
 }
 @media screen and (max-width: 576px) {
-	nav {
+	nav#Main_nav {
 		height: 2.5rem;
 		align-items: center !important;
 	}
-	nav.short {
+	nav#Main_nav.short {
 		height: 2.5rem;
 		top: -42px;
 	}
 }
-nav a {
+nav#Main_nav a {
 	transition: .15s;
 }
-nav a:hover {
+nav#Main_nav a:hover {
 	scale: 0.97;
 }
 #brandImage {
@@ -366,6 +366,77 @@ nav a:hover {
 .tab-pane {
 	transition: 0;
 }
+
+/**
+* Grids page parts
+*/
+
+main.grids-main > nav#pageSidenav {
+	padding-bottom: 2rem;
+	--_activeColor: var(--bs-pink);
+	/* --_activeColor: var(--myBlue_cons); */
+}
+main.grids-main > nav#pageSidenav > #scrollSpy > li:nth-child(1),
+main.grids-main > nav#pageSidenav > #scrollSpy > li:nth-child(1) a {
+	border-top-color: transparent;
+}
+main.grids-main > nav#pageSidenav > #scrollSpy .list-group-item {
+	border-inline: none;
+	background-color: transparent;
+	color: var(--black_var);
+}
+main.grids-main > nav#pageSidenav > #scrollSpy li > a:hover {
+	text-decoration: underline;
+}
+main.grids-main > nav#pageSidenav > #scrollSpy li > a.active {
+    font-weight: bold;
+	border-color: transparent;
+    border-right: 4px solid var(--appColor_cons);
+	background-color: transparent;
+	color: var(--_activeColor);
+	transition: font-weight var(--trans), color var(--trans), border-right-width var(--trans);
+}
+main.grids-main > nav#pageSidenav > #scrollSpy li > a.active::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	translate: -50% -50%;
+	width: .5rem;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-color: var(--white_var);
+	outline: 7px solid var(--_activeColor);
+	z-index: -1;
+}
+
+@media screen and (min-width: 992px) {
+	main.grids-main {
+		display: grid;
+		grid-template-columns: minmax(15rem, 20%) auto;
+		grid-template-rows: auto auto auto;
+	}
+	main.grids-main > nav#pageHeader {
+		grid-area: 1 / 2 / 1 / 2;
+	}
+	main.grids-main > nav#pageSidenav {
+		grid-area: 1 / 1 / 3 / 2;
+		position: sticky;
+		top: 60px;
+		height: 100vh;
+		height: 100dvh;
+		min-height: 300px;
+		overflow-x: visible;
+		border-right: 3px solid var(--black4_cons);
+		isolation: isolate;
+	}
+	main.grids-main > #pageMainContent {
+		grid-area: 2 / 2 / 3 / 2;
+	}
+}
+
+/* Grids page parts */
+
 .pageHere {
 	position: fixed;
 	top: 0;
@@ -1511,26 +1582,7 @@ html::-webkit-scrollbar-thumb:hover,
 	list-style-type: circle;
 	display: none;
 }
-#MessengerZ * {
-	font-weight: 600;
-}
-#MessengerZ > button:first-child {
-	border: 1px solid var(--myBlue);
-	background-color: var(--myBlue2);
-	color: white;
-	font-size: .7rem;
-}
-#MessengerZ > button:first-child:active {
-	background-color: var(--black2);
-}
-#SendInfo {
-	border: 1px solid var(--myBlue);
-	background-color: var(--myBlue2);
-	color: white;
-}
-#SendInfo:active {
-	background-color: var(--myBlue);
-}
+
 .navigate {
 	position: fixed;
 	top: 3.75rem;
@@ -1699,7 +1751,6 @@ html::-webkit-scrollbar-thumb:hover,
 	}
 }
 .navigate a:hover {
-	color: palegreen;
 	text-decoration: underline;
 	font-family: monospace;
 }
@@ -3146,9 +3197,6 @@ html::-webkit-scrollbar-thumb:hover,
 
 /* Analog Clock */
 
-#DropChat {
-	border-left: 15px solid var(--myBlue);
-}
 .clearfix {
 	/* clear: both; */
 	float: none;
@@ -3554,6 +3602,57 @@ html::-webkit-scrollbar-thumb:hover,
 }
 .list-style-smiley {
 	list-style: '😃 ' !important;
+}
+.list-style-tick {
+	list-style: '✔️ ' !important;
+}
+.list-style-feather {
+	list-style: '🪶 ' !important;
+}
+.list-style-leaf {
+	list-style: '🍃 ' !important;
+}
+.list-style-nib {
+	list-style: '✒️ ' !important;
+}
+.list-style-man {
+	list-style: '🧔🏾‍♂️ ' !important;
+}
+.list-style-eye {
+	list-style: '👁️' !important;
+}
+.list-style-laptop {
+	list-style: '💻 ' !important;
+}
+.list-style-mantechnology {
+	list-style: '👨🏾‍💻 ' !important;
+}
+.list-style-footprints {
+	list-style: '👣 ' !important;
+}
+.list-style-whiteflag {
+	list-style: '🏳️ ' !important;
+}
+.list-style-blackflag {
+	list-style: '🏴 ' !important;
+}
+.list-style-triangularflag {
+	list-style: '🚩 ' !important;
+}
+.list-style-bubbles {
+	list-style: '🫧 ' !important;
+}
+.list-style-droplet {
+	list-style: '💧 ' !important;
+}
+.list-style-bell {
+	list-style: '🛎️ ' !important;
+}
+.list-style-house {
+	list-style: '🏠 ' !important;
+}
+.list-style-voltage {
+	list-style: '⚡ ' !important;
 }
 .border-myBlue {
 	border-color: var(--myBlue_var) !important;
@@ -7010,7 +7109,6 @@ html::-webkit-scrollbar-thumb:hover,
 .informer-lg_Notes > strong ~ ul {
 	list-style: square;
 	list-style: '📌 ';
-	border-left: 10px solid var(--_mainColor);
 	border-start-start-radius: .3rem;
 	border-end-start-radius: .3rem;
 	font-size: 90%;
@@ -7513,6 +7611,246 @@ html::-webkit-scrollbar-thumb:hover,
 }
 .big-link-element:active {
 	animation: clickDown .2s 1;
+}
+
+/* chatbot */
+
+.chatbot {
+	display: none;
+	top: 1rem;
+	right: 0;
+	width: 100%;
+	min-width: 270px;
+	bottom: 0;
+	border-radius: 1rem 1rem 0 0;
+	overflow: hidden;
+	background-color: var(--_mainColor);
+	color: var(--black1_cons);
+	z-index: 1031;
+	transition: var(--trans);	
+	animation: zoomInBack .5s 1;
+}
+.chatbot.working {
+	display: block;
+}
+@media screen and (min-width: 27rem) {
+	.chatbot {
+		width: 25rem;
+		right: 1rem;
+		bottom: 2rem;
+		border-radius: 1rem;
+	}
+}
+/* Chatbot header */
+.chatbot > .chatbot-header {
+	height: 3rem;
+}
+.chatbot > .chatbot-header > button,
+.chatbot > .chatbot-header > div > button:last-child
+ {
+	width: 3rem;
+	height: 3rem;
+	border: 0;
+	border-radius: 50%;
+	background-color: var(--_headerColor);
+	color: var(--_mainColor) !important;
+}
+.chatbot > .chatbot-header > div {
+	color: var(--_headerColor) !important;
+}
+.chatbot > .chatbot-header > button:first-child {
+	margin-left: 1rem;
+}
+.chatbot > .chatbot-header > button:last-child {
+	margin-right: 1rem;
+}
+.chatbot > .chatbot-header .chatbot-name > span {
+	font-size: 75%;
+}
+/* Chat space */
+.chatbot > .chatbot-body {
+	height: calc(100% - calc(3rem + .5rem + 3.7rem ));
+	border-radius: 1rem 1rem 0 0;
+	overflow-y: auto;
+	display: grid;
+	align-items: flex-end;
+	background-color: var(--white1_cons);
+}
+.chatbot > .chatbot-body > .message-holder > p {
+	background-color: var(--black4_cons);
+	border-radius: .5rem;
+}
+.chatbot > .chatbot-body > .message-holder > p.sender,
+.chatbot > .chatbot-body > .message-holder > p.responder {
+	position: relative;
+	max-width: 75%;
+	padding: .5rem .7rem;
+}
+.chatbot > .chatbot-body > .message-holder > p.sender {
+	margin-left: auto;
+	background-color: var(--_mainColor);
+	color: var(--_headerColor) !important;
+}
+.chatbot > .chatbot-body > .message-holder > p.responder {
+	animation: flyInBottomSM .5s 1;
+}
+.chatbot > .chatbot-body > .message-holder > p ~ p.responder {
+	margin-bottom: .125rem;
+}
+.chatbot > .chatbot-body > .message-holder > p.responder ~ p.sender {
+	margin-top: 1rem;
+}
+.chatbot > .chatbot-body > .message-holder > p.sender > .message-time-sent,
+.chatbot > .chatbot-body > .message-holder > p.responder > .message-time-sent {
+	padding-inline: .5rem;
+	position: absolute;
+	bottom: 0;
+	font-size: 70%;
+	color: var(--black2_cons);
+}
+
+.chatbot > .chatbot-body > .message-holder > p.sender > .message-time-sent  {
+	left: 0;
+	translate: -100% 0;
+}
+.chatbot > .chatbot-body > .message-holder > p.responder > .message-time-sent {
+	right: 0;
+	translate: 100% 0;
+}
+.chatbot > .chatbot-body > .message-holder > p.conversation-date {
+	font-size: 65%;
+	background-color: var(--bs-gray);
+	color: var(--bs-light);
+	text-align: center;
+	width: fit-content;
+	padding: .25rem .5rem;
+	margin-inline: auto;
+	margin-top: 1rem;
+}
+.message-holder > .message-waiting-indicator {
+	display: flex;
+	gap: 4px;
+	--_timer: 1s;
+	padding-inline: .5rem;
+}
+.message-holder > .message-waiting-indicator > div {
+	opacity: .5;
+	scale: .8;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--bs-dark);
+	animation: popping 1s infinite;
+	animation-delay: calc(var(--_timer) / var(--child));
+}
+@keyframes popping {
+	50% {
+		/* width: 2.5px; */
+		scale: 1;
+		opacity: 1;
+	}
+}
+.chatbot > .chatbot-body > .message-holder > p.error-message {
+	background-color: rgba(220, 53, 69, .2);
+
+}
+/* Message typing space */
+.chatbot > .chatbot-footer {
+	position: relative;
+	height: 3.7rem;
+	background-color: var(--white1_cons);
+}
+.chatbot > .chatbot-footer .to-bottom-button {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: 1rem;
+	top: 0;
+	translate: 0 -150%;
+	width: 2rem; height: 2rem;
+	border: 0;
+	border-radius: 1rem;
+	background-color: var(--black2_cons);
+	color: var(--bs-light);
+	box-shadow: 0 .125rem .25rem var(--black3_cons);
+}
+.chatbot > .chatbot-footer .to-bottom-button.floated {
+	/* display: var(--fa-display, inline-block); */
+	display: flex;
+}
+.chatbot > .chatbot-footer > .chatbot-messenger {
+	border-radius: 1rem;
+	margin-inline: 1rem;
+	overflow: hidden;
+}
+.chatbot > .chatbot-footer textarea {
+	flex-grow: 1;
+	height: 100%;
+	resize: none;
+	border: 0;
+	border-radius: inherit;
+	background-color: var(--white1_cons);
+	outline: transparent;
+}
+.chatbot > .chatbot-footer textarea.floated {
+	position: absolute;
+    bottom: 3.5rem;
+    left: 3%;
+    right: 3%;
+    height: 35vh;
+	min-height: 80px;
+    background-color: ivory;
+	animation: flyInBottomSM .3s 1;
+}
+.chatbot > .chatbot-footer #sendMessageBtn,
+.chatbot > .chatbot-footer .textarea-expander {
+	outline: transparent;
+	box-shadow: none;
+}
+.chatbot > .chatbot-footer .textarea-expander {
+	transform: rotate(45deg);
+	margin-left: auto;
+}
+.chatbot > .chatbot-footer #sendMessageBtn:active {
+	color: var(--bs-light) !important;
+	background-color: var(--bs-success);
+}
+
+/* Toask (custom alert) */
+
+.myToast {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	z-index: 1032;
+	animation: slideIn 0.5s ease-out forwards, fadeOut 0.5s ease-out 2.5s forwards;
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateX(-50%) translateY(100%);
+	}
+
+	to {
+		transform: translateX(-50%) translateY(0);
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
 }
 
 /* Custom elements */
@@ -9358,12 +9696,6 @@ ul.marker-info > li::marker {
 .Notifs_wrapper > div {
 	scroll-behavior: smooth;
 }
-@media screen and (min-width: 768px) {
-	.Notifs_wrapper .Notif_Elem > .notif-body ul {
-		columns: 2;
-	}
-}
-
 .Notifs_wrapper .Notifs_2 > div {
 	overflow-y: auto;
 	background-color: var(--appColor);
@@ -9386,7 +9718,6 @@ ul.marker-info > li::marker {
 }*/
 .Updates_Elem > div {
 	border: 1px solid var(--white3);
-	/* animation: emphDIV 1s 1; */
 }
 @keyframes emphDIV {
 	50% {
@@ -9493,12 +9824,10 @@ ul.marker-info > li::marker {
 .Notif_Elem > div ul li::marker {
 	color: var(--bs-success);
 }
-.Notif_Elem > div ul > div {
+.Notif_Elem .notif-body > div > div > div {
 	color: var(--black1);
-	font-family: 'Roboto', sans-serif;
-	padding-right: .25rem;
 }
-.Notif_Elem > div ul > div mark {
+.Notif_Elem .notif-body > div > div mark {
 	border-radius: 5px;
 	background-color: var(--myBlue_cons);
 	color: rgb(150, 150, 150);
@@ -10008,7 +10337,6 @@ ul.marker-info > li::marker {
 }
 .corresMediaPlaying {
 	border-radius: .5em;
-	/* border: 1px solid var(--white2) !important; */
 	border: 1px solid var(--black3) !important;
 	overflow: hidden;
 	background-image: linear-gradient(-110deg, var(--appColor) 5%, var(--myBlue4) 60%, transparent, var(--appColor), var(--myBlue3), var(--myBlue3), var(--myBlue3));
@@ -10108,12 +10436,12 @@ footer > .row ul > li > span {
 
 /* emailing page */
 
-#Mailler > div > p.text-center > button:hover {
-	background-color: var(--grey1);
+#webMailerForm input[type="text"],
+#webMailerForm input[type="email"],
+#webMailerForm input[type="number"] {
+	border-radius: 0;
 }
-#Mailler > div > p.text-center > button > a:hover {
-	text-decoration: none;
-}
+
 input.PI {
 	background-color: rgba(78, 139, 190, .5);
 	border-radius: 10%;
@@ -10235,7 +10563,7 @@ textarea.Tell {
 
 /* Page parts */
 @media screen and (min-width: 992px) {
-	main > nav#sideNav {
+	main > nav#pageSidenav {
 		position: sticky;
 		top: 60px;
 		flex-basis: 15rem;
@@ -10351,7 +10679,8 @@ textarea.Tell {
 		}
 		100% {
 			color: black;
-		}	}
+		}
+	}
 	#main {
 		transition: margin-left 0.3s;
 		/* font-family: Trebuchet, serif; */

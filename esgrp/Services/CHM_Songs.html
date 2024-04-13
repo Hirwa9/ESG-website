@@ -4,7 +4,7 @@
 	<title>Holy Mass songs</title>
 	
 	<link rel="icon" type="image/x-icon" href="../../Pics/ESG_favicon1.ico">
-	<link rel="stylesheet" type="text/css" href="../../styles/chms.css?v=1.0900">
+	<link rel="stylesheet" type="text/css" href="../../styles/chms.css?v=1.0977">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Hirwa Willy">
@@ -35,7 +35,7 @@
     <script src="../../bootstrap5/js/bootstrap.bundle.min.js.map"></script> -->
     <!-- <script src="../../jq/jquery-3.7.1.js"></script> -->
 </head>
-<body id="mainBody" class="bg-bodi Holy_Mass_Songs" data bs-spy="scroll" data-bs-target=".navbar" data-offset="20">
+<body class="bg-bodi Holy_Mass_Songs" data bs-spy="scroll" data-bs-target=".navbar" data-offset="20">
     <div class="fix-holder fix-holder-appColor2_cons inx-high p-2">
         <div class="nav container-xs bordered-end-end Sbar-none shadow rounded-top" id="mySidenav">
             <div class="position-absolute rad-50 inx--1"></div>
@@ -447,7 +447,7 @@
                 </div>
             </div>
             <div class="d-grid my-item-body">
-                <ol class="my-list favorite-songs-list"></ol>
+                <ol class="notranslate my-list favorite-songs-list"></ol>
                 <button class="btn mt-3 mx-auto col-8 bounceClick item-search hide-par-fix item-adder">+ Add</button>
             </div>
         </div>
@@ -526,7 +526,7 @@
     <!-- Popups -->
     <!-- Request a song -->
     <div class="my-popup my-popup_request-song item-info">
-        <p>We can get you a song in case you didn't find it from the list given.</p>
+        <p>We can help to find a song if you couldn't find it in the collection.</p>
         <p class="text-center small">easternsingersg@gmail.com</p>
         <a href="mailto:easternsingersg@gmail.com?subject=Song request.&body=Song category: %0d%0aSong name: %0d%0a" class="btn">Proceed <i class="fa fa-external-link ms-2"></i></a>
     </div>
@@ -720,9 +720,9 @@
                 </div>
             </div>
             <div class="w-100 list-unstyled rounded-bottom clmn_wrapper schResults">
-                <div class="p-1 p-md-3 pt-3 mySbar-sm scroll-smooth mySbar"></div>
-                <div class="p-1 p-md-3 pt-3 mySbar-sm scroll-smooth"></div>
-                <div class="p-1 p-md-3 pt-3 mySbar-sm scroll-smooth"></div>
+                <div class="p-1 p-md-3 pt-3 mySbar-sm scroll-smooth notranslate mySbar"></div>
+                <div class="p-1 p-md-3 pt-3 mySbar-sm scroll-smooth notranslate"></div>
+                <div class="p-1 p-md-3 pt-3 mySbar-sm scroll-smooth notranslate"></div>
             </div>
             <!-- <div class ="position-fixed pill ptr extend-search">Extend search</div> -->
         </div>
@@ -730,8 +730,7 @@
 
     <!-- Song Uploader -->
     <div class="fix-holder fix-holder-appColor1_cons p-sm-3" id="UploadS">
-        <div
-            class="col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-4 col-lg-4 h-100 overflow-auto my-item item-info">
+        <div class="col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-4 col-lg-4 h-100 overflow-auto my-item item-info">
             <div class="my-item-header">
                 <h5 class="my-item-header__title"><span class="fa fa-cloud-upload-alt mr-3"></span> Upload a song</h5>
                 <div class="rad-3 my-item-header__icons">
@@ -752,6 +751,41 @@
                     </p>
                 </div>
                 <a href="ESG_UploadS" class="col-8 align-self-center justify-self-center proceed-button">Proceed</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Song Request -->
+    <div class="fix-holder fix-holder-appColor1_cons p-sm-3" id="requestSong">
+        <div class="col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-4 col-lg-4 h-100 overflow-auto my-item item-info">
+            <div class="my-item-header">
+                <h5 class="my-item-header__title"><span class="fa fa-file-pdf mr-3"></span> Request a song</h5>
+                <div class="rad-3 my-item-header__icons">
+                    <button class="fa fa-close hide-par-fix item-closer"></button>
+                </div>
+            </div>
+            <div class="d-grid my-item-body" style="height: calc(100% - 45px);">
+                <div class="p-3">
+                    <p>
+                        We can help to find a song <b>if you couldn't find it in the collection</b>.<br>
+                    </p>
+                    <hr>
+                    <small class="my-3 text-muted d-block text-center fst-italic"><b>*</b> indicates important</small>
+                    <form action="https://formspree.io/f/xkndpgwl" method="POST">
+                        <div class="mb-3">
+                            <label for="songName" class="form-label fw-bold">Song Name *</label>
+                            <input type="text" name="Song_Name" required class="form-control" id="songName" placeholder="Enter song's name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="composer" class="form-label fw-bold">Composer</label>
+                            <input type="text" name="Song_Composer" class="form-control" id="composer" placeholder="Enter composer's name">
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button type="reset" class="btn btn-secondary my-5 hide-par-fix" style="width: 49%;">Cancel</button>
+                            <button type="submit" class="btn bg-mainColor my-5" style="width: 49%;">Request <span class="fa fa-paper-plane"></span></button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -883,11 +917,11 @@
                         </div>
                         <div class="notif-body">
                             <div>
-                                <ul>
-                                    <div class="small">
-                                        Uploading more songs is the best way of making them available and widely used by Christians. We do it frequenly to decrease the gap of unavailable songs on this platform, and it prooves to be a good step towards satisfying musicians with many solfeggio documents to use. Anyone can support this through providing more copies, and then shall the music reach to everyone!
+                                <div class="d-lg-flex">
+                                    <div class="small col-md-9 mx-3 mx-md-auto px-lg-3">
+                                        Continuously adding new songs ensures a wider selection for Christians to access and use. By uploading regularly, we bridge the gap of unavailable music and provide valuable resources for musicians. Your support in providing more copies helps expand our reach and enrich the worship experience for all.
                                     </div>
-                                </ul>
+                                </div>
                                 <p class="p-1 my-2 small">
                                     <a href="#" class="px-4 py-1">Got it</a>
                                 </p>
@@ -907,12 +941,16 @@
                         </div>
                         <div class="notif-body">
                             <div>
-                                <ul>
-                                    <li>
-                                        Ndaje Dawe unyakire - Eastern singers group
-                                    </li>
-                                    <div class="small">Composer: Erneste Nzabahimana</div>
-                                </ul>
+                                <div class="d-lg-flex">
+                                    <ul class="col-lg-6">
+                                        <li>
+                                            Ndaje Dawe unyakire - Eastern singers group
+                                        </li>
+                                    </ul>
+                                    <div class="small col-md-6 mx-3 mx-md-auto px-lg-3">
+                                        Composer: Erneste Nzabahimana
+                                    </div>
+                                </div>
                                 <p class="p-1 my-2 small">
                                     <a href="https://youtu.be/6xnzzSRdBrI" target="_blank" class="px-4 py-1">Watch</a>
                                 </p>
@@ -931,35 +969,33 @@
                         </div>
                         <div class="notif-body">
                             <div>
-                                <ul>
-                                    <!-- <li>
-                                        Swipe right on a song to download it
-                                    </li> -->
-                                    <li>
-                                        <kbd class="text-light">Alt + click</kbd> a song to download it.
-                                    </li>
-                                    <li>
-                                        Press <kbd class="text-light">Ctrl + /</kbd> to toggle search tool, and <kbd
-                                            class="text-light">esc</kbd>
-                                        key to hide it.<br>
-                                        <small>
-                                            This will also focus in or out of any search box.
-                                        </small>
-                                    </li>
-                                    <li>
-                                        Press <kbd class="text-light">Alt + r</kbd> to refresh songs.
-                                    </li>
-                                    <li>
-                                        Press <kbd class="text-light">Alt + h</kbd> to see help.
-                                    </li>
-                                    <li>
-                                        Press <kbd class="text-light">Alt + n</kbd> to see our notifications.
-                                    </li>
-                                    <li>
-                                        <b>Refresh this page frequently for updates.</b>
-                                    </li>
-                                    <div class="small"></div>
-                                </ul>
+                                <div class="d-lg-flex">
+                                    <ul class="col-md-9 mx-3 mx-md-auto px-lg-3">
+                                        <!-- <li>
+                                            Swipe right on a song to download it
+                                        </li> -->
+                                        <li>
+                                            <kbd class="text-light">Alt + click</kbd> a song to download it.
+                                        </li>
+                                        <li>
+                                            Press <kbd class="text-light">Ctrl + /</kbd> to toggle search tool, and <kbd class="text-light">esc</kbd>
+                                            key to hide it.<br>
+                                            <small>This will also focus in or out of any search box.</small>
+                                        </li>
+                                        <li>
+                                            Press <kbd class="text-light">Alt + r</kbd> to refresh songs.
+                                        </li>
+                                        <li>
+                                            Press <kbd class="text-light">Alt + h</kbd> to see help.
+                                        </li>
+                                        <li>
+                                            Press <kbd class="text-light">Alt + n</kbd> to see our notifications.
+                                        </li>
+                                        <li>
+                                            <b>Refresh this page frequently for updates.</b>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <p class="p-1 my-2 small">
                                     <a href="#" class="px-4 py-1">Got it</a>
                                 </p>
@@ -979,19 +1015,21 @@
                         </div>
                         <div class="notif-body">
                             <div>
-                                <ul>
-                                    <li>
-                                        3/4, 4/4, 5/8 and more style can be found.
-                                    </li>
-                                    <li>
-                                        Liturgy documents/books and Prayers.
-                                    </li>
-                                    <div class="small">
+                                <div class="d-lg-flex">
+                                    <ul class="col-lg-6">
+                                        <li>
+                                            3/4, 4/4, 5/8 and more style can be found.
+                                        </li>
+                                        <li>
+                                            Liturgy documents/books and Prayers.
+                                        </li>
+                                    </ul>
+                                    <div class="small col-md-6 mx-3 mx-md-auto px-lg-3">
                                         You can find other documents related to the Catholic Liturgy including Liturgy
                                         books, Prayers, music styles
                                         (beats) and more.
                                     </div>
-                                </ul>
+                                </div>
                                 <p class="p-1 my-2 small">
                                     <a href="ESG_more_documents" class="px-4 py-1">Check it out</a>
                                 </p>
@@ -1003,21 +1041,25 @@
                     <div class="p-2 p-sm-3 Notif_Elem">
                         <button tabindex="0" class="fa fa-angle-down position-absolute ptr Notif_XPND"></button>
                         <p class="px-1">
-                            <span class="fa fa-users"></span> <span>Their songs are not enlisted</span>
+                            <span class="fa fa-users"></span> <span>Unlisted songs</span>
                         </p>
                         <div class="py-1 px-3 rounded-top small">
-                            For good reasons, some composers have requested not to share their songs yet on our
-                            platform but sooner.
+                            Stay updated for upcoming song releases.
                         </div>
                         <div class="notif-body">
                             <div>
-                                <ul>
-                                    <li>
-                                        Thomas Bicamumpaka
-                                    </li>
-                                </ul>
+                                <div class="d-lg-flex">
+                                    <ul class="col-lg-6">
+                                        <li>
+                                            Thomas Bicamumpaka
+                                        </li>
+                                    </ul>
+                                    <div class="small col-md-6 mx-3 mx-md-auto px-lg-3">
+                                        For various reasons, some composers have chosen not to share their songs on our platform at this time. However, these songs are expected to be available in the near future.
+                                    </div>
+                                </div>
                                 <p class="p-1 my-2 small">
-                                    Stay notified and know when they're available.
+                                    Stay tuned to know when they're available.
                                 </p>
                             </div>
                         </div>
@@ -1027,22 +1069,18 @@
                     <div class="p-2 p-sm-3 Notif_Elem Notif_Elem-clarify">
                         <button tabindex="0" class="fa fa-angle-down position-absolute ptr Notif_XPND"></button>
                         <p class="px-1">
-                            <span class="fa fa-file"></span> <span>Some songs are not categorized</span>
+                            <span class="fa fa-file"></span> <span>Song categorization notice</span>
                         </p>
                         <div class="py-1 px-3 rounded-top small">
-                            Clarify your song
+                            Help us organize the song collection
                         </div>
                         <div class="notif-body">
                             <div>
-                                <ul>
-                                    <div class="small">
-                                        While having difficulties in classification of songs, we put some of them in <mark
-                                            class="px-1">More songs</mark> category.<br> Composers (or anyone sure of it)
-                                        can send an e-mail to <a
-                                            href="mailto:easternsingersg@gmail.com?subject=Song Clarification.">easternsingersg@gmail.com</a>
-                                        or text us to inform about the best suiting category for the song(s) recognized.
+                                <div class="d-lg-flex">
+                                    <div class="small col-md-9 mx-3 mx-md-auto px-lg-3">
+                                        When faced with challenges in classifying songs, we place some of them in the <mark class="px-1">More  songs</mark> category. Composers (or anyone certain of it) can send an email to <a href="mailto:easternsingersg@gmail.com?subject=Song Clarification.">easternsingersg@gmail.com</a> or text us to provide information about the most suitable category for the recognized song(s).
                                     </div>
-                                </ul>
+                                </div>
                                 <p class="p-1 my-2 small">
                                     <a href="#" class="px-4 py-1">Go for it</a>
                                 </p>
@@ -1061,20 +1099,15 @@
                         </div>
                         <div class="notif-body">
                             <div>
-                                <ul>
-                                    <li>
-                                        At the top of it, one needs to find enough time for Solfeggio,
-                                    </li>
-                                    <li>
-                                        Your patience and focus will help to know things better, not only knowing.
-                                    </li>
-                                    <li>
-                                        You might need to be creative to understand some key concepts of reading difficult
-                                        compositions.<br>
-                                        But let's not worry, you got it.
-                                    </li>
-                                    <div class="small"></div>
-                                </ul>
+                                <div class="d-lg-flex">
+                                    <ul class="col-md-9 mx-3 mx-md-auto px-lg-3">
+                                        <li>First and foremost, allocate sufficient time for your Solfeggio practice,</li>
+                                        <li>Your patience and focused attention are invaluable assets for comprehensive learning,</li>
+                                        <li>
+                                            Creativity may play a role in grasping intricate concepts, especially when dealing with complex musical compositions.<br> But rest assured, with commitment and dedication, you've got this.
+                                        </li>                                        
+                                    </ul>
+                                </div>
                                 <p class="p-1 my-2 small">
                                     <a href="../solfeggio" class="px-4 py-1">Go for it</a>
                                 </p>
@@ -1115,12 +1148,6 @@
                             </div>
                         </div>
                         <section for="Day statistics" class="p-3">
-                            <!-- <div class="rad-50 item-myBlue data-stats-disk">
-                                <div class="position-absolute dim-100 inset-0 m-auto rad-inherit data-stats-ring song-stats-ring"></div>
-                                <div class="position-absolute inset-0 m-auto grid-center rad-inherit data-stats-num">
-                                    <span><span class="available_songs">....</span> songs</span>
-                                </div>
-                            </div> -->
                             <table class="w-100 song-stats-table">
                                 <caption>A short statistics of available documents on this platform</caption>
                                 <tr>
@@ -1152,13 +1179,14 @@
                     </div>
                 </div>
             </div>
-            <button class="position-absolute w-100 text-center p-2 Notif_Closer d-none d-sm-block"
+            <button class="position-absolute w-100 text-center p-2 Notif_Closer"
                 onclick="hide_Notif();">
                 <span class="fa fa-angle-up rad-50"></span>
             </button>
         </div>
     </div>
-
+    
+    <!-- Followups -->
     <div class="fix-holder fix-holder-appColor2 fade-to-bottom blur-bg-2px">
         <div class="offset-md-1 col-md-10 offset-lg-2 col-lg-8 Sbar-none my-item item-secondary informer-lg">
             <div class="my-item-header">
@@ -1176,30 +1204,45 @@
                         Same song can be found from different categories.
                     </li>
                     <li>
-                        If a song is not found at all, you can request that one with <a href="#" data-topopup=".my-popup_request-song">provided space</a>, and come back later to check. We won't take long to put it on.
+                        If a song is not found at all, you can request it using the <a href="#" data-totoggle="#requestSong" onclick="hide_CHMS_help()">provided space</a> and check back later. It won't take long to be included.
                     </li>
                 </ul><br>
                 <strong class="display-6">Note:</strong>
-                <!-- <div> -->
-                    <ul class="p-2 ps-4 px-md-5 inx-inherit">
-                        <li>
-                            <b class="text-danger">We do not sell songs</b>. The available documents can be used free of charge.
-                        </li>
-                        <li>
-                            Only Catholic Church songs can be found and accessed from this platform.
-                        </li>
-
-                        <li>
-                            Every song provided is rightfully possessed by corresponding composer. Copying, modifying or trading any of them will require owner's permission.
-                        </li>
-                    </ul>
-                    <div class="Songs-Privacy padLock position-absolute top-right-m h-100 w-25 inx--1">
-                        <div class="padLock-body">
-                            <div class="padLock-ring"></div>
-                            <div class="padLock-rect"></div>
-                        </div>
+                <ul class="p-2 ps-4 px-md-5 inx-inherit">
+                    <li>
+                        <strong class="text-danger">We do not sell songs.</strong> All available documents are provided free of charge for personal use and educational purposes.
+                    </li>
+                    <li>
+                        <strong>This platform exclusively hosts Catholic Church songs,</strong> which can be accessed accordingly.
+                    </li>
+                    <li>
+                        Each song provided is the rightful property of its respective composer. <strong>Copying, modifying, or trading any of them</strong> without proper authorization is strictly prohibited.
+                    </li>
+                    <li>
+                        Users are prohibited from redistributing, selling, or otherwise distributing the documents to third parties without the consent of the platform or the respective composers.
+                    </li>
+                    <li>
+                        We respect the intellectual property rights of composers and creators. Any unauthorized use or reproduction of the documents is <strong>strictly prohibited</strong>.
+                    </li>
+                    <li>
+                        Users are encouraged to <strong>report any instances of misuse</strong> or copyright infringement regarding the documents available on the platform.
+                    </li>
+                    <li>
+                        The platform takes measures to ensure the accuracy and quality of the documents provided, but users are encouraged to verify the information independently if necessary.
+                    </li>
+                    <li>
+                        Documents may be <strong>removed or updated</strong> at the discretion of the platform or the composers, and users are advised to check for the latest versions regularly.
+                    </li>
+                    <li>
+                        By accessing and downloading documents from the platform, users agree to abide by the terms and conditions outlined in the <a href="#" onclick="hide_CHMS_help(), show_terms()">privacy policy and terms</a> of use.
+                    </li>
+                </ul>
+                <div class="Songs-Privacy padLock position-absolute top-right-m h-100 w-25 inx--1">
+                    <div class="padLock-body">
+                        <div class="padLock-ring"></div>
+                        <div class="padLock-rect"></div>
                     </div>
-                <!-- </div> -->
+                </div>
             </div>
         </div>
     </div>
@@ -1228,7 +1271,7 @@
                 <ul class="dropdown-menu me-3 me-sm-0 my-dropdown" aria-labelledby="moreSongActions">
                     <li class="chms-favorites"><a class="dropdown-item d-flex align-items-center" href="#">Favorites <span class="favorite-songs-num"></span></a></li>
                     <li data-totoggle="#UploadS"><a class="dropdown-item d-flex align-items-center" href="#">Upload a song</a></li>
-                    <li data-topopup=".my-popup_request-song"><a class="dropdown-item d-flex align-items-center" href="#">Request a song</a></li>
+                    <li data-totoggle="#requestSong"><a class="dropdown-item d-flex align-items-center" href="#">Request a song</a></li>
                     <li><hr class="my-1 dropdown-divider border-light"></li>
                     <li class="guideBtn"><a class="dropdown-item d-flex align-items-center" href="#">Followups</a></li>
                     <li class="d-none d-sm-block web-tips-toggler"><a class="dropdown-item d-flex align-items-center" href="#">Tips</a></li>
@@ -1255,17 +1298,17 @@
                                 <div class="rad-50 item-myBlue data-stats-disk">
                                     <div class="position-absolute dim-100 inset-0 m-auto rad-inherit data-stats-ring song-stats-ring"></div>
                                     <div class="position-absolute inset-0 m-auto grid-center rad-inherit data-stats-num">
-                                        <span><span class="available_songs">....</span> songs</span>
+                                        <span class="fw-bold text-mainColor"><span class="available_songs">....</span> songs</span>
                                     </div>
                                 </div>
                                 <div class="bg-myBlue d-grid display-6 p-3">
                                     Solfeggio songs you can use in different places
                                 </div>
                                 <div class="p-3">
-                                    <ul>
-                                        <li>Holy Mass songs</li>
-                                        <li>Concert songs</li>
-                                        <li>More different songs</li>
+                                    <ul class="list-style-square">
+                                        <li class="py-2">Holy Mass songs</li>
+                                        <li class="py-2">Concert songs</li>
+                                        <li class="py-2">More different songs</li>
                                     </ul>
                                 </div>
                             </section>
@@ -1376,107 +1419,107 @@
                         <input type="text" placeholder="..category" class="borderless categoryFilter">
                     </div>
                     <div class="mt-2 active-options Sbar-none categoryTogglers">
-                        <div class="sControlCATG px-2">
-                            <h6 class="KwinjiraCAT">Kwinjira</h6>
+                        <div class="notranslate sControlCATG px-2">
+                            <h6 class="notranslate KwinjiraCAT">Kwinjira</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG px-2">
+                        <div class="notranslate sControlCATG px-2">
                             <h6 class="KyrieCAT">Kyrie</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG px-2">
+                        <div class="notranslate sControlCATG px-2">
                             <h6 class="GloriaCAT">Gloria</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG px-2">
+                        <div class="notranslate sControlCATG px-2">
                             <h6 class="Isomo1CAT">Nyuma y'isomo rya mbere</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG px-2">
+                        <div class="notranslate sControlCATG px-2">
                             <h6 class="AlleluiaCAT">Alleluia</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG px-2">
+                        <div class="notranslate sControlCATG px-2">
                             <h6 class="IndangakwemeraCAT">Indangakwemera</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG px-2">
+                        <div class="notranslate sControlCATG px-2">
                             <h6 class="SacrCAT">Amasezerano n'Amasakaramentu</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG px-2">
+                        <div class="notranslate sControlCATG px-2">
                             <h6 class="IbisabishoCAT">Ibisabisho</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG px-2">
+                        <div class="notranslate sControlCATG px-2">
                             <h6 class="GuturaCAT">Gutura</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG px-2">
+                        <div class="notranslate sControlCATG px-2">
                             <h6 class="SanctusCAT">Sanctus</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG px-2">
+                        <div class="notranslate sControlCATG px-2">
                             <h6 class="Agnus_DeiCAT">Ntama w'Imana</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG px-2">
+                        <div class="notranslate sControlCATG px-2">
                             <h6 class="GuhazwaCAT">Guhazwa</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG px-2">
+                        <div class="notranslate sControlCATG px-2">
                             <h6 class="GushimiraCAT">Gushimira</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG px-2">
+                        <div class="notranslate sControlCATG px-2">
                             <h6 class="GutahaCAT">Gutaha</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG px-2">
+                        <div class="notranslate sControlCATG px-2">
                             <h6 class="MariyaCAT">Bikiramariya</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG special px-2">
+                        <div class="notranslate sControlCATG special px-2">
                             <h6 class="MarriageCAT">Marriage</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG special px-2">
+                        <div class="notranslate sControlCATG special px-2">
                             <h6 class="AbatagatifuCAT">Abatagatifu</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG special px-2">
+                        <div class="notranslate sControlCATG special px-2">
                             <h6 class="Roho_MutagatifuCAT">Roho Mutagatifu</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG special px-2">
+                        <div class="notranslate sControlCATG special px-2">
                             <h6 class="IgisiboCAT">Igisibo</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG special px-2">
+                        <div class="notranslate sControlCATG special px-2">
                             <h6 class="PasikaCAT">Pasika</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG special px-2">
+                        <div class="notranslate sControlCATG special px-2">
                             <h6 class="AsensiyoCAT">Asensiyo</h6>
                             <div class=""></div>
                         </div>
-                        <!-- <div class="sControlCATG special px-2">
+                        <!-- <div class="notranslate sControlCATG special px-2">
                             <h6 class="AdiventiCAT">Adiventi</h6>
                             <div class=""></div>
                         </div> -->
-                        <div class="sControlCATG special px-2">
+                        <div class="notranslate sControlCATG special px-2">
                             <h6 class="NoheliCAT">Noheli</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG special px-2">
+                        <div class="notranslate sControlCATG special px-2">
                             <h6 class="IbitaramoCAT">Ibitaramo</h6>
                             <div class=""></div>
                         </div>
-                        <div class="sControlCATG special px-2">
+                        <div class="notranslate sControlCATG special px-2">
                             <h6 class="More_songsCAT">More songs</h6>
                             <div class=""></div>
                         </div>
-                        <!-- <div class="sControlCATG sControlCATG-all px-2">
+                        <!-- <div class="notranslate sControlCATG sControlCATG-all px-2">
                             <h6 class="All_SongsCAT">All songs</h6>
                             <div class=""></div>
                         </div> -->
@@ -1502,7 +1545,7 @@
                         <div class="rad-50 item-myBlue data-stats-disk">
                             <div class="position-absolute dim-100 inset-0 m-auto rad-inherit data-stats-ring song-stats-ring"></div>
                             <div class="position-absolute inset-0 m-auto grid-center rad-inherit data-stats-num">
-                                <span><span class="available_songs">....</span> songs</span>
+                                <span class="fw-bold text-mainColor"><span class="available_songs">....</span> songs</span>
                             </div>
                         </div>
                         <div class="bg-myBlue d-grid display-6 p-3">
@@ -1510,10 +1553,10 @@
                             <i data-feather="leaf w-3rem ratio-1-1"></i>
                         </div>
                         <div class="p-3">
-                            <ul class="">
-                                <li>Holy Mass songs</li>
-                                <li>Concert songs</li>
-                                <li>More different songs</li>
+                            <ul class="list-style-square">
+                                <li class="py-2">Holy Mass songs</li>
+                                <li class="py-2">Concert songs</li>
+                                <li class="py-2">More different songs</li>
                             </ul>
                         </div>
                     </section>
@@ -1646,7 +1689,7 @@
                     </div>
                     <div class="ScatSongs KwinjiraD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Kwinjira</h4>
+                            <h4 class="text-center notranslate CATG_name">Kwinjira</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa mu <u>gutangira Igitambo cya Misa</u>, Umutambagiro n'ibindi bikorwa bya Riturujiya bikorwa Misa itangiye.<br>
@@ -1657,7 +1700,7 @@
                     </div>
                     <div class="ScatSongs KyrieD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Kyrie</h4>
+                            <h4 class="text-center notranslate CATG_name">Kyrie</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa mu gice cyo <u>gusaba Imana imbabazi </u> z'ibicumuro twakoze kungirango duture Igitambo cy'Ukaristiya dufite umutima usukuye.<br>
@@ -1668,7 +1711,7 @@
                     </div>
                     <div class="ScatSongs GloriaD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Gloria</h4>
+                            <h4 class="text-center notranslate CATG_name">Gloria</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa mu gice cyo <u>gusingiza Imana</u>, nyuma yo gusaba Imbabazi z'ibicumuro byacu. In the <mark>Liturgy of the Word</mark>.<br>
@@ -1679,7 +1722,7 @@
                     </div>
                     <div class="ScatSongs Isomo1D">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Nyuma y'Isomo rya mbere</h4>
+                            <h4 class="text-center notranslate CATG_name">Nyuma y'Isomo rya mbere</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa <u>mbere y'isomo rimanziriza Ivanjiri</u>, igihe hatateguwe Zaburi cyangwa hakurikijwe uko Riturujiya yapanzwe.<br>
@@ -1690,7 +1733,7 @@
                     </div>
                     <div class="ScatSongs AlleluiaD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Alleluia</h4>
+                            <h4 class="text-center notranslate CATG_name">Alleluia</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa <u>mbere y'Ivanjiri</u> <i>(Nyuma y'isomo rimanziriza Ivanjiri)</i>.<br>
@@ -1701,7 +1744,7 @@
                     </div>
                     <div class="ScatSongs IndangakwemeraD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Indangakwemera</h4>
+                            <h4 class="text-center notranslate CATG_name">Indangakwemera</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa mu gice cyo <u>kwamamaza ukwemera kwacu</u><i>(Abakristu)</i>.<br>
@@ -1712,7 +1755,7 @@
                     </div>
                     <div class="ScatSongs SacrD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Amasezerano n'Amasakaramentu</h4>
+                            <h4 class="text-center notranslate CATG_name">Amasezerano n'Amasakaramentu</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa <u>mu gihe cy'Amasezerano n'Amasakaramentu</u>.<br>
@@ -1723,7 +1766,7 @@
                     </div>
                     <div class="ScatSongs IbisabishoD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Ibisabisho</h4>
+                            <h4 class="text-center notranslate CATG_name">Ibisabisho</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa <u>mu gice cy'Isengesho rusange (igisabisho)</u>, mu Gitambo cya Misa.<br>
@@ -1734,7 +1777,7 @@
                     </div>
                     <div class="ScatSongs GuturaD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Gutura</h4>
+                            <h4 class="text-center notranslate CATG_name">Gutura</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa mu gice cyo <u>gutura amaturo n'imitima yacu</u> ku Mana.<br>
@@ -1745,7 +1788,7 @@
                     </div>
                     <div class="ScatSongs SanctusD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Sanctus</h4>
+                            <h4 class="text-center notranslate CATG_name">Sanctus</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa mu gice cyo <u>gusingiza Imana Ubutatu Butagatifu</u>. In the <mark>Liturgy of Eucharist</mark>.<br>
@@ -1756,7 +1799,7 @@
                     </div>
                     <div class="ScatSongs Agnus_DeiD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Ntama w'Imana</h4>
+                            <h4 class="text-center notranslate CATG_name">Ntama w'Imana</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa mu gihe cyo <u>kwitegura guhabwa Yezu mu Ukaristiya</u>, <i>(Agneau de Dieu)</i>.<br>
@@ -1767,7 +1810,7 @@
                     </div>
                     <div class="ScatSongs GuhazwaD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Guhazwa</h4>
+                            <h4 class="text-center notranslate CATG_name">Guhazwa</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa mu gihe cyo <u>guhabwa Yezu mu Ukaristiya</u>, <i>(Communion)</i>.<br>
@@ -1778,7 +1821,7 @@
                     </div>
                     <div class="ScatSongs GushimiraD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Gushimira</h4>
+                            <h4 class="text-center notranslate CATG_name">Gushimira</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa mu gice cyo <u>gushimira Imana</u>, <i>(Action de grace)</i>.<br>
@@ -1789,7 +1832,7 @@
                     </div>
                     <div class="ScatSongs GutahaD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Gutaha</h4>
+                            <h4 class="text-center notranslate CATG_name">Gutaha</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa <u>Misa Ihumuje</u>.<br>
@@ -1800,7 +1843,7 @@
                     </div>
                     <div class="ScatSongs MariyaD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Bikiramariya</h4>
+                            <h4 class="text-center notranslate CATG_name">Bikiramariya</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 <u>Indirimbo za Bikiramariya</u> ziririmbwa Misa ihumuje, n'ahandi hose igihe cyose.<br>
@@ -1811,7 +1854,7 @@
                     </div>
                     <div class="ScatSongs MarriageD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Marriage</h4>
+                            <h4 class="text-center notranslate CATG_name">Marriage</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa <u>mu Misa y'abageni</u>, <i>(Wedding Mass/Messe de Mariage)</i>.<br>
@@ -1822,7 +1865,7 @@
                     </div>
                     <div class="ScatSongs IbitaramoD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Ibitaramo</h4>
+                            <h4 class="text-center notranslate CATG_name">Ibitaramo</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo zaririmbwa <u>mu gihe cy'ibitaramo</u>, <i>(Concert songs)</i>.<br>
@@ -1833,7 +1876,7 @@
                     </div>
                     <div class="ScatSongs AsensiyoD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Asensiyo</h4>
+                            <h4 class="text-center notranslate CATG_name">Asensiyo</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa <u>twizihiza gusubira mu Ijuru kwa Nyagasani Yezu</u>, <i>(Ascension)</i>.<br>
@@ -1844,7 +1887,7 @@
                     </div>
                     <div class="ScatSongs Roho_MutagatifuD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Roho Mutagatifu</h4>
+                            <h4 class="text-center notranslate CATG_name">Roho Mutagatifu</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo za Roho Mutagatifu.<br>
@@ -1855,7 +1898,7 @@
                     </div>
                     <div class="ScatSongs AbatagatifuD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Abatagatifu</h4>
+                            <h4 class="text-center notranslate CATG_name">Abatagatifu</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa <u>twizihiza Abatagatifu</u>.<br>
@@ -1866,7 +1909,7 @@
                     </div>
                     <div class="ScatSongs IgisiboD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Igisibo</h4>
+                            <h4 class="text-center notranslate CATG_name">Igisibo</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa <u>mu gihe cy'Igisibo</u>.<br>
@@ -1877,7 +1920,7 @@
                     </div>
                     <div class="ScatSongs PasikaD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Pasika</h4>
+                            <h4 class="text-center notranslate CATG_name">Pasika</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa <u>mu gihe cya Pasika</u>.<br>
@@ -1888,7 +1931,7 @@
                     </div>
                     <div class="ScatSongs NoheliD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">Noheli</h4>
+                            <h4 class="text-center notranslate CATG_name">Noheli</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo ziririmbwa <u>mu gihe cya Noheli</u>, <i>(Christmas Song/Chants de Noel)</i><br>
@@ -1899,7 +1942,7 @@
                     </div>
                     <div class="ScatSongs More_songsD">
                         <div class="p-3 display-10 collapse show CATG_description">
-                            <h4 class="text-center CATG_name">More songs</h4>
+                            <h4 class="text-center notranslate CATG_name">More songs</h4>
                             <button class="d-lg-none btn-close toggle-par"></button>
                             <p>
                                 Indirimbo yaririmbwa mu bihe bitandukanye bya Misa, Ibitaramo ndetse n'ahandi <i>(bitewe n'uko Uwayihimbye/Composer abyifuza)</i>.<br>
@@ -1921,7 +1964,7 @@
                         </ul>
                     </div>
                     <!-- Other results -->
-                    <div class="col-12 offset-sm-2 col-sm-8 px-1 otherResults Sbar-none">
+                    <div class="col-12 offset-sm-2 col-sm-8 px-1 notranslate otherResults Sbar-none">
                         <div class="position-sticky sticky-top pt-3">
                             <h6 class="mb-3 text-center">Found some results here</h6>
                             <button class="btn-close bg-appColor_cons r-middle-m" onclick="hide_other_schResults()"></button>
@@ -2047,8 +2090,8 @@
 
     <!-- ************************** Page end ************************** -->
 
-    <script src="../../MyScripts.js?v=1.0900"></script>
-    <script src="chmsData.js?v=1.0900"></script>
+    <script src="../../MyScripts.js?v=1.0977"></script>
+    <script src="chmsData.js?v=1.0977"></script>
 	<script>
 		create_current_month();
 	</script>

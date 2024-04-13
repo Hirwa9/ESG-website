@@ -4,7 +4,7 @@
 	<title>ESG FAQS</title>
 
 	<link rel="icon" type="image/x-icon" href="../../Pics/ESG_favicon1.ico">
-	<link rel="stylesheet" type="text/css" href="../../styles/faqs.css?v=1.0885">
+	<link rel="stylesheet" type="text/css" href="../../styles/faqs.css?v=1.0986">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width= device-width, initial-scale=1.0">
 	<meta name="author" content="Hirwa Willy">
@@ -26,7 +26,7 @@
     <script src="../../bootstrap5/js/bootstrap.bundle.min.js.map"></script> -->
     <!-- <script src="../../jq/jquery-3.7.1.js"></script> -->
 </head>
-<body id="mainBody" class="bg-bodi" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="20" style="background-size: cover;">
+<body class="bg-bodi" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="20" style="background-size: cover;">
     <!-- sm navbar -->
 	<div class="d-sm-none fix-holder inx-25 p-2">
 		<div class="nav container-xs Sbar-none bordered-end-end" id="mySidenav">
@@ -36,7 +36,7 @@
 				<li class="nav-item"><a href="../about" class="nav-link">About</a></li>
 				<li class="nav-item"><a href="../About/ESG_Songs" class="nav-link">Songs</a></li>
 				<li class="nav-item"><a href="../services" class="nav-link">Services</a></li>
-				<li class="nav-item"><a href="../About/ESG_FAQs" class="nav-link">FAQs</a></li>
+				<li class="nav-item Here"><a href="../About/ESG_FAQs" class="nav-link">FAQs</a></li>
 				<li class="nav-item" data-bs-toggle="collapse"	data-bs-target=".MRNV"><a href="#" class="nav-link MoreMenu">More</a></li>
 			</div>
 			<div class="ps-3 mt-3 collapse MRNV">
@@ -86,7 +86,7 @@
                 <li class="nav-item">
                     <a class="nav-link" id="settings"><span class="fa fa-gear"></span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item Here">
                     <a class="nav-link" href="../About/ESG_FAQs">FAQs</a>
                 </li>
             </ul>
@@ -137,6 +137,10 @@
 						<span class="small flex-center" style="font-size: 65%;">easternsingersg@gmail.com</span>
 						<a class="flex-center bounceClick" href="mailto:easternsingersg@gmail.com">Mail</a>
 					</div>
+				</div>
+				<div class="my-3 d-grid" onclick="show_chatbot()">
+					<span class="mb-2">Or send us a Direct Message</span>
+					<button class="btn bg-transparent text-headerColor" style="border: 1px solid var(--_headerColor);">DM <span class="fa fa-paper-plane ps-2"></span></button>
 				</div>
 			</div>
 		</div>
@@ -385,45 +389,19 @@
     </div>
 	
 	<div id="main">
-		<div class="navigate position-fixed col-2 d-none d-md-block align-items-baseline">
-			<p class="p-2" id="upDown" data-bs-toggle="modal" data-bs-target="#qui_bene" style="opacity: 0;">
-				Bis orat qui bene cantat !!
-			</p>
-			<p class="p-2" id="upDown1" data-bs-toggle="modal" data-bs-target="#qui_bene" style="opacity: 0;">
-				Bis orat qui bene cantat !!
-			</p>
-		</div>
-
-		<div class="modal fade" rol="dialod" id="qui_bene">
-			<div class="modal-dialog modal-lg bg-navi2">
-				<div class="modal-header" style="color: whitesmoke;">
-					<h4>Bis orat qui bene cantat</h4>
-				</div>
-				<div class="modal-content">
-					<p>
-						Latin: <strong>Bis orat qui cantat</strong> has been traditionally attributed to <span style="color: darkgoldenrod;">St. Augustine (d. 430 CE)</span>. The version with the included “bene” is from the <span style="color: blue; font-weight: bold;">General Instruction of the Roman Missal</span> and can be translated as “Whoever sings well prays twice over”. Hence singing, as a primary form of prayer, is a very ancient tradition in Christianity indeed!<br><br>
-
-						By the way, anyone can have problems with that “bene”! <u>How could we be required to be great singers in order to pray twice</u>? I had the question too, but soon I got it. It was my own perfectionism putting a slant on everything I hear and see. We are not asked to be professional operatic singers, but to sing well, with enthusiasm, and conviction, and joy. That is praying twice as well.
-					</p>
-				</div>
-				<div class="modal-footer">
-					<p class="small" data-bs-dismiss="modal" data-bs-target="#qui_bene" style="color: whitesmoke; cursor: pointer;">Dusenge kabiri</p><button data-bs-dismiss="modal" data-bs-target="#qui_bene" style="color: var(--myBlue); cursor: pointer;"><span class="fa fa-check" onclick="$('#qui_bene').fadeOut();"></span></button>
-				</div>
-			</div>
-		</div>
 
 		<!-- ************************** End of navigations ************************** -->
 
-		<div id="FAQs" class="offset-sm-1 offset-md-2 col-sm-10 FAQs">
+		<div id="FAQs" class="container px-2 FAQs">
 			<h1 class="page-heading">Frequently asked questions about Eastern Singers Group</h1>
 			<p class="my-5 px-3 px-md-4 display-7">
-				From the community, people would ask a question like; <q><i>are you all from the Eastern Province <small class="text-muted"><small>Rwanda</small></small>?</i></q> or <q><i>how can someone join your singing group?</i></q> and more other questions regarding our notability.<br>
-				For the record, we have already answered to such ones and different more, and we're also open for further questions. 
+				Within our community, individuals often inquire about various topics, such as whether all ESG members hail from the Eastern Province of Rwanda or how to become a part of our singing group. Among other queries related to our prominence, we have addressed many of these questions in the past and we are open to answering additional questions.<br><br>
+				Below, you'll find a compilation of frequently asked questions along with our responses. It's possible that your question has already been addressed here, but if you have any further inquiries, please don't hesitate to ask.
 			</p>
-			<h4 class="p-2 px-md-4 mb-4">Questions - Answers</h4>
-			<div class="offset-md-1 col-md-10 px-2 px-sm-3 Questions">
-				<div class="card card-info mb-2">
-					<div class="card-header">
+			<h2 class="p-2 px-md-4 mb-4">Questions - Answers</h2>
+			<div class="col-lg-10 mx-auto px-lg-3 Questions">
+				<div class="card card-info">
+					<div class="fs-5 card-header">
 						Are all ESG singers from the Eastern Province <img src="../../Pics/Question.png">
 					</div>
 					<div class="card-body">
@@ -433,8 +411,8 @@
 						</small>
 					</div>
 				</div>
-				<div class="card card-info mb-2">
-					<div class="card-header">
+				<div class="card card-info">
+					<div class="fs-5 card-header">
 						How many are you in ESG <img src="../../Pics/Question.png">
 					</div>
 					<div class="card-body">
@@ -444,8 +422,8 @@
 						</small>
 					</div>
 				</div>
-				<div class="card card-info mb-2">
-					<div class="card-header">
+				<div class="card card-info">
+					<div class="fs-5 card-header">
 						How can someone join your group <img src="../../Pics/Question.png">
 					</div>
 					<div class="card-body">
@@ -455,8 +433,8 @@
 						</small>
 					</div>
 				</div>
-				<div class="card card-info mb-2">
-					<div class="card-header">
+				<div class="card card-info">
+					<div class="fs-5 card-header">
 						Is your singing group made by only youth people <img src="../../Pics/Question.png">
 					</div>
 					<div class="card-body">
@@ -466,8 +444,8 @@
 						</small>
 					</div>
 				</div>
-				<div class="card card-info mb-2">
-					<div class="card-header">
+				<div class="card card-info">
+					<div class="fs-5 card-header">
 						Why Eastern Singers Group not "Eastern Singers Choir" <img src="../../Pics/Question.png">
 					</div>
 					<div class="card-body">
@@ -477,8 +455,8 @@
 						</small>
 					</div>
 				</div>
-				<div class="card card-info mb-2">
-					<div class="card-header">
+				<div class="card card-info">
+					<div class="fs-5 card-header">
 						Where is Eastern Singers Group based <img src="../../Pics/Question.png">
 					</div>
 					<div class="card-body">
@@ -489,8 +467,8 @@
 					</div>
 				</div>
 
-				<div class="card card-info mb-2">
-					<div class="card-header">
+				<div class="card card-info">
+					<div class="fs-5 card-header">
 						How do you prepare for your activities and services <img src="../../Pics/Question.png">
 					</div>
 					<div class="card-body">
@@ -501,8 +479,8 @@
 					</div>
 				</div>
 
-				<div class="card card-info mb-2">
-					<div class="card-header">
+				<div class="card card-info">
+					<div class="fs-5 card-header">
 						Are all of you proficient in music, including sight-reading notes (solfeggio) <img src="../../Pics/Question.png">
 					</div>
 					<div class="card-body">
@@ -513,7 +491,7 @@
 					</div>
 				</div>
 				<div class="card cardinfo mb-2">
-					<div class="card-header">
+					<div class="fs-5 card-header">
 						How many original songs do you have <img src="../../Pics/Question.png">
 					</div>
 					<div class="card-body">
@@ -524,28 +502,65 @@
 					</div>
 				</div>
 			</div>
-			<br><br>
 			
-			<div class="" id="AskQuestions">
-				<button id="QuestionsBtn" class="btn text-black1 w-100" data-bs-toggle="collapse" data-bs-target="#DropChat" onclick="$(this).fadeOut()">
-					Ask a question
-				</button>
-				<br>
-				<div class="offset-sm-2 col-sm-8 shadow pt-1 py-3 rounded-right collapse" id="DropChat">
-					<form action="Questions.php" method="post">
-						<textarea maxlength="200" class="col-12 py-3" name="question" rows="4" placeholder="Your question"></textarea>
-						<div class="d-flex" style="justify-content: stretch;">
-							<button class="btn btn-secondary col-6" type="reset" data-bs-toggle="collapse" data-bs-target="#DropChat" onclick="$('#QuestionsBtn').fadeIn()">
-								<span class="fa fa-times"></span>
-							</button>
-							<input type="submit" name="submit" value="?" class="btn btn-primary col-6">
-						</div>
-					</form>
+			<!-- Custom chatbot mailer-->
+			<!-- Chatbot-form -->
+			<form action="https://formsubmit.co/c2a11ab9ef05b62d278557c946e90ed3" method="POST" id="directMessageForm" style="display: none;">
+				<div class="mb-3">
+					<label for="pEmail" class="form-label fw-bold">Email *</label>
+					<input type="email" name="Person_Email" required class="form-control" id="pEmail" placeholder="Enter email">
 				</div>
+				<div class="mb-3">
+					<label for="message" class="form-label fw-bold">Message *</label>
+					<input type="text" name="Direct_Message"required class="form-control" id="message" placeholder="Enter message">
+				</div>
+				<div class="mb-3">
+					<input type="hidden" name="_captcha" value="false">
+					<input type="hidden" name="_template" value="table">
+					<input type="hidden" name="_subject" value="You have a DM from ESG website!">
+				</div>
+				<div class="d-flex justify-content-between">
+					<button type="reset" class="btn btn-secondary my-5" style="width: 49%;">Cancel</button>
+					<button type="submit" id="sendCustomDM" class="btn bg-mainColor my-5" style="width: 49%;">Request <span class="fa fa-paper-plane"></span></button>
+				</div>
+			</form>
+
+			<!-- Chatbot-UI -->
+			<div class="position-fixed shadow pt-2 item-myBlue fix-draggable chatbot">
+				<div class="d-flex align-items-center justify-content-between chatbot-header">
+					<button class="fa fa-arrow-left bounceClick"></button>
+					<div class="w-fit d-grid p-1 chatbot-name fix-dragger">
+						<span class="mx-auto fw-bold">ESG mailer</span>
+						<span class="mx-auto">Online</span>
+					</div>
+					<div class="rad-3 me-3 my-item-header__icons">
+						<button class="fa fa-ellipsis-h" data-menu-toggle=".chatbot-cont-menu" ></button>
+						<button class="fa fa-angle-down bounceClick" title="Minimize" onclick="hide_chatbot()"></button>
+					</div>
+				</div>
+				<div class="mt-2 p-3 Sbar-none chatbot-body">
+					<div class="message-holder"></div>
+				</div>
+				<div class="py-2 chatbot-footer">
+					<button class="fa fa-angle-double-down clickDown small to-bottom-button"></button>
+					<div class="d-flex h-100 chatbot-messenger">
+						<textarea name="message" id="chatbotMessageInput" cols="30" rows="10" placeholder="Type your message..." class="p-2 Sbar-none"></textarea>
+						<button class="btn fa fa-arrows-alt-v clickDown small text-dark textarea-expander"></button>
+						<button class="btn text-success clickDown small trans-0 flex-shrink-0" id="sendMessageBtn" title="Ctrl + Enter">Send <span class="far fa-paper-plane ps-1"></span></button>
+					</div>
+				</div>
+			</div>
+			<div class="rad-7 my-cont-menu chatbot-cont-menu">
+				<ul>
+					<li class="favorite-songs-copier" onclick="hide_chatbot()"><span class="fa fa-close w-25px mr-2"></span>Close</li>
+					<hr class="my-1">
+					<li class="border-0 chatbot-message-clearer"><span class="fa fa-trash-alt w-25px mr-2"></span> Clear messages</li>
+				</ul>
 			</div>
 			<hr class="border-black4">
 			<div>
-				<a href="../contact" class="btn text-black1 col-12 clearfix mt-2">Add a comment</a><br>
+				<a href="#" class="btn text-black1 col-12 mt-2" onclick="show_chatbot()">Ask question <span class="fa fa-paper-plane ms-2"></span></a>
+				<a href="../contact" class="btn text-black1 col-12 mt-2">Contact us <span class="fa fa-comment ms-2"></span></a>
 			</div>
 			<br><br>
 		</div>
@@ -632,6 +647,6 @@
 	</footer>
 
 	<!-- <script type="text/javascript" src="jquery.num2words.js"></script> -->
-	<script src="../../MyScripts.js?v=1.0885"></script>
+	<script src="../../MyScripts.js?v=1.0986"></script>
 </body>
 </html>

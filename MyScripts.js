@@ -476,6 +476,15 @@ $('[data-topopup]').click(function (e) {
     }
 });
 
+// Custom popups
+$('[data-menu-toggle]').click(function (e) {
+    var elem_eddress = $(this).attr('data-menu-toggle'),
+        elem = $('' + elem_eddress);
+    if (elem.length > 0) {
+        show_custom_menu(e, elem);
+    }
+});
+
 // Scroll to the corresponding attributed class or id
 $('[data-scrollto]').click(function () {
     var elem_eddress = $(this).attr('data-scrollto'),
@@ -775,6 +784,387 @@ document.onclick = function (e) {
         }
     });
 }
+
+/**
+ * Working on DMs (Custom_chatbot)
+ */
+
+const chatbotMessageInput = $('#chatbotMessageInput'),
+    chatbotMessageSender = $('#sendMessageBtn'),
+    chatbotMessageSpace = $('.chatbot .message-holder');
+
+// Messages storage
+let chatbotMessagesStorage = localStorage.getItem('chatbotConversation');
+
+// Chatbot initial hello message
+const chatbot_hello = function () {
+    const timeNow = new Date(),
+        messageTime = (timeNow.getHours() < 10 ? '0' + timeNow.getHours() : timeNow.getHours()) +
+            ':' +
+            (timeNow.getMinutes() < 10 ? '0' + timeNow.getMinutes() : timeNow.getMinutes()),
+        initialisationMessage =
+            '<p class="responder">Hello! 😊<br>\
+        How can we assist you today?<br><br>\
+        If there\'s anything you\'d like to share with us, please feel free to do so.<br><br>\
+        You can provide a detailed message so that we can clearly understand \
+        the issue or request, enabling us to assist you effectively.\
+        <span class="message-time-sent">' + messageTime + '</span></p>';
+    chatbotMessageSpace.html('');
+    chatbotMessageSpace.append(initialisationMessage);
+}
+
+// Scroll bottom messages
+const scroll_bottom_chatbot_messages = function () {
+    $('.chatbot-body').animate({ scrollTop: $('.message-holder')[0].clientHeight });
+}
+const jumpto_bottom_chatbot_messages = function () {
+    $('.chatbot-body').scrollTop($('.message-holder')[0].clientHeight);
+}
+
+// Processing response
+function process_message_response(message, messageTime) {
+    messageParagraph =
+        '<p class="sender">' + message + ' <span class="message-time-sent">' + messageTime + '</span></p>';
+    let responseParagraph1 =
+        '<p class="responder">\
+                🤝 Thank you for reaching out! <b>We\'ll address your message promptly through email.</b>\
+                <span class="message-time-sent">' + messageTime + '</span></p>',
+        responseParagraph2 =
+            '<p class="responder">\
+            If you have any further questions or concerns, please don\'t hesitate to let us know.<br>\
+            In the meantime, feel free to explore more on our platform.\
+            <span class="message-time-sent">' + messageTime + '</span></p>',
+        singleResponse = false,
+        shortMessage = false;
+    // Non-email-triggers
+    const thankMessages = [
+        "thanks",
+        "thank you",
+        "merci",
+        "asante",
+        "urakoze",
+        "appreciate",
+        "gracias",
+        "cheers",
+        "much obliged",
+        "you're the best",
+        "awesome",
+        "amazing",
+        "gorgeous",
+    ];
+    const greetingMessages = [
+        "hello",
+        "hi",
+        "hey",
+        "morning",
+        "good morning",
+        "bonjour",
+        "afternoon",
+        "good afternoon",
+        "apres midi",
+        "bonne apres midi",
+        "evening",
+        "good evening",
+        "bonsoir",
+        "howdy",
+        "knock",
+        "greetings",
+        "mwiriwe",
+        "muraho",
+        "mwaramutse",
+        "bite",
+        "salut",
+        "salute",
+        "salutations",
+        "what's up",
+        "hi there",
+        "hello there",
+        "how's it going",
+    ];
+    const simpleMessages = [
+        "ok",
+        // "okay",
+        "yes",
+        "alright",
+        "wow",
+        "sure",
+        "cool",
+        "fine",
+        "waiting",
+        "got it",
+        "gotcha",
+        "I am good",
+        "i'm good",
+        "am good",
+        "understood",
+        "sure thing",
+        "roger that",
+        "no problem",
+        "great",
+        "perfect",
+    ];
+    // Short message
+    if (message.trim().length < 50) { shortMessage = true }
+    // Non-email-responses
+    if (shortMessage) {
+        singleResponse = true;
+        const messageLower = message.toLowerCase();
+        if (greetingMessages.some(el => messageLower.includes(el)) ||
+            thankMessages.some(el => messageLower.includes(el)) ||
+            simpleMessages.some(el => messageLower.includes(el))) {
+            if (thankMessages.some(el => messageLower.includes(el))) {
+                responseParagraph1 =
+                    '<p class="responder">You are most welcome 😊\
+                        <span class="message-time-sent">' + messageTime + '</span></p>';
+
+            } else if (greetingMessages.some(el => messageLower.includes(el))) {
+                const exceptions = ["hello", "knock", "howdy", "how's it going", "bite"];
+                responseParagraph1 =
+                    '<p class="responder">Hello there! 😊<br>\
+                        How can we assist you? <br>\
+                        You can provide a detailed message so that we can clearly understand \
+                        the issue or request, enabling us to assist you effectively.\
+                        <span class="message-time-sent">' + messageTime + '</span></p>';
+                if (greetingMessages.some(el => ((messageLower === el) && (!exceptions.some(word => messageLower === word))))) {
+                    const exactWord = messageLower.replace(messageLower[0], messageLower[0].toUpperCase());
+                    responseParagraph1 =
+                        '<p class="responder"> ' + exactWord + ' 👋👋<br>\
+                            How can we assist you? <br>\
+                            You can provide a detailed message so that we can clearly understand \
+                            the issue or request, enabling us to assist you effectively.\
+                            <span class="message-time-sent">' + messageTime + '</span></p>';
+
+                }
+            } else {
+                responseParagraph1 =
+                    '<p class="responder">If you have any further questions or concerns, \
+                        please don\'t hesitate to let us know.\
+                        Best regards!!\
+                        <span class="message-time-sent">' + messageTime + '</span></p>';
+            }
+        } else {
+            responseParagraph1 =
+                '<p class="responder">Message too short 😐 <br><br> \
+                    Consider providing a detailed message so that we can clearly understand \
+                    the issue or request, enabling us to assist you effectively.\
+                    <span class="message-time-sent">' + messageTime + '</span></p>';
+        }
+    }
+    return { messageParagraph, responseParagraph1, responseParagraph2, singleResponse };
+}
+
+// Showing chatbot
+const show_chatbot = function () {
+    const chatbot = $('.chatbot'),
+        pastConversation = localStorage.getItem('chatbotConversation');
+    chatbot.addClass('working');
+    // Show previous conversation
+    if (!chatbot.hasClass('recently-interacted')) {
+        chatbotMessageSpace.html('');
+        // Restore previous conversation
+        if (pastConversation) {
+            const convMesages = JSON.parse(pastConversation);
+            convMesages.forEach(el => {
+                const theMessage = el.message, theTime = el.msgTime, theDay = el.msgDay;
+                // Process response
+                const questionResponse = process_message_response(theMessage, theTime);
+                // Adding Date indicator
+                const conversationDaySeparator = '<p class="conversation-date">' + theDay + '</span></p>',
+                    dateIndicators = chatbotMessageSpace.find('.conversation-date'),
+                    dateIndicatorExists = dateIndicators.filter(function () {
+                        return $(this).text().trim() === theDay;
+                    }).length;
+                (dateIndicatorExists < 1) && chatbotMessageSpace.append(conversationDaySeparator)
+                // Adding messages
+                chatbotMessageSpace.append(questionResponse.messageParagraph);
+                chatbotMessageSpace.append(questionResponse.responseParagraph1);
+                if (!questionResponse.singleResponse) {
+                    chatbotMessageSpace.append(questionResponse.responseParagraph2);
+                }
+            });
+            jumpto_bottom_chatbot_messages();
+        } else {
+            chatbot_hello();
+        }
+    }
+}
+
+// Hiding chatbot
+const hide_chatbot = function () {
+    const chatbot = $('.chatbot')
+    chatbot.addClass('flyOutB');
+    setTimeout(function () {
+        $('.chatbot').removeClass('working');
+        chatbot.removeClass('flyOutB');
+    }, 400);
+}
+
+// Send function
+function send_chatbot_message() {
+    const message = chatbotMessageInput.val().trim();
+    $('.chatbot').addClass('recently-interacted');
+    if (message === '') {
+        showToast('Please type a message before sending');
+        return;
+    }
+    const timeNow = new Date(),
+        messageTime = (timeNow.getHours() < 10 ? '0' + timeNow.getHours() : timeNow.getHours()) +
+            ':' +
+            (timeNow.getMinutes() < 10 ? '0' + timeNow.getMinutes() : timeNow.getMinutes()),
+        messageDay = month_num_to_nm(timeNow.getMonth()) + ' ' + timeNow.getDate() + ', ' + timeNow.getFullYear(),
+        messageData = { message, msgTime: messageTime, msgDay: messageDay }
+    // Storing the message
+    let pastConversation = localStorage.getItem('chatbotConversation');
+    if (pastConversation) {
+        let pastConv = JSON.parse(pastConversation);
+        pastConv.push(messageData);
+        localStorage.setItem('chatbotConversation', JSON.stringify(pastConv));
+    } else {
+        let newConversation = [messageData];
+        localStorage.setItem('chatbotConversation', JSON.stringify(newConversation));
+    }
+    const waiter = $('<div class="message-waiting-indicator">\
+            <div style="--child: 3"></div><div style="--child: 2"></div><div style="--child: 1"></div>\
+            </div>');
+    questionResponse = process_message_response(message, messageTime); // Process response
+    // Adding question
+    chatbotMessageSpace.append(questionResponse.messageParagraph);
+    chatbotMessageInput.val('');
+    scroll_bottom_chatbot_messages();
+    // Adding responses / Mailing
+    if (!questionResponse.singleResponse) {
+        // Fill the form
+        const DMform = $('#directMessageForm');
+        DMform.find('#message').val(message);
+        DMform.find('#pEmail').val('hirwawilly55@gmail.com');
+        // Submit the form
+        setTimeout(() => {
+            $('#sendCustomDM').trigger('click');
+        }, 1000);
+    } else {
+        // Responce for non-email questions/messages
+        chatbotMessageSpace.append(waiter);
+        setTimeout(() => {
+            waiter.remove();
+            chatbotMessageSpace.append(questionResponse.responseParagraph1);
+            scroll_bottom_chatbot_messages();
+        }, 1000);
+    }
+}
+
+// Submiting message using Fetch API
+const directMessageForm = document.getElementById('directMessageForm');
+
+async function handle_DM_submit(event) {
+    event.preventDefault();
+    // Creating waiter and response
+    const waiter = $('<div class="message-waiting-indicator">\
+            <div style="--child: 3"></div><div style="--child: 2"></div><div style="--child: 1"></div>\
+            </div>'),
+        responseNotOk = $('<p class="responder error-message">\
+        <span class="h6 d-block p-2 text-center text-danger" style="border-bottom: 1px solid var(--bs-danger);">Ooh no 😟!!</span>\
+        <span class="small d-block text-center">Something went wrong while sending your message.</span> <br>\
+        <button class="btn btn-sm d-block mx-auto bg-mainColor text-headerColor bounceClick resend-chatbot-message">Tap to resend</button>\
+    </p>'),
+        fetchErrorMessage = $('<p class="responder error-message">\
+        <span class="h6 d-block p-2 text-center text-danger" style="border-bottom: 1px solid var(--bs-danger);">Ooh wait 🙁!!</span>\
+        <span class="small d-block text-center">We couldn\'t send your message. Please check the internet and try again.</span> <br>\
+        <button class="btn btn-sm d-block mx-auto bg-mainColor text-headerColor bounceClick resend-chatbot-message">Try again</button>\
+    </p>');
+    // Adding response waiter
+    chatbotMessageSpace.append(waiter);
+    scroll_bottom_chatbot_messages();
+    // Submit/Mail action
+    var eTarget = event.target;
+    try {
+        const response = await fetch(eTarget.action, {
+            method: eTarget.method,
+            body: new FormData(eTarget),
+        });
+        waiter.remove();
+        // Showing response error message
+        if (!response.ok) {
+            chatbotMessageSpace.append(responseNotOk);
+            return;
+        }
+        // Showing success message
+        chatbotMessageSpace.append(questionResponse.responseParagraph1);
+        scroll_bottom_chatbot_messages();
+        setTimeout(() => {
+            chatbotMessageSpace.append(questionResponse.responseParagraph2);
+            scroll_bottom_chatbot_messages();
+        }, 1000);
+    } catch (error) {
+        // Adding error message
+        waiter.remove();
+        chatbotMessageSpace.append(fetchErrorMessage);
+        console.error('Error:', error.message);
+    } finally {
+        directMessageForm.reset(); // Reset the form
+        scroll_bottom_chatbot_messages();
+    }
+}
+
+directMessageForm.addEventListener("submit", handle_DM_submit);
+
+// Send action
+chatbotMessageSender.on({
+    click: function () {
+        send_chatbot_message();
+        chatbotMessageInput.removeClass('floated');
+    }
+});
+chatbotMessageInput.on({
+    keydown: function (e) {
+        if (e.ctrlKey && e.keyCode === 13) {
+            send_chatbot_message();
+            chatbotMessageInput.removeClass('floated');
+        }
+    }
+});
+
+// Resend action
+$('.chatbot').on('click', '.resend-chatbot-message', function () {
+    const pastConversation = localStorage.getItem('chatbotConversation'),
+        pastConv = JSON.parse(pastConversation),
+        lastMessage = pastConv[pastConv.length - 1].message;
+    // Remove last message from storage
+    pastConv.pop();
+    localStorage.setItem('chatbotConversation', JSON.stringify(pastConv));
+    // Retry sending
+    chatbotMessageInput.val(lastMessage);
+    send_chatbot_message();
+});
+
+// clear chat messages/history
+const clear_chatbot_message = function () {
+    $('.chatbot .message-holder').html('');
+    localStorage.removeItem('chatbotConversation');
+    chatbot_hello();
+}
+$('.chatbot-message-clearer').click(clear_chatbot_message);
+
+// Scroll chat to bottom
+const chatbotToBottomBtn = $('.chatbot-footer .to-bottom-button');
+$('.chatbot-body').scroll(function () {
+    const msgScrollTop = $(this)[0].scrollTop,
+        disHeight = $(this).height();
+    msgHeight = $(this).find('.message-holder').height();
+
+    if ((msgHeight - msgScrollTop) > ((disHeight * 2) + 50)) {
+        chatbotToBottomBtn.addClass('floated');
+    } else {
+        chatbotToBottomBtn.removeClass('floated');
+    }
+});
+chatbotToBottomBtn.click(function () {
+    scroll_bottom_chatbot_messages();
+});
+
+// Expanding text area
+$('.chatbot-footer .textarea-expander').click(function () {
+    $(this).closest('.chatbot-footer').find('#chatbotMessageInput').toggleClass('floated');
+});
 
 /**
  * Moving/Dragging fixed elements
@@ -1153,6 +1543,20 @@ function sort_list_descending(aList) {
 }
 
 /**
+ * Show toast (alert)
+ */
+
+const showToast = (message) => {
+    const toast = document.createElement('div');
+    toast.classList.add('myToast');
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
+};
+
+/**
  * Save/Print an element
  */
 
@@ -1174,6 +1578,12 @@ function printElem(dt, w, h) {
 $('.printThis').click(function () {
     printElem($('.SongsHome'));
 });
+
+// prevents the addition of a new history entry when the page loads
+function preventHistory() {
+    history.replaceState(null, null, document.URL);
+}
+
 
 // Custom functions
 
@@ -5476,43 +5886,43 @@ function count_elapsed_time(desiredDate, outPut) {
         miliSEC_Month = (1000 * 3600 * 24) * 30,
         miliSEC_Year = (1000 * 3600 * 24) * 356,
 
-        YearSEllapsed = days_diff / miliSEC_Year,
-        MonthSEllapsed = days_diff / miliSEC_Month,
-        WeekSEllapsed = days_diff / miliSEC_Week,
-        DaySEllapsed = days_diff / miliSEC_Day,
+        yearsEllapsed = days_diff / miliSEC_Year,
+        monthsEllapsed = days_diff / miliSEC_Month,
+        weeksEllapsed = days_diff / miliSEC_Week,
+        daysEllapsed = days_diff / miliSEC_Day,
         timeEllapsed,
         theCount;
 
-    if ((YearSEllapsed) >= 1) {
-        timeEllapsed = Math.floor((YearSEllapsed));
+    if ((yearsEllapsed) >= 1) {
+        timeEllapsed = Math.floor((yearsEllapsed));
         theCount = " • " + timeEllapsed + " year ago";
-        if ((YearSEllapsed) >= 2) {
+        if ((yearsEllapsed) >= 2) {
             theCount = " • " + timeEllapsed + " years ago";
         }
     }
-    else if ((MonthSEllapsed) >= 1) {
-        timeEllapsed = Math.floor((MonthSEllapsed));
+    else if ((monthsEllapsed) >= 1) {
+        timeEllapsed = Math.floor((monthsEllapsed));
         theCount = " • a month ago";
-        if ((MonthSEllapsed) >= 2) {
+        if ((monthsEllapsed) >= 2) {
             theCount = " • " + timeEllapsed + " months ago"
         }
     }
-    else if ((WeekSEllapsed) >= 1) {
-        timeEllapsed = Math.floor((WeekSEllapsed));
+    else if ((weeksEllapsed) >= 1) {
+        timeEllapsed = Math.floor((weeksEllapsed));
         theCount = " • a week ago"
-        if ((WeekSEllapsed) >= 2) {
+        if ((weeksEllapsed) >= 2) {
             theCount = " • " + timeEllapsed + " weeks ago"
-            if ((WeekSEllapsed) > 4 && (WeekSEllapsed) < 5) {
+            if ((weeksEllapsed) > 4 && (weeksEllapsed) < 5) {
                 theCount = " • on " + date.getDate() + "/" + dateMon;
             }
         }
     }
-    else if ((DaySEllapsed) >= 1) {
-        timeEllapsed = Math.floor((DaySEllapsed));
-        if ((DaySEllapsed) > 2) {
+    else if ((daysEllapsed) >= 1) {
+        timeEllapsed = Math.floor((daysEllapsed));
+        if ((daysEllapsed) > 2) {
             theCount = " • " + timeEllapsed + " days ago"
         }
-        else if (2 <= DaySEllapsed < 3) {
+        else if (2 <= daysEllapsed < 3) {
             theCount = "• Yesterday";
         }
     }

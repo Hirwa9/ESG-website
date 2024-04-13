@@ -1,4 +1,4 @@
-@import "../all.css?v=1.0873";
+@import "../all.css?v=1.0966";
 
 /**
 * CHM_Songs
@@ -29,21 +29,18 @@
 	position: relative;
 	width: 10rem;
 	height: 10rem;
-	border: 1px solid var(--black4);
-	animation: rotateInRight 1s 1;
 	align-self: center;
 	justify-self: center;
+	animation: rotateInRight 1s 1;
 }
 .data-stats-ring {
 	clip-path: polygon(50% 50%, 50% 0, 50% 0, 50% 50%, 50% 50%, 50% 50%, 50% 50%);
-	/* background-color: var(--myBlue_cons); */
 	background-color: var(--_mainColor);
 	transition: .3s;
 }
 .data-stats-num {
-	width: 90%;
-	height: 90%;
-	box-shadow: 0 0 3px 2px var(--black2);
+	width: 80%;
+	height: 80%;
 	background-color: var(--bodi);
 	color: var(--black1);
 }
@@ -492,9 +489,9 @@
 	overflow-y: auto;
 	scroll-behavior: smooth;
 	background-color: var(--bodi);
-	/* background-image: linear-gradient(var(--myBlue), rgb(23, 56, 52), rgb(48, 48, 48), #312031, #172942); */
 	animation: flyInBottomHalf .5s 1;
-	--_ScatToolsBg:  #123d5e;
+	--_ScatToolsBg: #123d5e;
+	transition: scale .5s;
 }
 .dark-theme .sCategories {
 	--_ScatToolsBg: #0b2231;
@@ -602,6 +599,11 @@
 }
 .ScatSearch > * {
 	height: 100%;
+}
+@media screen and (min-width: 576px) {
+	.ScatSearch {
+		animation: zoomInBack .5s 1;
+	}
 }
 
 #manualSearch {
@@ -1273,13 +1275,12 @@
 .chms-home {
 	position: relative;
 	/* background-image: url(../Pics/Jesus1.jpeg); */
-	/* background-image: url(../Pics/Jesus.jpeg); */
-	background-image: url(../Pics/Lent_2.jpg);
-	background-image: url(../Pics/Lent_1.jpg);
+	background-image: url(../Pics/Jesus.jpeg);
+	/* background-image: url(../Pics/Lent_1.jpg); */
 	background-repeat: no-repeat;
 	background-size: cover;
-	/* background-position: center 10%; */
-	background-position: 68% 10%;
+	background-position: center 10%;
+	/* background-position: 68% 10%; */
 	-webkit-mask: linear-gradient(transparent, black 40%, transparent);
 	mask: linear-gradient(transparent, black 40%, transparent);
 }

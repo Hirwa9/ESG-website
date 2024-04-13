@@ -1,4 +1,4 @@
-@import "../all.css?v=1.0873";
+@import "../all.css?v=1.0941";
 
 /**
 * ESG_Solfeggio
@@ -28,11 +28,14 @@
 	height: 40vh;
 	min-height: 300px;
 	overflow: hidden;
-	border-radius: 10px;
-	background-image: linear-gradient(to left, var(--myBlue2) 90%, var(--myBlue)), url(../Pics/Music_sheet9.jpg);
+	background-image: linear-gradient(to right, var(--myBlue1) 20%, var(--myBlue3)), url(../Pics/Music_sheet9.jpg);
 	background-size: cover;
 	background-position: center;
-	animation: zoomInBack .5s 1;
+}
+@media screen and (min-width: 576px) {
+	.SolfCAP {
+		height: 60vh;
+	}
 }
 .SolfCAP span {
 	animation: slideInLeft .5s 1;

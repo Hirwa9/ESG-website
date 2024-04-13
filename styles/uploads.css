@@ -1,4 +1,4 @@
-@import "../all.css?v=1.0873";
+@import "../all.css?v=1.0965";
 
 /**
 * ESG_Uploads
@@ -58,7 +58,7 @@
 	background-color: var(--appColor_cons);
 }
 .fileUploader > p:first-of-type {
-	background-color: rgba(0, 0, 0, .5);
+	background-color: rgba(0, 0, 0, .2);
 	color: black;
 }
 .fileUploader form > p:last-of-type {

@@ -1,4 +1,4 @@
-@import "../all.css?v=1.0848";
+@import "../all.css?v=1.0966";
 
 /**
 * More_docs
@@ -18,15 +18,16 @@
 	position: relative;
 	height: clamp(350px, 400px, 600px);
 	overflow: hidden;
-	border-radius: 1rem;
-	background-color: var(--appColor_cons);
-	box-shadow: 0 -.125rem .25rem var(--black3);
+	border-left: 1px solid var(--black4);
+	border-bottom: 1px solid var(--black4);
+	background-color: var(--black4);
+	transition: var(--trans);
 }
 .BookElement .book-title {
 	display: grid;
 	align-items: center;
 	height: 30%;
-	color: var(--bs-success);
+	color: var(--black1);
 	font-size: small;
 	font-weight: bold;
 }
@@ -35,9 +36,9 @@
 	height: 70%;
 	overflow: hidden;
 }
-.BookElement .book-holder > img {
+/* .BookElement .book-holder > img {
 	border-radius: 0 0 1rem 1rem;
-}
+} */
 .BookElement .book-holder img {
 	width: 100%;
 	display: block;
@@ -53,6 +54,11 @@
 .BookElement .book-tools.selected {
 	animation: none;
 }
+
+.BookElement:hover, .BookElement.getBook {
+	translate: 0 -.5rem;
+}
+
 .BookElement.getBook .book-tools {
 	display: block;
 }
