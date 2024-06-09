@@ -4,7 +4,7 @@
 	<title>ESG events</title>
 	
 	<link rel="icon" type="image/x-icon" href="../Pics/ESG_favicon1.ico">
-	<link rel="stylesheet" type="text/css" href="../styles/events.css?v=1.0885">
+	<link rel="stylesheet" type="text/css" href="../styles/events.css?v=1.1011">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width= device-width, initial-scale=1.0">
 	<meta name="author" content="Hirwa Willy">
@@ -27,7 +27,7 @@
     <!-- <script src="../jq/jquery-3.7.1.js"></script> -->
 
 </head>
-<body id="mainBody" class="bg-bodi" data-bs-spy="scroll" data-bs-target=".navbar" data-offset="20" style="background-size: cover;">
+<body class="bg-bodi" data-bs-spy="scroll" data-bs-target="#scrollSpy" data-bs-offset="200" tabindex="0">
     <!-- sm navbar -->
 	<div class="d-sm-none fix-holder inx-25 p-2">
 		<div class="nav container-xs Sbar-none bordered-end-end" id="mySidenav">
@@ -169,16 +169,16 @@
                     <div>
                         <div class="h-20 flex-center">Guide</div>
                         <div class="h-80 position-relative d-grid guider">
-                            <span class="fa fa-adjust w-100 grid-center ptr" title="Theme"></span>
+                            <span class="fa fa-moon w-100 grid-center ptr" title="Theme"></span>
                             <span class="fa fa-keyboard w-100 grid-center ptr" title="Keyboard shortcuts"></span>
-                            <span class="fa fa-check w-100 grid-center ptr" title="Tips"></span>
+                            <span class="fa fa-lightbulb w-100 grid-center ptr" title="Tips"></span>
                             <span class="w-100 grid-center ptr" tabindex="0" onclick="show_guide()">All</span>
                         </div>
                     </div>
                     <div>
-                        <div class="h-20 flex-center">Terms</div>
+                        <div class="h-20 flex-center">Terms and privacy</div>
                         <div class="h-80 position-relative">
-                            <span class="fa fa-briefcase w-100 h-100 grid-center ptr" onclick="show_terms()"></span>
+                            <span class="fa fa-shield-alt w-100 h-100 grid-center display-5 ptr" onclick="show_terms()"></span>
                         </div>
                     </div>
                     <div>
@@ -285,7 +285,7 @@
                     <ul class="mt-5">
                         <li>Theme</li>
                         <li>Animations</li>
-                        <li>Keybord shortcuts <kbd>alt + s</kbd>.</li>
+                        <li>Keybord shortcuts <kbd>alt</kbd> <kbd>s</kbd>.</li>
                     </ul>
                 </p>
             </div>
@@ -297,7 +297,7 @@
                     </span>
                     <ul class="mt-5">
                         <li>Go through web settings <span class="fa fa-gear"></span> and switch the themes, or</li>
-                        <li>Presh keybord shortcut <kbd>alt + t</kbd>.</li>
+                        <li>Presh keybord shortcut <kbd>alt</kbd> <kbd>t</kbd>.</li>
                     </ul>
                 </p>
                 <p class="p-2 mt-5">
@@ -335,19 +335,19 @@
                             <th>Action</th>
                         </tr>
                         <tr>
-                            <td><kbd>alt + s</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>s</kbd></td>
                             <td>Show web settings</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + t</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>t</kbd></td>
                             <td>Change theme</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + t + a</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>t</kbd> <kbd>a</kbd></td>
                             <td>Set auto-theme</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + g</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>g</kbd></td>
                             <td>Show this guide</td>
                         </tr>
                     </table>
@@ -383,95 +383,33 @@
             </div>
         </div>
     </div>
-	
-	<div id="main">
-		<div class="navigate position-fixed col-2 d-none d-md-block align-items-baseline">
-			<p class="p-2" id="upDown" data-bs-toggle="modal" data-bs-target="#qui_bene" style="opacity: 0;">Bis orat qui bene cantat !!</p>
-			<p class="p-2" id="upDown1" data-bs-toggle="modal" data-bs-target="#qui_bene" style="opacity: 0;">Bis orat qui bene cantat !!</p>
-		</div>
 
-		<div class="modal fade" rol="dialod" id="qui_bene">
-			<div class="modal-dialog modal-lg bg-navi2">
-				<div class="modal-header" style="color: whitesmoke;">
-					<h4>Bis orat qui bene cantat</h4>
-				</div>
-				<div class="modal-content">
-					<p>
-						Latin: <strong>Bis orat qui cantat</strong> has been traditionally attributed to <span style="color: darkgoldenrod;">St. Augustine (d. 430 CE)</span>. The version with the included “bene” is from the <span style="color: blue; font-weight: bold;">General Instruction of the Roman Missal</span> and can be translated as “Whoever sings well prays twice over”. Hence singing, as a primary form of prayer, is a very ancient tradition in Christianity indeed!<br><br>
+	<div class="modal fade" rol="dialod" id="qui_bene">
+		<div class="modal-dialog modal-lg bg-navi2">
+			<div class="modal-header" style="color: whitesmoke;">
+				<h4>Bis orat qui bene cantat</h4>
+			</div>
+			<div class="modal-content">
+				<p>
+					Latin: <strong>Bis orat qui cantat</strong> has been traditionally attributed to <span style="color: darkgoldenrod;">St. Augustine (d. 430 CE)</span>. The version with the included “bene” is from the <span style="color: blue; font-weight: bold;">General Instruction of the Roman Missal</span> and can be translated as “Whoever sings well prays twice over”. Hence singing, as a primary form of prayer, is a very ancient tradition in Christianity indeed!<br><br>
 
-						By the way, anyone can have problems with that “bene”! <u>How could we be required to be great singers in order to pray twice</u>? I had the question too, but soon I got it. It was my own perfectionism putting a slant on everything I hear and see. We are not asked to be professional operatic singers, but to sing well, with enthusiasm, and conviction, and joy. That is praying twice as well.
-					</p>
-				</div>
-				<div class="modal-footer">
-					<p class="small" data-bs-dismiss="modal" data-bs-target="#qui_bene" style="color: whitesmoke; cursor: pointer;">Dusenge kabiri</p><button data-bs-dismiss="modal" data-bs-target="#qui_bene" style="color: var(--myBlue); cursor: pointer;"><span class="fa fa-check" onclick="$('#qui_bene').fadeOut();"></span></button>
-				</div>
+					By the way, anyone can have problems with that “bene”! <u>How could we be required to be great singers in order to pray twice</u>? I had the question too, but soon I got it. It was my own perfectionism putting a slant on everything I hear and see. We are not asked to be professional operatic singers, but to sing well, with enthusiasm, and conviction, and joy. That is praying twice as well.
+				</p>
+			</div>
+			<div class="modal-footer">
+				<p class="small" data-bs-dismiss="modal" data-bs-target="#qui_bene" style="color: whitesmoke; cursor: pointer;">Dusenge kabiri</p><button data-bs-dismiss="modal" data-bs-target="#qui_bene" style="color: var(--myBlue); cursor: pointer;"><span class="fa fa-check" onclick="$('#qui_bene').fadeOut();"></span></button>
 			</div>
 		</div>
-					
-		<!-- ************************** End of navigations ************************** -->
-		
-		<div class="offset-sm-1 offset-md-2 col-sm-10" id="mainBody_Events">
+	</div>
+	
+	<!-- ************************** End of fixed Elements ************************** -->
+	
+	<main class="grids-main">
+
+		<!-- ************************** 1 Page header ************************** -->
+
+		<div id="pageHeader">
 			<h1 class="page-heading">ESG Events</h1>
-	
-			<!-- <div class="position-fixed p-2 inx-10 ptr" id="aniver">
-				<p class="text-end">
-					2 YEARS anniv
-				</p>
-				<p class="text-center">
-					<span class="fa fa-parachute-box text-center" id="anivIcon"></span>
-				</p>
-			</div> -->
-			<!-- <div class="position-fixed p-3 offset-sm-8 col-sm-4 inx-3 rad-10 Sbar-none" id="aniv">
-				<span class="fa fa-snowflake sqr-30px rad-10 inx-inherit ptr anivClose"></span>
-				<div class="w-100 p-2 rad-5 bg-myBlue anniv-title">
-					<h3 class="text-goldR">2 years anniversary</h3>
-				</div>
-				<hr>
-				<div class="mt-2 anniv-message">
-					<p class="text-center text-white w-100">
-						On this <span class="text-goldR">1 <sup class="text-goldR">st</sup> October</span>, we celebrate.
-					</p>
-					<p class="mt-5 small">
-						Since 1<sup class="text-white">st</sup> October 2021, ESG have been praising the Lord. Singing to the Lord with his people has brought us good fortune and so much blessings. Thanks be to God the Almighty Lord!! <span class="fa fa-praying-hands text-white"></span> <span class="fa fa-praying-hands text-white"></span> Let's praise and by singing to him a new song for his Holiness and Marvelous work!
-					</p>
-					<p class="text-center">
-						<button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#anivGuest">
-							Be with us
-						</button>
-					</p>
-					<div class="position-relative rad-15 inx-5 p-2 collapse" id="anivGuest">
-						<div class="p-3">
-							<p class="text-white">
-								We're glad to be along with you while we cerebrate this anniversary together.<br><br>
-								<span class="text-goldR">Place of cerebration will be communicated.<br><br><br>
-								<a href="tel:+250783967092" class="p-2 mt-4 rad-5 bg-myBlue" id="anivCallBtn">
-									Continue <span class="fa fa-phone-volume"></span>
-								</a>
-							</p>
-							<button class="w-100 bordered-bottom bg-none py-3 mt-2 anivCallClose">
-								<i class="fa fa-angle-up"></i>
-							</button>
-						</div>
-					</div>
-				</div>
-			</div> -->
-	
-			<script type="text/javascript">
-				$('.anivClose').click(function () {
-					$('#aniv').fadeOut();
-					$('#aniver').slideDown();
-				});
-				$('#aniver').click(function () {
-					$(this).slideUp();
-					$('#aniv').fadeIn();
-				});
-				$('.anivCallClose , #anivCallBtn').click(function () {
-					$('#aniv').fadeOut();
-					$('#anivGuest').collapse('hide');
-					$('#aniver').slideDown();
-				});
-			</script>
-	
 			<div class="carousel slide carousel-fade offset-sm-1 col-sm-10 my-3 my-md-4" data-bs-ride="carousel" data-bs-pause="false" id="MomCar">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
@@ -555,10 +493,49 @@
 				The moments we experience are intertwined with our happiness. Beyond singing, our lives are brimming with joy and delightful moments! ESG, a group comprised of the most passionate singers, exemplifies this.<br>
 				Speaking of memorable experiences, traveling to different places holds a special place. It consistently tops the list for good reasons, often guided by divine providence. As we explore these remarkable moments, we recognize how the love of God and people has propelled us toward becoming an exceptional singing group. Whenever we gather for various activities, everyone feels a sense of belonging—a true homecoming.
 			</p>
+		</div>
+
+		<!-- ************************** 2 Page navigator ************************** -->
+
+		<nav class="container px-lg-0" id="pageSidenav" style="perspective: 12rem; perspective-origin: center 30%">
+			<!-- <div class="p-3 my-3 flex-center text-wheat display-5 d-none d-xl-flex clock" style="transform: rotateY(20deg); transform-origin: 0 center;">
+				<div class="rad-10 blur-bg-20px clock_sticks" style="pointer-events: none; opacity: .6;">
+					<div class="position-absolute center rad-50 bg-danger clock-around-nums">
+						<div class="twelve">12</div>
+						<div class="one">1</div>
+						<div class="two">2</div>
+						<div class="three">3</div>
+						<div class="four">4</div>
+						<div class="five">5</div>
+						<div class="six">6</div>
+						<div class="seven">7</div>
+						<div class="eight">8</div>
+						<div class="nine">9</div>
+						<div class="ten">10</div>
+						<div class="eleven">11</div>
+					</div>
+					<div class="bg-goldR hrs_stick"></div>
+					<div class="min_stick"></div>
+					<div class="bg-white sec_stick">
+						<div class="position-absolute b-middle rad-50 ratio-1-1 rad-50 bg-black"></div>
+					</div>
+				</div>
+			</div> -->
+			<ul class="blur-bg-5px list-group list-unstyled" id="scrollSpy">
+				<li><a class="list-group-item list-group-item-action" href="#title1">Home visits</a></li>
+				<li><a class="list-group-item list-group-item-action" href="#title2">Marriages</a></li>
+				<li><a class="list-group-item list-group-item-action" href="#title3">Reheasals</a></li>
+				<li><a class="list-group-item list-group-item-action" href="#title4">Studio times</a></li>
+			</ul>
+		</nav>
+
+		<!-- ************************** 3 Main content ************************** -->
+
+		<div id="pageMainContent">
 			<div class="position-relative mb-5">
 				<div class="card EventCard">
 					<div class="panel-heading pNl-4 ps-1">
-						<h2 class="display-5 fw-bold text-myBlue-cons p-3 text-decoration-underline" style="text-underline-offset: 5px; text-decoration-thickness: 8px !important;">Home visits</h2>
+						<h2 class="display-5 fw-bold text-myBlue-cons p-3 text-decoration-underline" id="title1" style="text-underline-offset: 5px; text-decoration-thickness: 8px !important;">Home visits</h2>
 					</div>
 					<div class="panel-body px-2 py-4 mt-2 EventBody" id="HomeVM">
 						<div class="px-2 px-md-4">
@@ -570,7 +547,7 @@
 				</div>
 				<div class="card EventCard">
 					<div class="panel-heading pNl-4 ps-1">
-						<h2 class="display-5 fw-bold text-myBlue-cons p-3 text-decoration-underline" style="text-underline-offset: 5px; text-decoration-thickness: 8px !important;">Marriages</h2>
+						<h2 class="display-5 fw-bold text-myBlue-cons p-3 text-decoration-underline" id="title2" style="text-underline-offset: 5px; text-decoration-thickness: 8px !important;">Marriages</h2>
 					</div>
 					<div class="panel-body px-2 py-4 mt-2 EventBody" id="MarrM">
 						<div class="px-2 px-md-4">
@@ -583,7 +560,7 @@
 				</div>
 				<div class="card EventCard">
 					<div class="panel-heading pNl-4 ps-1">
-						<h2 class="display-5 fw-bold text-myBlue-cons p-3 text-decoration-underline" style="text-underline-offset: 5px; text-decoration-thickness: 8px !important;">Reheasals</h2>
+						<h2 class="display-5 fw-bold text-myBlue-cons p-3 text-decoration-underline" id="title3" style="text-underline-offset: 5px; text-decoration-thickness: 8px !important;">Reheasals</h2>
 					</div>
 					<div class="panel-body px-2 py-4 mt-2 EventBody" id="RehM">
 						<div class="px-2 px-md-4">
@@ -595,7 +572,7 @@
 				</div>
 				<div class="card EventCard">
 					<div class="panel-heading pNl-4 ps-1">
-						<h2 class="display-5 fw-bold text-myBlue-cons p-3 text-decoration-underline" style="text-underline-offset: 5px; text-decoration-thickness: 8px !important;">Studio times</h2>
+						<h2 class="display-5 fw-bold text-myBlue-cons p-3 text-decoration-underline" id="title4" style="text-underline-offset: 5px; text-decoration-thickness: 8px !important;">Studio times</h2>
 					</div>
 					<div class="panel-body px-2 py-4 mt-2 EventBody" id="StuM">
 						<div class="px-2 px-md-4">
@@ -608,8 +585,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
+	</main>
+	
 	<!-- ************************** Page Ending ************************** -->
 	
 	<footer class="py-3 Info">
@@ -691,6 +668,6 @@
 		</div>
 	</footer>
 
-    <script src="../MyScripts.js?v=1.0873"></script>
+    <script src="../MyScripts.js?v=1.1011"></script>
 </body>
 </html>

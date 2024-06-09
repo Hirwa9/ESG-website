@@ -4,7 +4,7 @@
 	<title>ESG Solfeggio</title>
 	
 	<link rel="icon" type="image/x-icon" href="../Pics/ESG_favicon1.ico">
-	<link rel="stylesheet" type="text/css" href="../styles/solfeggio.css?v=1.0885">
+	<link rel="stylesheet" type="text/css" href="../styles/solfeggio.css?v=1.1011">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width= device-width, initial-scale=1.0">
 	<meta name="author" content="Hirwa Willy">
@@ -26,7 +26,7 @@
     <script src="../bootstrap5/js/bootstrap.bundle.min.js.map"></script> -->
     <!-- <script src="../jq/jquery-3.7.1.js"></script> -->
 </head>
-<body id="mainBody" class="bg-bodi" data-bs-spy="scroll" data-bs-target="#scrollSpy" data-bs-offset="200" tabindex="0">
+<body class="bg-bodi" data-bs-spy="scroll" data-bs-target="#scrollSpy" data-bs-offset="200" tabindex="0">
 	<!-- sm navbar -->
 	<div class="d-sm-none fix-holder inx-25 p-2">
 		<div class="nav container-xs Sbar-none" id="mySidenav">
@@ -169,16 +169,16 @@
                     <div>
                         <div class="h-20 flex-center">Guide</div>
                         <div class="h-80 position-relative d-grid guider">
-                            <span class="fa fa-adjust w-100 grid-center ptr" title="Theme"></span>
+                            <span class="fa fa-moon w-100 grid-center ptr" title="Theme"></span>
                             <span class="fa fa-keyboard w-100 grid-center ptr" title="Keyboard shortcuts"></span>
-                            <span class="fa fa-check w-100 grid-center ptr" title="Tips"></span>
+                            <span class="fa fa-lightbulb w-100 grid-center ptr" title="Tips"></span>
                             <span class="w-100 grid-center ptr" tabindex="0" onclick="show_guide()">All</span>
                         </div>
                     </div>
                     <div>
-                        <div class="h-20 flex-center">Terms</div>
+                        <div class="h-20 flex-center">Terms and privacy</div>
                         <div class="h-80 position-relative">
-                            <span class="fa fa-briefcase w-100 h-100 grid-center ptr" onclick="show_terms()"></span>
+                            <span class="fa fa-shield-alt w-100 h-100 grid-center display-5 ptr" onclick="show_terms()"></span>
                         </div>
                     </div>
                     <div>
@@ -285,7 +285,7 @@
                     <ul class="mt-5">
                         <li>Theme</li>
                         <li>Animations</li>
-                        <li>Keybord shortcuts <kbd>alt + s</kbd>.</li>
+                        <li>Keybord shortcuts <kbd>alt</kbd> <kbd>s</kbd>.</li>
                     </ul>
                 </p>
             </div>
@@ -297,7 +297,7 @@
                     </span>
                     <ul class="mt-5">
                         <li>Go through web settings <span class="fa fa-gear"></span> and switch the themes, or</li>
-                        <li>Presh keybord shortcut <kbd>alt + t</kbd>.</li>
+                        <li>Presh keybord shortcut <kbd>alt</kbd> <kbd>t</kbd>.</li>
                     </ul>
                 </p>
                 <p class="p-2 mt-5">
@@ -335,19 +335,19 @@
                             <th>Action</th>
                         </tr>
                         <tr>
-                            <td><kbd>alt + s</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>s</kbd></td>
                             <td>Show web settings</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + t</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>t</kbd></td>
                             <td>Change theme</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + t + a</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>t</kbd> <kbd>a</kbd></td>
                             <td>Set auto-theme</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + g</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>g</kbd></td>
                             <td>Show this guide</td>
                         </tr>
                     </table>
@@ -407,303 +407,295 @@
         </div>
     </div>
     
-    <!-- ************************** End of navigators ************************** -->
+	<!-- ************************** End of fixed Elements ************************** -->
 	
-	<div id="main">
-			<div class="navigate position-fixed col-2 d-none d-md-block align-items-baseline">
-				<ul class="blur-bg-5px list-group" id="scrollSpy">
-					<a class="list-group-item list-group-item-action" href="#title1">The definition of music</a>
-					<a class="list-group-item list-group-item-action" href="#title2">Deep about music</a>
-					<a class="list-group-item list-group-item-action" href="#title3">Benefits of knowing Solfeggio</a>
-					<a class="list-group-item list-group-item-action" href="#title4">Learning progress</a>
+	<main class="grids-main">
+
+		<!-- ************************** 1 Page header ************************** -->
+
+		<div id="pageHeader">
+			<div class="mb-4 bg-myBlue2 text-white p-4 SolfCAP">
+				<h1 class="display-4 reveal-text">Solfeggio</h1>
+				<span class="position-absolute display-3 w-25 ratio-1-1 flex-center text-white-var top-right-m
+				">&#119070;</span>
+				<div class="p-2 display-7">
+					Learn sheet music reading from experties and music professionals.
+				</div>
+			</div>
+			
+			<article class="p-4 text-justify fs-4 container">
+				<u>Solfeggio</u>, often referred to as solfège, is <strong>a system used in music education to teach sight-singing and pitch recognition</strong>. It involves assigning syllables to the notes of the musical scale to aid in singing melodies and understanding musical relationships.
+			</article>
+			<hr>
+		</div>
+
+		<!-- ************************** 2 Page navigator ************************** -->
+
+		<nav class="container px-lg-0" id="pageSidenav" style="perspective: 12rem; perspective-origin: center 30%">
+			<ul class="blur-bg-5px list-group list-unstyled" id="scrollSpy">
+				<li><a class="list-group-item list-group-item-action" href="#title1">The definition of music</a></li>
+				<li><a class="list-group-item list-group-item-action" href="#title2">Deep about music</a></li>
+				<li><a class="list-group-item list-group-item-action" href="#title3">Benefits of knowing Solfeggio</a></li>
+				<li><a class="list-group-item list-group-item-action" href="#title4">Learning progress</a></li>
+			</ul>
+		</nav>
+
+		<!-- ************************** 3 Main content ************************** -->
+
+		<div id="pageMainContent">
+			<div id="mainBody_Music">
+				<h3 class="ms-2 mb-4 display-5 gradient-underline" id="title1">The definition of music</h3>
+				<div class="p-sm-2 p-lg-3 d-lg-flex">
+					<p class="p-3 rounded dfn py-lg-5" style="flex-basis: 40%; flex-shrink: 0;">
+						According to the community of musicians, music is <dfn>a combination of sounds that brings beauty of emotional expressions</dfn>.<br>
+					</p>
+					<p class="p-3 fs-5">
+						Some may regard it as a leisure activity, but whether it truly qualifies as leisure is subjective. The grammatical definition of music is riddled with contradictions, as individuals tend to define it based on its personal impact. Nevertheless, for many of us, music embodies the harmonious fusion of sounds, be they vocal, instrumental, or a combination of both, creating an auditory experience that is pleasing to the ears and evokes emotional expressions.
+					</p>
+				</div>
+				<h3 class="ms-2 mb-4 display-5 gradient-underline" id="title2">Deep about music</h3>
+				<div class="p-3">
+					<p class=" fs-5">
+						Digging deeper, great music should include the best of <b> Melody, Harmony, Pitch, Timbre, Texture, Tempo, Dynamics, and Meter</b>. These components serve as the foundation for the diversity of songs we encounter. Take, for instance, the universally recognized 'Happy Birthday' song, an exemplar of musicality known worldwide. Its appeal lies in the harmonious interplay of melodies, showcasing how the same song can be rendered in various musical expressions.<br><br>
+					</p>
+					<div class="d-flex flex-wrap">
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Melody</h4>
+									<hr>
+									<p class="card-text">
+										A strong and memorable melody is a key characteristic of good music. A well-crafted melody has a clear and distinctive shape, often making it easy for listeners to remember and sing along.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Harmony</h4>
+									<hr>
+									<p class="card-text">
+										Harmony involves the combination of different musical notes played simultaneously. Well-constructed harmonies complement the melody, creating depth and richness in the overall sound.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Pitch</h4>
+									<hr>
+									<p class="card-text">
+										This is determined by the frequency of the sound waves, where higher frequencies result in higher pitch and lower frequencies in lower pitch. 
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Timbre</h4>
+									<hr>
+									<p class="card-text">
+										Timbre, or tone color, refers to the unique quality of a sound. A variety of timbres, such as different instruments or voices, can add interest and diversity to the music.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Texture</h4>
+									<hr>
+									<p class="card-text">
+										Texture relates to the layers of sound in a piece of music. Whether it's a sparse or densely orchestrated arrangement, the way different elements interact contributes to the overall texture.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Tempo</h4>
+									<hr>
+									<p class="card-text">
+										The speed or pace at which a piece of music is performed. It is a crucial element that influences the overall feel and character of a musical composition. Tempo is typically measured in beats per minute (BPM).
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Dynamics</h4>
+									<hr>
+									<p class=" collapse show">
+										Dynamics refer to the variations in volume and intensity within a piece of music. Effective use of dynamics can create contrast, build tension, and add emotional depth to the music.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Meter</h4>
+									<hr>
+									<p class="card-text">
+										The meter of music refers to the rhythmic structure and organization of beats within a musical composition. It defines the recurring patterns of strong and weak beats that give a sense of regularity and pulse to the music.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>		
+					<p class="mt-4">
+						Understanding a song's melody is just a starting point for musicians or anyone aspiring to become one. This is where Solfeggio becomes invaluable. Solfeggio goes beyond recognizing melodies; it provides a deeper comprehension of music, helping you understand why certain notes are sung and the reasoning behind musical choices. Essentially, Solfeggio can be described as <mark>the written language of music</mark>.<br><br>
+						Nevertheless, it's crucial to acknowledge that not every musician must master Solfeggio. While it's not a universal requirement, possessing Solfeggio skills can significantly enhance the capabilities of a musician. The proficiency in this musical language opens doors to a deeper understanding of musical compositions, contributing to a musician's overall versatility and expertise. Here is why it's a great skill to cope with.
+					</p>
+				</div>
+				<h3 class="ms-2 mb-4 display-5 gradient-underline" id="title3">Benefits of knowing Solfeggio</h3>
+				<ul class="list-style-square ps-5 pe-2 pe-lg-3">
+					<li>
+						The foremost, you're not just reading song lyrics; you're also understanding and interpreting the melody.
+					</li>
+					<li>
+						Those skilled in music share a universal language. They interpret compositions similarly.
+					</li>
+					<li>
+						Composers don't need to worry about forgetting melodies; the musical score preserves them.
+					</li>
+					<li>
+						With Solfeggio skills, you can read and write any music, including your favorites and traditional songs, using sheet music.
+					</li>
+					<li>
+						Mastering musical note reading means you can tackle almost any song, even complex compositions or those not yet written. Plus, you can create your own great pieces.
+					</li>
 				</ul>
-				<p class="p-2" id="upDown" data-bs-toggle="modal" data-bs-target="#qui_bene" style="opacity: 0;">
-					Bis orat qui bene cantat !!
-				</p>
-				<p class="p-2" id="upDown1" data-bs-toggle="modal" data-bs-target="#qui_bene" style="opacity: 0;">
-					Bis orat qui bene cantat !!
-				</p>
-			</div>
-			<div class="modal fade" rol="dialod" id="qui_bene">
-				<div class="modal-dialog modal-lg bg-navi2">
-					<div class="modal-header" style="color: whitesmoke;">
-						<h4>Bis orat qui bene cantat</h4>
-					</div>
-					<div class="modal-content">
-						<p>
-							Latin: <strong>Bis orat qui cantat</strong> has been traditionally attributed to <span style="color: darkgoldenrod;">St. Augustine (d. 430 CE)</span>. The version with the included “bene” is from the <span style="color: blue; font-weight: bold;">General Instruction of the Roman Missal</span> and can be translated as “Whoever sings well prays twice over”. Hence singing, as a primary form of prayer, is a very ancient tradition in Christianity indeed!<br><br>
-
-							By the way, anyone can have problems with that “bene”! <u>How could we be required to be great singers in order to pray twice</u>? I had the question too, but soon I got it. It was my own perfectionism putting a slant on everything I hear and see. We are not asked to be professional operatic singers, but to sing well, with enthusiasm, and conviction, and joy. That is praying twice as well.
-						</p>
-					</div>
-					<div class="modal-footer">
-						<p class="small" data-bs-dismiss="modal" data-bs-target="#qui_bene" style="color: whitesmoke; cursor: pointer;">Dusenge kabiri</p><button data-bs-dismiss="modal" data-bs-target="#qui_bene" style="color: var(--myBlue); cursor: pointer;"><span class="fa fa-check" onclick="$('#qui_bene').fadeOut();"></span></button>
-					</div>
-				</div>
-			</div>
-
-			<!-- ************************** End of navigations ************************** -->
-
-
-	<div class="position-relative offset-sm-1 offset-md-2 col-sm-10 mb-4" id="mainBody_Music">
-		<div class="offset-md-1 col-md-10 col-md-8 mb-2 mt-3 bg-myBlue2 text-white p-4 SolfCAP">
-			<h1 class="display-4 reveal-text">Solfeggio</h1>
-			<span class="position-absolute display-3 w-25 ratio-1-1 flex-center text-white-var top-right-m
-			">&#119070;</span>
-			<div class="p-2 display-7">
-				Learn sheet music reading from experties and music professionals.
-			</div>
-		</div><br><br>
-		<h3 class="ms-2 mb-4 gradient-underline" id="title1">The definition of music</h3>
-		<div class="p-sm-2 p-lg-3 d-lg-flex">
-			<p class="p-3 rounded dfn">
-				According to the community of musicians, music is <dfn>a combination of sounds that brings beauty of emotional expressions</dfn>.<br>
-			</p>
-			<p class="p-3">
-				Some may regard it as a leisure activity, but whether it truly qualifies as leisure is subjective. The grammatical definition of music is riddled with contradictions, as individuals tend to define it based on its personal impact. Nevertheless, for many of us, music embodies the harmonious fusion of sounds, be they vocal, instrumental, or a combination of both, creating an auditory experience that is pleasing to the ears and evokes emotional expressions.
-			</p>
-		</div>
-		<h3 class="ms-2 mb-4 gradient-underline" id="title2">Deep about music</h3>
-		<div class="p-3">
-			<p>
-				Digging deeper, great music should include the best of <b> Melody, Harmony, Pitch, Timbre, Texture, Tempo, Dynamics, and Meter</b>. These components serve as the foundation for the diversity of songs we encounter. Take, for instance, the universally recognized 'Happy Birthday' song, an exemplar of musicality known worldwide. Its appeal lies in the harmonious interplay of melodies, showcasing how the same song can be rendered in various musical expressions.<br><br>
-			</p>
-			<div class="d-flex flex-wrap">
-				<div class="col-md-6 col-lg-4 col-xl-3 p-1">
-					<div class="card bg-transparent border-0">
-						<div class="card-body">
-							<h4 class="card-title text-secondary">Melody</h4>
-							<hr>
-							<p class="card-text">
-								A strong and memorable melody is a key characteristic of good music. A well-crafted melody has a clear and distinctive shape, often making it easy for listeners to remember and sing along.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4 col-xl-3 p-1">
-					<div class="card bg-transparent border-0">
-						<div class="card-body">
-							<h4 class="card-title text-secondary">Harmony</h4>
-							<hr>
-							<p class="card-text">
-								Harmony involves the combination of different musical notes played simultaneously. Well-constructed harmonies complement the melody, creating depth and richness in the overall sound.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4 col-xl-3 p-1">
-					<div class="card bg-transparent border-0">
-						<div class="card-body">
-							<h4 class="card-title text-secondary">Pitch</h4>
-							<hr>
-							<p class="card-text">
-								This is determined by the frequency of the sound waves, where higher frequencies result in higher pitch and lower frequencies in lower pitch. 
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4 col-xl-3 p-1">
-					<div class="card bg-transparent border-0">
-						<div class="card-body">
-							<h4 class="card-title text-secondary">Timbre</h4>
-							<hr>
-							<p class="card-text">
-								Timbre, or tone color, refers to the unique quality of a sound. A variety of timbres, such as different instruments or voices, can add interest and diversity to the music.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4 col-xl-3 p-1">
-					<div class="card bg-transparent border-0">
-						<div class="card-body">
-							<h4 class="card-title text-secondary">Texture</h4>
-							<hr>
-							<p class="card-text">
-								Texture relates to the layers of sound in a piece of music. Whether it's a sparse or densely orchestrated arrangement, the way different elements interact contributes to the overall texture.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4 col-xl-3 p-1">
-					<div class="card bg-transparent border-0">
-						<div class="card-body">
-							<h4 class="card-title text-secondary">Tempo</h4>
-							<hr>
-							<p class="card-text">
-								The speed or pace at which a piece of music is performed. It is a crucial element that influences the overall feel and character of a musical composition. Tempo is typically measured in beats per minute (BPM).
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4 col-xl-3 p-1">
-					<div class="card bg-transparent border-0">
-						<div class="card-body">
-							<h4 class="card-title text-secondary">Dynamics</h4>
-							<hr>
-							<p class=" collapse show">
-								Dynamics refer to the variations in volume and intensity within a piece of music. Effective use of dynamics can create contrast, build tension, and add emotional depth to the music.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4 col-xl-3 p-1">
-					<div class="card bg-transparent border-0">
-						<div class="card-body">
-							<h4 class="card-title text-secondary">Meter</h4>
-							<hr>
-							<p class="card-text">
-								The meter of music refers to the rhythmic structure and organization of beats within a musical composition. It defines the recurring patterns of strong and weak beats that give a sense of regularity and pulse to the music.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>		
-			<p class="mt-4">
-				Understanding a song's melody is just a starting point for musicians or anyone aspiring to become one. This is where Solfeggio becomes invaluable. Solfeggio goes beyond recognizing melodies; it provides a deeper comprehension of music, helping you understand why certain notes are sung and the reasoning behind musical choices. Essentially, Solfeggio can be described as <mark>the written language of music</mark>.<br><br>
-				Nevertheless, it's crucial to acknowledge that not every musician must master Solfeggio. While it's not a universal requirement, possessing Solfeggio skills can significantly enhance the capabilities of a musician. The proficiency in this musical language opens doors to a deeper understanding of musical compositions, contributing to a musician's overall versatility and expertise. Here is why it's a great skill to cope with.
-			</p>
-		</div>
-		<h3 class="ms-2 mb-4 gradient-underline" id="title3">Benefits of knowing Solfeggio</h3>
-		<ul class="list-style-circle fs-5 pe-2 pe-lg-3">
-			<li>
-				The foremost, you're not just reading song lyrics; you're also understanding and interpreting the melody.
-			</li>
-			<li>
-				Those skilled in music share a universal language. They interpret compositions similarly.
-			</li>
-			<li>
-				Composers don't need to worry about forgetting melodies; the musical score preserves them.
-			</li>
-			<li>
-				With Solfeggio skills, you can read and write any music, including your favorites and traditional songs, using sheet music.
-			</li>
-			<li>
-				Mastering musical note reading means you can tackle almost any song, even complex compositions or those not yet written. Plus, you can create your own great pieces.
-			</li>
-		</ul>
-
-		<div class="carousel slide carousel-fade offset-sm-2 col-sm-8 p-3 p-sm-0" data-ride="carousel" data-interval="10000" data-pause="false" id="SolCar">
-			<ol class="carousel-indicators"></ol>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="../Pics/Music_sheet4.jpg" alt="" class="img-fluid rounded">
-					<div class="carousel-caption">
-						<h4 class="heading">Solfeggio</h4>
-						<p>Read from the score</p>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img src="../Pics/Music_sheet1.jpg" alt="" class="img-fluid rounded">
-					<div class="carousel-caption">
-						<h4 class="heading">Solfeggio</h4>
-						<p>Read from the score</p>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img src="../Pics/Music_sheet2.jpg" alt="" class="img-fluid rounded">
-					<div class="carousel-caption">
-						<h4 class="heading">Solfeggio</h4>
-						<p>Practice</p>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img src="../Pics/Music_sheet.jpg" alt="" class="img-fluid rounded">
-					<div class="carousel-caption">
-						<h4 class="heading">Solfeggio</h4>
-						<p>Strengthen your skills</p>
-					</div>
-				</div>
-
-				<a href="#SolCar" class="carousel-control-prev" data-slide="prev" for="navigation">
-					<span class="fa fa-chevron-left"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a href="#SolCar" class="carousel-control-next" data-slide="next" for="navigation">
-					<span class="fa fa-chevron-right"></span>
-					<span class="sr-only">Next</span>
-				</a>
-			</div>
-		</div>
-		<br><br>
 		
-		<h3 class="ms-2 mb-4 gradient-underline" id="title4">Learning progress.</h3>
-		<p class="p-3">
-			Before embarking on learning Solfeggio, it's crucial to assess your current skills accurately to ensure effective knowledge acquisition. For beginners, starting with the 'Beginner's category' is recommended to establish a strong foundation. Avoid skipping steps, as it may lead to a less engaging and potentially dull learning experience.
-		</p>
-		<div class="my-2 mx-0 p-3 py-1 py-sm-2 item-secondary h-grids-controller" id="solfCategories" role="navigation">
-			<button type="button" class="btn btn-lg active">Beginner</button>
-			<button type="button" class="btn btn-lg">Intermediate</button>
-			<button type="button" class="btn btn-lg">Professional</button>
+				<div class="carousel slide carousel-fade offset-sm-2 col-sm-8 p-3 p-sm-0" data-ride="carousel" data-interval="10000" data-pause="false" id="SolCar">
+					<ol class="carousel-indicators"></ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="../Pics/Music_sheet4.jpg" alt="" class="img-fluid rounded">
+							<div class="carousel-caption">
+								<h4 class="heading">Solfeggio</h4>
+								<p>Read from the score</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="../Pics/Music_sheet1.jpg" alt="" class="img-fluid rounded">
+							<div class="carousel-caption">
+								<h4 class="heading">Solfeggio</h4>
+								<p>Read from the score</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="../Pics/Music_sheet2.jpg" alt="" class="img-fluid rounded">
+							<div class="carousel-caption">
+								<h4 class="heading">Solfeggio</h4>
+								<p>Practice</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="../Pics/Music_sheet.jpg" alt="" class="img-fluid rounded">
+							<div class="carousel-caption">
+								<h4 class="heading">Solfeggio</h4>
+								<p>Strengthen your skills</p>
+							</div>
+						</div>
+		
+						<a href="#SolCar" class="carousel-control-prev" data-slide="prev" for="navigation">
+							<span class="fa fa-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a href="#SolCar" class="carousel-control-next" data-slide="next" for="navigation">
+							<span class="fa fa-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+				<br><br>
+				
+				<h3 class="ms-2 mb-4 display-5 gradient-underline" id="title4">Learning progress.</h3>
+				<p class="p-3 fs-5">
+					Before embarking on learning Solfeggio, it's crucial to assess your current skills accurately to ensure effective knowledge acquisition. For beginners, starting with the 'Beginner's category' is recommended to establish a strong foundation. Avoid skipping steps, as it may lead to a less engaging and potentially dull learning experience.
+				</p>
+				<div class="my-2 mx-0 p-3 py-1 py-sm-2 item-secondary h-grids-controller" id="solfCategories" role="navigation">
+					<button type="button" class="btn btn-lg active">Beginner</button>
+					<button type="button" class="btn btn-lg">Intermediate</button>
+					<button type="button" class="btn btn-lg">Professional</button>
+				</div>
+				<div class="d-flex mb-5 h-grids-wrapper" data-scrolledby="solfCategories">
+					<section class="offset-sm-1 col-sm-10 mb-3 p-0 h-grids-item">
+						<h2 class="mt-3">Beginner</h2>
+						<div>
+							<p>
+								Before delving into the materials, it's essential to establish a few key considerations for an effective Solfeggio learning journey.
+							</p>
+							<ul>
+								<li>First and foremost, allocate sufficient time for your Solfeggio practice,</li>
+								<li>Your patience and focused attention are invaluable assets for comprehensive learning,</li>
+								<li>
+									Creativity may play a role in grasping intricate concepts, especially when dealing with complex musical compositions.<br> But rest assured, with commitment and dedication, you've got this.
+								</li>
+							</ul>
+							<p class="text-center">
+								<button class="btn btn-info target-link h-grids-item_link"><a href="Solfeggio/ESG_SolfeggioBGN">Begin learning</a> <span class="fa fa-angle-double-right"></span></button>
+							</p>
+						</div>
+					</section>
+					<section class="w-0 mb-3 p-0 h-grids-item">
+						<h2 class="mt-3">Intermediate</h2>
+						<div>
+							<p>
+								As a burgeoning musician, the learning journey unfolds with continuous exploration from the source.<br>
+								<strong>Tips at this stage:</strong>
+							</p>
+							<ul>
+								<li>
+									Assess and identify your frequent weaknesses in reading musical notes.
+								</li>
+								<li>
+									Channel your efforts towards addressing and improving those identified weaknesses.
+								</li>
+							</ul>
+							<p class="text-center">
+								<button class="btn btn-info target-link h-grids-item_link"><a href="Solfeggio/ESG_SolfeggioIM">Continue learning</a> <span class="fa fa-angle-double-right"></span></button>
+							</p>
+						</div>
+					</section>
+					<section class="w-0 mb-3 p-0 h-grids-item">
+						<h2 class="mt-3">Pro</h2>
+						<div>
+							<p>
+								In the current phase, it's undeniable that you've made significant progress in your musical journey, but there's always room for further advancement.
+							</p>
+							<ul>
+								<li>
+									Aspire to reach greater proficiency by actively seeking additional skills.
+								</li>
+								<li>
+									Distinguish yourself by tackling the most challenging compositions that push your limits.
+								</li>
+								<li>
+									Cultivate a unique and innovative approach to experiencing music.
+								</li>
+								<li>
+									Identify and address any persistent weaknesses in reading notes, particularly those involving quick and transposed compositions.
+								</li>
+								<li>
+									Concentrate your efforts on improving the areas where you face challenges.
+								</li>
+							</ul>
+							<p class="text-center">
+								<button class="btn btn-info target-link h-grids-item_link"><a href="Solfeggio/ESG_SolfeggioPRO">Continue learning</a> <span class="fa fa-angle-double-right"></span></button>
+							</p>
+						</div>
+					</section>
+				</div>
+			</div>
 		</div>
-		<div class="d-flex mb-5 h-grids-wrapper" data-scrolledby="solfCategories">
-			<section class="offset-sm-1 col-sm-10 mb-3 p-0 h-grids-item">
-				<h2 class="mt-3">Beginner</h2>
-				<div>
-					<p>
-						Before delving into the materials, it's essential to establish a few key considerations for an effective Solfeggio learning journey.
-					</p>
-					<ul>
-						<li>First and foremost, allocate sufficient time for your Solfeggio practice,</li>
-						<li>Your patience and focused attention are invaluable assets for comprehensive learning,</li>
-						<li>
-							Creativity may play a role in grasping intricate concepts, especially when dealing with complex musical compositions.<br> But rest assured, with commitment and dedication, you've got this.
-						</li>
-					</ul>
-					<p class="text-center">
-						<button class="btn btn-info target-link h-grids-item_link"><a href="Solfeggio/ESG_SolfeggioBGN">Begin learning</a> <span class="fa fa-angle-double-right"></span></button>
-					</p>
-				</div>
-			</section>
-			<section class="w-0 mb-3 p-0 h-grids-item">
-				<h2 class="mt-3">Intermediate</h2>
-				<div>
-					<p>
-						As a burgeoning musician, the learning journey unfolds with continuous exploration from the source.<br>
-						<strong>Tips at this stage:</strong>
-					</p>
-					<ul>
-						<li>
-							Assess and identify your frequent weaknesses in reading musical notes.
-						</li>
-						<li>
-							Channel your efforts towards addressing and improving those identified weaknesses.
-						</li>
-					</ul>
-					<p class="text-center">
-						<button class="btn btn-info target-link h-grids-item_link"><a href="Solfeggio/ESG_SolfeggioIM">Continue learning</a> <span class="fa fa-angle-double-right"></span></button>
-					</p>
-				</div>
-			</section>
-			<section class="w-0 mb-3 p-0 h-grids-item">
-				<h2 class="mt-3">Pro</h2>
-				<div>
-					<p>
-						In the current phase, it's undeniable that you've made significant progress in your musical journey, but there's always room for further advancement.
-					</p>
-					<ul>
-						<li>
-							Aspire to reach greater proficiency by actively seeking additional skills.
-						</li>
-						<li>
-							Distinguish yourself by tackling the most challenging compositions that push your limits.
-						</li>
-						<li>
-							Cultivate a unique and innovative approach to experiencing music.
-						</li>
-						<li>
-							Identify and address any persistent weaknesses in reading notes, particularly those involving quick and transposed compositions.
-						</li>
-						<li>
-							Concentrate your efforts on improving the areas where you face challenges.
-						</li>
-					</ul>
-					<p class="text-center">
-						<button class="btn btn-info target-link h-grids-item_link"><a href="Solfeggio/ESG_SolfeggioPRO">Continue learning</a> <span class="fa fa-angle-double-right"></span></button>
-					</p>
-				</div>
-			</section>
-		</div>
-	</div>
+	</main>
 	
 	<!-- ************************** Page Ending ************************** -->
 	
@@ -786,6 +778,6 @@
 		</div>
 	</footer>
 	
-	<script  src="../MyScripts.js?v=1.0873"></script>
+	<script  src="../MyScripts.js?v=1.1011"></script>
 </body>
 </html>

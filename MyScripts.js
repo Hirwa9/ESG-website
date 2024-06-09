@@ -16,43 +16,29 @@ $(function () {
         interval: 10000,
         pause: 'none'
     });
-    function media1() {
-        var mediaShow = $('.socialM div:first-child'),
-            mediaShow1 = $('.socialM div:nth-child(2)'),
-            mediaShow2 = $('.socialM div:nth-child(3)');
-        mediaShow.animate({ top: "-100%", opacity: '0' }, 700).fadeOut();
-        mediaShow1.fadeIn().animate({ top: "0vh" }, 700);
-        mediaShow2.css({ top: "0" }).animate({ opacity: '1' }, 800);
-    }
-    function media2() {
-        var mediaShow = $('.socialM div:first-child'),
-            mediaShow1 = $('.socialM div:nth-child(2)'),
-            mediaShow2 = $('.socialM div:nth-child(3)');
-        mediaShow1.animate({ top: "-100%", opacity: '0' }, 700).fadeOut();
-        mediaShow2.fadeIn().animate({ top: "0vh" }, 700);
-        mediaShow.css({ top: "0" }).animate({ opacity: '1' }, 800);
-    }
-    function media3() {
-        var mediaShow = $('.socialM div:first-child'),
-            mediaShow1 = $('.socialM div:nth-child(2)'),
-            mediaShow2 = $('.socialM div:nth-child(3)');
-        mediaShow2.animate({ top: "-100%", opacity: '0' }, 700).fadeOut();
-        mediaShow.fadeIn().animate({ top: "0vh" }, 700);
-        mediaShow1.css({ top: "0" }).animate({ opacity: '1' }, 800);
-    }
 
-    setTimeout(function mediaAll() {
-        media1();
-        setTimeout(function () {
-            media2();
-            setTimeout(function () {
-                media3();
-                setTimeout(function () {
-                    mediaAll();
-                }, 7000);
-            }, 7000);
-        }, 7000);
-    }, 7000);
+    /**
+     * slide up Carousell
+     */
+
+    const slideupCarousel = $('.slideup-carousel');
+    $.each(slideupCarousel, function () {
+        const container = $(this),
+            children = container.find('.su-carousel-item'),
+            totalChildren = children.length;
+        let currentIndex = totalChildren - 1;
+
+        setInterval(() => {
+            const nextIndex = (currentIndex + 1) % totalChildren;
+            children.eq(currentIndex).prependTo(container);
+            currentIndex = nextIndex;
+        }, 5000);
+    });
+
+    /**
+     * slide up Carousell
+     */
+
     $('.show-touch, .show-touch-sm').click(function touch_anim(e, a) {
         var clicked = $(this),
             click_shower = clicked.find('.touch-anim'),
@@ -187,6 +173,20 @@ function scroll_page_to(elem, off, dur) {
     off = off || 50;
     dur = dur || 'fast';
     $('html, body').animate({ scrollTop: elem.offset().top - off }, dur);
+}
+
+function jump_page_to(elem, off) {
+    off = off || 50;
+    const targetPosition = elem.offset().top - off;
+    // Disable smooth scroll
+    $('html, body').addClass('scroll-auto');
+    // Set the scroll position
+    $('html').scrollTop(targetPosition);
+    $('body').scrollTop(targetPosition);
+    // Re-enable smooth scroll
+    setTimeout(() => {
+        $('html, body').removeClass('scroll-auto');
+    }, 0);
 }
 
 function scroll_left(elem) {
@@ -329,6 +329,24 @@ function loading() {
 
 function close_loading() {
     $('.Loading_fix').css({ visibility: 'hidden' });
+}
+
+// Dynamically add the loader to the page
+function addLoader() {
+    // Create loader elements
+    var loaderContainer = $('<div class="flex-center Loading_fix"></div>');
+    var loadingMotionWave = $('<div class="loading-motion-wave"></div>');
+    
+    // Add bars to loadingMotionWave
+    for (var i = 0; i < 5; i++) {
+        loadingMotionWave.append('<div class="bar"></div>');
+    }
+    loaderContainer.append(loadingMotionWave);
+    $('body').append(loaderContainer);
+}
+// Remove the loader from the page
+function removeLoader() {
+    $('.Loading_fix').remove();
 }
 
 // Prevent reloading when same page link in clicked
@@ -476,13 +494,26 @@ $('[data-topopup]').click(function (e) {
     }
 });
 
-// Custom popups
+// Custom menu
 $('[data-menu-toggle]').click(function (e) {
     var elem_eddress = $(this).attr('data-menu-toggle'),
         elem = $('' + elem_eddress);
     if (elem.length > 0) {
         show_custom_menu(e, elem);
     }
+});
+
+// Custom dialog
+$('[data-dialog-toggle]').click(function () {
+    var elem_eddress = $(this).attr('data-dialog-toggle'),
+        elem = $('' + elem_eddress);
+    if (elem.length > 0) {
+        elem.show();
+    }
+});
+
+$('.my-dialog-closer').click(function () {
+    $(this).closest('.my-dialog').trigger('click');
 });
 
 // Scroll to the corresponding attributed class or id
@@ -507,6 +538,12 @@ $('[data-notify]').click(function () {
         elem.removeClass('view');
     }, 4000);
 });
+
+// Validate email
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
 
 /**
  * Action notifying
@@ -779,7 +816,7 @@ document.onclick = function (e) {
     listElements = document.querySelectorAll('.my-list > li');
     listElements.forEach((el) => {
         var optionsContainer = el.querySelector(':scope > span');
-        if (optionsContainer !== e.target && !optionsContainer.contains(e.target) || (el == e.target && el.classList.contains('active'))) {
+        if (optionsContainer && optionsContainer !== e.target && !optionsContainer.contains(e.target) || (el == e.target && el.classList.contains('active'))) {
             el.classList.remove('active');
         }
     });
@@ -791,10 +828,10 @@ document.onclick = function (e) {
 
 const chatbotMessageInput = $('#chatbotMessageInput'),
     chatbotMessageSender = $('#sendMessageBtn'),
-    chatbotMessageSpace = $('.chatbot .message-holder');
-
+    chatbotMessageSpace = $('.chatbot .message-holder'),
+    directMessageForm = document.getElementById('directMessageForm');
 // Messages storage
-let chatbotMessagesStorage = localStorage.getItem('chatbotConversation');
+let chatbotMessagesStorage = localStorage.getItem('chatbotConversations');
 
 // Chatbot initial hello message
 const chatbot_hello = function () {
@@ -883,25 +920,25 @@ function process_message_response(message, messageTime) {
     ];
     const simpleMessages = [
         "ok",
-        // "okay",
         "yes",
         "alright",
         "wow",
         "sure",
         "cool",
         "fine",
+        "great",
+        "perfect",
         "waiting",
         "got it",
         "gotcha",
-        "I am good",
+        "i am good",
         "i'm good",
         "am good",
         "understood",
+        "vraiment",
         "sure thing",
         "roger that",
         "no problem",
-        "great",
-        "perfect",
     ];
     // Short message
     if (message.trim().length < 50) { shortMessage = true }
@@ -954,106 +991,201 @@ function process_message_response(message, messageTime) {
 }
 
 // Showing chatbot
-const show_chatbot = function () {
-    const chatbot = $('.chatbot'),
-        pastConversation = localStorage.getItem('chatbotConversation');
-    chatbot.addClass('working');
-    // Show previous conversation
-    if (!chatbot.hasClass('recently-interacted')) {
-        chatbotMessageSpace.html('');
-        // Restore previous conversation
-        if (pastConversation) {
-            const convMesages = JSON.parse(pastConversation);
-            convMesages.forEach(el => {
-                const theMessage = el.message, theTime = el.msgTime, theDay = el.msgDay;
-                // Process response
-                const questionResponse = process_message_response(theMessage, theTime);
-                // Adding Date indicator
-                const conversationDaySeparator = '<p class="conversation-date">' + theDay + '</span></p>',
-                    dateIndicators = chatbotMessageSpace.find('.conversation-date'),
-                    dateIndicatorExists = dateIndicators.filter(function () {
-                        return $(this).text().trim() === theDay;
-                    }).length;
-                (dateIndicatorExists < 1) && chatbotMessageSpace.append(conversationDaySeparator)
-                // Adding messages
-                chatbotMessageSpace.append(questionResponse.messageParagraph);
-                chatbotMessageSpace.append(questionResponse.responseParagraph1);
-                if (!questionResponse.singleResponse) {
-                    chatbotMessageSpace.append(questionResponse.responseParagraph2);
-                }
-            });
-            jumpto_bottom_chatbot_messages();
-        } else {
-            chatbot_hello();
-        }
+const show_chatbot = () => {
+    $('.chatbot').closest('.fix-holder').show();
+    // Fill in email
+    const userEmail = localStorage.getItem('activeUserEmail');
+    if (userEmail) {
+        $('#directMessageForm').find('input[type="email"]').val(userEmail);
     }
 }
 
 // Hiding chatbot
 const hide_chatbot = function () {
-    const chatbot = $('.chatbot')
-    chatbot.addClass('flyOutB');
-    setTimeout(function () {
-        $('.chatbot').removeClass('working');
-        chatbot.removeClass('flyOutB');
-    }, 400);
+    const chatbotContainer = $('.chatbot').closest('.fix-holder');
+    close_fixHolder(chatbotContainer);
+}
+
+// Scrolling chatbot
+const chatbotWrapper = $('.chatbot-wrapper');
+
+const scroll_chatbot_to_messages = () => {
+    let chatbotEmail = $('#directMessageForm').find('input[type="email"]').val().trim();
+    const chatbot = $('.chatbot');
+    if (chatbotEmail === '') {
+        show_toast("Enter your email to continue");
+        return;
+    }
+    // Go to messages
+    if (isValidEmail(chatbotEmail)) {
+        // Activate user email
+        localStorage.setItem('activeUserEmail', chatbotEmail);
+
+        // Check previous conversation
+        chatbotMessageSpace.html('');
+        const pastConversation = localStorage.getItem('chatbotConversations');
+        if (pastConversation) {
+            const pastConv = JSON.parse(pastConversation),
+                allUsers = pastConv.map(user => user.userEmail);
+            let userHasConversation = false;
+            allUsers.includes(chatbotEmail) && (userHasConversation = true);
+
+            // Restore previous conversation
+            if (userHasConversation) {
+                const timeNow = new Date(),
+                    todayDate = month_num_to_nm(timeNow.getMonth() + 1) + ' ' + timeNow.getDate() + ', ' + timeNow.getFullYear(),
+                    yesterdayDate = month_num_to_nm(timeNow.getMonth() + 1) + ' ' + (timeNow.getDate() - 1) + ', ' + timeNow.getFullYear();
+                let convMesages;
+                pastConv.forEach(conv => {
+                    if (conv.userEmail === chatbotEmail) {
+                        convMesages = conv.userMessages;
+                    }
+                });
+                convMesages.forEach(el => {
+                    const theMessage = el.message, theTime = el.msgTime;
+                    let theDay = el.msgDay;
+                    // Process response
+                    setTimeout(() => {
+                        const messageResponse = process_message_response(theMessage, theTime);
+                        // Adding Date indicator
+                        (theDay === todayDate) && (theDay = "Today");
+                        (theDay === yesterdayDate) && (theDay = "Yesterday");
+                        const conversationDaySeparator = '<p class="conversation-date">' + theDay + '</span></p>',
+                            dateIndicators = chatbotMessageSpace.find('.conversation-date'),
+                            dateIndicatorExists = dateIndicators.filter(function () {
+                                return $(this).text().trim() === theDay;
+                            }).length;
+                        (dateIndicatorExists < 1) && chatbotMessageSpace.append(conversationDaySeparator);
+                        // Adding messages
+                        chatbotMessageSpace.append(messageResponse.messageParagraph);
+                        if (el.hasOwnProperty('errorType')) {
+                            messageResponse.singleResponse = true;
+                            const theError = el.errorType,
+                                responseNotOk = $('<p class="responder error-message">\
+                                <span class="h6 d-block p-2 text-center text-danger" style="border-bottom: 1px solid var(--bs-danger);">Ooh no 😟!!</span>\
+                                <span class="small d-block text-center">Something went wrong while sending your message.</span><br>\
+                                <button class="btn btn-sm d-block mx-auto bg-mainColor text-headerColor bounceClick resend-chatbot-message">Tap to resend</button>\
+                                </p>'),
+                                fetchErrorMessage = $('<p class="responder error-message">\
+                                <span class="h6 d-block p-2 text-center text-danger" style="border-bottom: 1px solid var(--bs-danger);">Ooh wait 🙁!!</span>\
+                                <span class="small d-block text-center">We couldn\'t send your message. Please check the internet and try again.</span><br>\
+                                <button class="btn btn-sm d-block mx-auto bg-mainColor text-headerColor bounceClick resend-chatbot-message">Try again</button>\
+                                </p>');
+                            if (theError === "poorConnection") {
+                                messageResponse.responseParagraph1 = fetchErrorMessage;
+                            } else if (theError === "badResponse") {
+                                messageResponse.responseParagraph1 = responseNotOk;
+                            }
+                        }
+                        chatbotMessageSpace.append(messageResponse.responseParagraph1);
+                        if (!messageResponse.singleResponse) {
+                            chatbotMessageSpace.append(messageResponse.responseParagraph2);
+                        }
+                        jumpto_bottom_chatbot_messages();
+                    }, 50);
+                });
+            } else {
+                chatbot_hello();
+            }
+        } else {
+            chatbot_hello();
+        }
+        // Move to chatbot
+        setTimeout(() => {
+            chatbotWrapper.scrollLeft(chatbotWrapper.width());
+        }, 500);
+    } else {
+        show_toast("Enter a valid email to continue");
+    }
+}
+
+const scroll_chatbot_home = function () {
+    scroll_left(chatbotWrapper);
 }
 
 // Send function
 function send_chatbot_message() {
     const message = chatbotMessageInput.val().trim();
+    chatbotMessageInput.removeClass('floated');
     $('.chatbot').addClass('recently-interacted');
     if (message === '') {
-        showToast('Please type a message before sending');
+        show_toast('Please type a message before sending');
         return;
     }
     const timeNow = new Date(),
         messageTime = (timeNow.getHours() < 10 ? '0' + timeNow.getHours() : timeNow.getHours()) +
             ':' +
             (timeNow.getMinutes() < 10 ? '0' + timeNow.getMinutes() : timeNow.getMinutes()),
-        messageDay = month_num_to_nm(timeNow.getMonth()) + ' ' + timeNow.getDate() + ', ' + timeNow.getFullYear(),
-        messageData = { message, msgTime: messageTime, msgDay: messageDay }
+        messageDay = month_num_to_nm(timeNow.getMonth() + 1) + ' ' + timeNow.getDate() + ', ' + timeNow.getFullYear(),
+        messageData = { message, msgTime: messageTime, msgDay: messageDay };
+    let newConversation = [messageData];
     // Storing the message
-    let pastConversation = localStorage.getItem('chatbotConversation');
+    let pastConversation = localStorage.getItem('chatbotConversations');
+    const activeUser = localStorage.getItem('activeUserEmail');
     if (pastConversation) {
-        let pastConv = JSON.parse(pastConversation);
-        pastConv.push(messageData);
-        localStorage.setItem('chatbotConversation', JSON.stringify(pastConv));
+        let pastConv = JSON.parse(pastConversation),
+            userExists = false;
+        // Check if user exists
+        const allUsers = pastConv.map(user => user.userEmail);
+        allUsers.includes(activeUser) && (userExists = true);
+        // Adding conversations
+        if (!userExists) {
+            // Create new user
+            const chatbotUser = { userEmail: activeUser, userMessages: newConversation };
+            pastConv.push(chatbotUser);
+        } else {
+            // Update conversation
+            pastConv.forEach(conv => {
+                if (conv.userEmail === activeUser) {
+                    conv.userMessages.push(messageData);
+                }
+            });
+        }
+        // Save conversation
+        localStorage.setItem('chatbotConversations', JSON.stringify(pastConv));
     } else {
-        let newConversation = [messageData];
-        localStorage.setItem('chatbotConversation', JSON.stringify(newConversation));
+        // Create first user and conversation
+        const chatbotUser = { userEmail: activeUser, userMessages: newConversation },
+            chatConversations = [];
+        chatConversations.push(chatbotUser);
+        localStorage.setItem('chatbotConversations', JSON.stringify(chatConversations));
     }
+    // Displaying message
     const waiter = $('<div class="message-waiting-indicator">\
             <div style="--child: 3"></div><div style="--child: 2"></div><div style="--child: 1"></div>\
             </div>');
-    questionResponse = process_message_response(message, messageTime); // Process response
-    // Adding question
-    chatbotMessageSpace.append(questionResponse.messageParagraph);
+    messageResponse = process_message_response(message, messageTime); // Process response
+    const todayConversationDaySeparator = '<p class="conversation-date">Today</span></p>',
+        dateIndicators = chatbotMessageSpace.find('.conversation-date'),
+        todayDateIndicatorExists = dateIndicators.filter(function () {
+            return $(this).text().trim() === "Today";
+        }).length;
+    (todayDateIndicatorExists < 1) && chatbotMessageSpace.append(todayConversationDaySeparator);
+    chatbotMessageSpace.append(messageResponse.messageParagraph);
     chatbotMessageInput.val('');
     scroll_bottom_chatbot_messages();
     // Adding responses / Mailing
-    if (!questionResponse.singleResponse) {
+    if (!messageResponse.singleResponse) {
         // Fill the form
         const DMform = $('#directMessageForm');
         DMform.find('#message').val(message);
-        DMform.find('#pEmail').val('hirwawilly55@gmail.com');
+        DMform.find('#pEmail').val(localStorage.getItem('activeUserEmail'));
         // Submit the form
         setTimeout(() => {
             $('#sendCustomDM').trigger('click');
         }, 1000);
     } else {
-        // Responce for non-email questions/messages
+        // Responce for non-email messages
         chatbotMessageSpace.append(waiter);
         setTimeout(() => {
             waiter.remove();
-            chatbotMessageSpace.append(questionResponse.responseParagraph1);
+            chatbotMessageSpace.append(messageResponse.responseParagraph1);
             scroll_bottom_chatbot_messages();
         }, 1000);
     }
 }
 
 // Submiting message using Fetch API
-const directMessageForm = document.getElementById('directMessageForm');
 
 async function handle_DM_submit(event) {
     event.preventDefault();
@@ -1063,12 +1195,12 @@ async function handle_DM_submit(event) {
             </div>'),
         responseNotOk = $('<p class="responder error-message">\
         <span class="h6 d-block p-2 text-center text-danger" style="border-bottom: 1px solid var(--bs-danger);">Ooh no 😟!!</span>\
-        <span class="small d-block text-center">Something went wrong while sending your message.</span> <br>\
+        <span class="small d-block text-center">Something went wrong while sending your message.</span><br>\
         <button class="btn btn-sm d-block mx-auto bg-mainColor text-headerColor bounceClick resend-chatbot-message">Tap to resend</button>\
     </p>'),
         fetchErrorMessage = $('<p class="responder error-message">\
         <span class="h6 d-block p-2 text-center text-danger" style="border-bottom: 1px solid var(--bs-danger);">Ooh wait 🙁!!</span>\
-        <span class="small d-block text-center">We couldn\'t send your message. Please check the internet and try again.</span> <br>\
+        <span class="small d-block text-center">We couldn\'t send your message. Please check the internet and try again.</span><br>\
         <button class="btn btn-sm d-block mx-auto bg-mainColor text-headerColor bounceClick resend-chatbot-message">Try again</button>\
     </p>');
     // Adding response waiter
@@ -1076,6 +1208,9 @@ async function handle_DM_submit(event) {
     scroll_bottom_chatbot_messages();
     // Submit/Mail action
     var eTarget = event.target;
+    const activeUser = localStorage.getItem('activeUserEmail'),
+        pastConv = JSON.parse(localStorage.getItem('chatbotConversations'));
+    const userConversation = pastConv.find(conv => conv.userEmail === activeUser);
     try {
         const response = await fetch(eTarget.action, {
             method: eTarget.method,
@@ -1085,63 +1220,91 @@ async function handle_DM_submit(event) {
         // Showing response error message
         if (!response.ok) {
             chatbotMessageSpace.append(responseNotOk);
+            // Marking the error to the last message object
+            if (userConversation) {
+                const len = userConversation.userMessages.length,
+                    lastMessageObj = userConversation.userMessages[len - 1];
+                lastMessageObj.errorType = "badResponse";
+                localStorage.setItem('chatbotConversations', JSON.stringify(pastConv));
+            }
             return;
         }
         // Showing success message
-        chatbotMessageSpace.append(questionResponse.responseParagraph1);
+        chatbotMessageSpace.append(messageResponse.responseParagraph1);
         scroll_bottom_chatbot_messages();
         setTimeout(() => {
-            chatbotMessageSpace.append(questionResponse.responseParagraph2);
+            chatbotMessageSpace.append(messageResponse.responseParagraph2);
             scroll_bottom_chatbot_messages();
         }, 1000);
     } catch (error) {
         // Adding error message
         waiter.remove();
         chatbotMessageSpace.append(fetchErrorMessage);
+        // Marking the error to the last message object
+        if (userConversation) {
+            const len = userConversation.userMessages.length,
+                lastMessageObj = userConversation.userMessages[len - 1];
+            lastMessageObj.errorType = "poorConnection";
+            localStorage.setItem('chatbotConversations', JSON.stringify(pastConv));
+        }
         console.error('Error:', error.message);
     } finally {
         directMessageForm.reset(); // Reset the form
         scroll_bottom_chatbot_messages();
     }
 }
-
-directMessageForm.addEventListener("submit", handle_DM_submit);
+if (directMessageForm) {
+    directMessageForm.addEventListener("submit", handle_DM_submit);
+}
 
 // Send action
 chatbotMessageSender.on({
     click: function () {
         send_chatbot_message();
-        chatbotMessageInput.removeClass('floated');
     }
 });
 chatbotMessageInput.on({
     keydown: function (e) {
         if (e.ctrlKey && e.keyCode === 13) {
             send_chatbot_message();
-            chatbotMessageInput.removeClass('floated');
         }
     }
 });
 
 // Resend action
 $('.chatbot').on('click', '.resend-chatbot-message', function () {
-    const pastConversation = localStorage.getItem('chatbotConversation'),
-        pastConv = JSON.parse(pastConversation),
-        lastMessage = pastConv[pastConv.length - 1].message;
-    // Remove last message from storage
-    pastConv.pop();
-    localStorage.setItem('chatbotConversation', JSON.stringify(pastConv));
+    const activeUser = localStorage.getItem('activeUserEmail'),
+        pastConv = JSON.parse(localStorage.getItem('chatbotConversations'));
+    let lastMessageObj;
+    // Get and remove last message of the active user
+    const userConversation = pastConv.find(conv => conv.userEmail === activeUser);
+    userConversation && (lastMessageObj = userConversation.userMessages.pop());
+    // Update conversation
+    localStorage.setItem('chatbotConversations', JSON.stringify(pastConv));
     // Retry sending
-    chatbotMessageInput.val(lastMessage);
-    send_chatbot_message();
+    if (lastMessageObj) {
+        chatbotMessageInput.val(lastMessageObj.message);
+        send_chatbot_message();
+    }
 });
 
 // clear chat messages/history
 const clear_chatbot_message = function () {
     $('.chatbot .message-holder').html('');
-    localStorage.removeItem('chatbotConversation');
+    const activeUser = localStorage.getItem('activeUserEmail'),
+        pastConv = JSON.parse(localStorage.getItem('chatbotConversations'));
+    if (pastConv) {
+        const updatedConv = pastConv.filter(conversation => conversation.userEmail !== activeUser);
+        if (updatedConv.length < 1) {
+            localStorage.removeItem('chatbotConversations');
+        } else {
+            localStorage.setItem('chatbotConversations', JSON.stringify(updatedConv));
+        }
+    }
+    // Hello message
     chatbot_hello();
 }
+
 $('.chatbot-message-clearer').click(clear_chatbot_message);
 
 // Scroll chat to bottom
@@ -1213,8 +1376,8 @@ fixDragger.on({
                     if (currentToDragLeft < 0) {
                         currentToDragLeft = 0;
                     }
-                    if (currentToDragLeft + toDrag.width() > $(window).width()) {
-                        currentToDragLeft = $(window).innerWidth() - toDrag.width();
+                    if (currentToDragLeft + toDrag.outerWidth() > $(window).width()) {
+                        currentToDragLeft = $(window).innerWidth() - toDrag.outerWidth();
                     }
                     toDrag.css({ top: currentToDragTop, left: currentToDragLeft });
                 }
@@ -1222,9 +1385,9 @@ fixDragger.on({
             mouseup: function (e) {
                 if (canDrag && toDrag.hasClass('dragging')) {
                     toDrag.removeClass('trans-0 dragging');
-                    var toDragWid = toDrag.width();
+                    var toDragWid = toDrag.outerWidth();
                     var screenWid = $(window).innerWidth();
-                    var toDragHei = toDrag.height();
+                    var toDragHei = toDrag.outerHeight();
                     var screenHei = $(window).height();
                     finalMouseLeft = e.clientX;
                     var mouseLeftDiff = finalMouseLeft - initialMouseLeft;
@@ -1546,7 +1709,7 @@ function sort_list_descending(aList) {
  * Show toast (alert)
  */
 
-const showToast = (message) => {
+const show_toast = (message) => {
     const toast = document.createElement('div');
     toast.classList.add('myToast');
     toast.textContent = message;
@@ -3713,10 +3876,10 @@ $('.webSetGrid .guider > span:not(:last-child)').click(function (e) {
         nthGuide;
     webSetPG.removeClass('overf-x-hide');
     $('.appendedGuide').remove();
-    if ($('.fa-adjust').is(e.target)) {
+    if ($('[title="Theme"]').is(e.target)) {
         nthGuide = 2;
     }
-    if ($('.fa-keyboard').is(e.target) || $('.fa-check').is(e.target)) {
+    if ($('[title="Keyboard shortcuts"]').is(e.target) || $('[title="Tips"]').is(e.target)) {
         nthGuide = 4;
     }
     appendedGuide = $('.webGuide > div:nth-of-type(' + nthGuide + ')').clone();
@@ -5863,14 +6026,6 @@ $('.h-grids-controller > button').click(function () {
     activate(dis);
     $('[data-scrolledby="' + identifyer + '"]').find('> *:nth-child(' + nth + ')').fadeIn().removeClass('w-0').addClass('offset-sm-1 col-sm-10');
     $('[data-scrolledby="' + identifyer + '"]').find('> *:nth-child(' + nth + ')').siblings().removeClass('offset-sm-1 col-sm-10').addClass('w-0');
-});
-
-//  **Services**
-
-$('.servive-menu-title').click(function () {
-    var text = $(this).text(),
-        targ = $('.esg-services main').find('h2:icontains(' + text + ')');
-    scroll_page_to(targ);
 });
 
 /**

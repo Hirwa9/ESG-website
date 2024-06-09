@@ -4,7 +4,7 @@
 	<title>ESG FAQS</title>
 
 	<link rel="icon" type="image/x-icon" href="../../Pics/ESG_favicon1.ico">
-	<link rel="stylesheet" type="text/css" href="../../styles/faqs.css?v=1.0986">
+	<link rel="stylesheet" type="text/css" href="../../styles/faqs.css?v=1.1027">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width= device-width, initial-scale=1.0">
 	<meta name="author" content="Hirwa Willy">
@@ -173,16 +173,16 @@
                     <div>
                         <div class="h-20 flex-center">Guide</div>
                         <div class="h-80 position-relative d-grid guider">
-                            <span class="fa fa-adjust w-100 grid-center ptr" title="Theme"></span>
+                            <span class="fa fa-moon w-100 grid-center ptr" title="Theme"></span>
                             <span class="fa fa-keyboard w-100 grid-center ptr" title="Keyboard shortcuts"></span>
-                            <span class="fa fa-check w-100 grid-center ptr" title="Tips"></span>
+                            <span class="fa fa-lightbulb w-100 grid-center ptr" title="Tips"></span>
                             <span class="w-100 grid-center ptr" tabindex="0" onclick="show_guide()">All</span>
                         </div>
                     </div>
                     <div>
-                        <div class="h-20 flex-center">Terms</div>
+                        <div class="h-20 flex-center">Terms and privacy</div>
                         <div class="h-80 position-relative">
-                            <span class="fa fa-briefcase w-100 h-100 grid-center ptr" onclick="show_terms()"></span>
+                            <span class="fa fa-shield-alt w-100 h-100 grid-center display-5 ptr" onclick="show_terms()"></span>
                         </div>
                     </div>
                     <div>
@@ -289,7 +289,7 @@
                     <ul class="mt-5">
                         <li>Theme</li>
                         <li>Animations</li>
-                        <li>Keybord shortcuts <kbd>alt + s</kbd>.</li>
+                        <li>Keybord shortcuts <kbd>alt</kbd> <kbd>s</kbd>.</li>
                     </ul>
                 </p>
             </div>
@@ -301,7 +301,7 @@
                     </span>
                     <ul class="mt-5">
                         <li>Go through web settings <span class="fa fa-gear"></span> and switch the themes, or</li>
-                        <li>Presh keybord shortcut <kbd>alt + t</kbd>.</li>
+                        <li>Presh keybord shortcut <kbd>alt</kbd> <kbd>t</kbd>.</li>
                     </ul>
                 </p>
                 <p class="p-2 mt-5">
@@ -339,19 +339,19 @@
                             <th>Action</th>
                         </tr>
                         <tr>
-                            <td><kbd>alt + s</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>s</kbd></td>
                             <td>Show web settings</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + t</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>t</kbd></td>
                             <td>Change theme</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + t + a</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>t</kbd> <kbd>a</kbd></td>
                             <td>Set auto-theme</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + g</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>g</kbd></td>
                             <td>Show this guide</td>
                         </tr>
                     </table>
@@ -399,6 +399,7 @@
 				Below, you'll find a compilation of frequently asked questions along with our responses. It's possible that your question has already been addressed here, but if you have any further inquiries, please don't hesitate to ask.
 			</p>
 			<h2 class="p-2 px-md-4 mb-4">Questions - Answers</h2>
+			<hr class="hr-md mb-5">
 			<div class="col-lg-10 mx-auto px-lg-3 Questions">
 				<div class="card card-info">
 					<div class="fs-5 card-header">
@@ -408,17 +409,6 @@
 						<h6 class="text-muted">Answer</h6>
 						<small>
 							No, ESG singers come from various regions across Rwanda, representing the diversity of our nation.
-						</small>
-					</div>
-				</div>
-				<div class="card card-info">
-					<div class="fs-5 card-header">
-						How many are you in ESG <img src="../../Pics/Question.png">
-					</div>
-					<div class="card-body">
-						<h6 class="text-muted">Answer</h6>
-						<small>
-							Now we are 39 singers in ESG.
 						</small>
 					</div>
 				</div>
@@ -457,7 +447,7 @@
 				</div>
 				<div class="card card-info">
 					<div class="fs-5 card-header">
-						Where is Eastern Singers Group based <img src="../../Pics/Question.png">
+						Where is your location <img src="../../Pics/Question.png">
 					</div>
 					<div class="card-body">
 						<h6 class="text-muted">Answer</h6>
@@ -504,52 +494,70 @@
 			</div>
 			
 			<!-- Custom chatbot mailer-->
-			<!-- Chatbot-form -->
-			<form action="https://formsubmit.co/c2a11ab9ef05b62d278557c946e90ed3" method="POST" id="directMessageForm" style="display: none;">
-				<div class="mb-3">
-					<label for="pEmail" class="form-label fw-bold">Email *</label>
-					<input type="email" name="Person_Email" required class="form-control" id="pEmail" placeholder="Enter email">
-				</div>
-				<div class="mb-3">
-					<label for="message" class="form-label fw-bold">Message *</label>
-					<input type="text" name="Direct_Message"required class="form-control" id="message" placeholder="Enter message">
-				</div>
-				<div class="mb-3">
-					<input type="hidden" name="_captcha" value="false">
-					<input type="hidden" name="_template" value="table">
-					<input type="hidden" name="_subject" value="You have a DM from ESG website!">
-				</div>
-				<div class="d-flex justify-content-between">
-					<button type="reset" class="btn btn-secondary my-5" style="width: 49%;">Cancel</button>
-					<button type="submit" id="sendCustomDM" class="btn bg-mainColor my-5" style="width: 49%;">Request <span class="fa fa-paper-plane"></span></button>
-				</div>
-			</form>
-
-			<!-- Chatbot-UI -->
-			<div class="position-fixed shadow pt-2 item-myBlue fix-draggable chatbot">
-				<div class="d-flex align-items-center justify-content-between chatbot-header">
-					<button class="fa fa-arrow-left bounceClick"></button>
-					<div class="w-fit d-grid p-1 chatbot-name fix-dragger">
-						<span class="mx-auto fw-bold">ESG mailer</span>
-						<span class="mx-auto">Online</span>
+			<div class="fix-holder fade-to-bottom p-sm-3">
+				<div class="clmn_wrapper fix-draggable item-myBlue chatbot-wrapper">
+					<div class="container pt-2" style="color: var(--_headerColor);">
+						<div class="d-flex"><button class="ms-auto w-2rem rad-10 border-0 bounceClick closerX" onclick="hide_chatbot()"></button></div>
+						<h5 class="display-6 text-center"><span class="fa fa-paper-plane me-3"></span> ESG mailer</span></h5>
+						<div class="text-center my-4">
+							<p>Feel free to contact us direcly from here</p>
+							<hr>
+							<p class="small">Please provide your email address so that we can respond to you promptly.</p>
+						</div>
+						<form action="https://formsubmit.co/c2a11ab9ef05b62d278557c946e90ed3" method="POST" id="directMessageForm" class="px-2 mt-5">
+							<div class="mb-3">
+								<label for="pEmail" class="form-label fw-bold">Email *</label>
+								<input type="email" name="Person_Email" required class="form-control text-center" id="pEmail" placeholder="Enter email">
+							</div>
+							<div class="mb-3 d-none">
+								<label for="message" class="form-label fw-bold">Message *</label>
+								<input type="text" name="Direct_Message"required class="form-control" id="message" placeholder="Enter message">
+							</div>
+							<div class="mb-3">
+								<input type="hidden" name="_captcha" value="false">
+								<input type="hidden" name="_template" value="table">
+								<input type="hidden" name="_subject" value="You have a DM from ESG website!">
+							</div>
+							
+							<div class="d-none justify-content-between">
+								<button type="reset" class="btn btn-secondary my-5" style="width: 29%;">Cancel</button>
+								<button type="submit" id="sendCustomDM" class="btn bg-headerColor text-mainColor my-5" style="width: 69%;">Request <span class="fa fa-paper-plane"></span></button>
+							</div>
+						</form>
+						<div class="mx-2 my-5">
+							<button class="btn btn-lg text-headerColor w-100 clickDown" style="border: 3px dashed var(--white3_cons);" onclick="scroll_chatbot_to_messages()">Continue</button>
+						</div>
 					</div>
-					<div class="rad-3 me-3 my-item-header__icons">
-						<button class="fa fa-ellipsis-h" data-menu-toggle=".chatbot-cont-menu" ></button>
-						<button class="fa fa-angle-down bounceClick" title="Minimize" onclick="hide_chatbot()"></button>
+		
+					<!-- Chatbot-UI -->
+					<div class="shadow pt-2 chatbot">
+						<div class="d-flex align-items-center justify-content-between chatbot-header">
+							<button class="fa fa-arrow-left bounceClick" onclick="scroll_chatbot_home()"></button>
+							<div class="w-fit d-grid p-1 chatbot-name fix-dragger">
+								<span class="mx-auto fw-bold">ESG mailer</span>
+								<span class="mx-auto">Online</span>
+							</div>
+							<div class="rad-3 me-3 my-item-header__icons">
+								<button class="fa fa-ellipsis-h" data-menu-toggle=".chatbot-cont-menu" ></button>
+								<button class="fa fa-angle-down bounceClick" title="Minimize" onclick="hide_chatbot()"></button>
+							</div>
+						</div>
+						<div class="mt-2 p-3 Sbar-none chatbot-body">
+							<div class="message-holder"></div>
+						</div>
+						<div class="py-2 chatbot-footer">
+							<button class="fa fa-angle-double-down clickDown small to-bottom-button"></button>
+							<div class="d-flex h-100 chatbot-messenger">
+								<textarea name="message" id="chatbotMessageInput" cols="30" rows="10" placeholder="Type your message..." class="p-2 Sbar-none"></textarea>
+								<button class="btn fa fa-arrows-alt-v clickDown small text-dark textarea-expander"></button>
+								<button class="btn text-success clickDown small trans-0 flex-shrink-0" id="sendMessageBtn" title="Ctrl + Enter">Send <span class="far fa-paper-plane ps-1"></span></button>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="mt-2 p-3 Sbar-none chatbot-body">
-					<div class="message-holder"></div>
-				</div>
-				<div class="py-2 chatbot-footer">
-					<button class="fa fa-angle-double-down clickDown small to-bottom-button"></button>
-					<div class="d-flex h-100 chatbot-messenger">
-						<textarea name="message" id="chatbotMessageInput" cols="30" rows="10" placeholder="Type your message..." class="p-2 Sbar-none"></textarea>
-						<button class="btn fa fa-arrows-alt-v clickDown small text-dark textarea-expander"></button>
-						<button class="btn text-success clickDown small trans-0 flex-shrink-0" id="sendMessageBtn" title="Ctrl + Enter">Send <span class="far fa-paper-plane ps-1"></span></button>
-					</div>
-				</div>
+				<!-- Chatbot-form -->
 			</div>
+			<!-- Chatbot options -->
 			<div class="rad-7 my-cont-menu chatbot-cont-menu">
 				<ul>
 					<li class="favorite-songs-copier" onclick="hide_chatbot()"><span class="fa fa-close w-25px mr-2"></span>Close</li>
@@ -557,11 +565,22 @@
 					<li class="border-0 chatbot-message-clearer"><span class="fa fa-trash-alt w-25px mr-2"></span> Clear messages</li>
 				</ul>
 			</div>
-			<hr class="border-black4">
-			<div>
-				<a href="#" class="btn text-black1 col-12 mt-2" onclick="show_chatbot()">Ask question <span class="fa fa-paper-plane ms-2"></span></a>
-				<a href="../contact" class="btn text-black1 col-12 mt-2">Contact us <span class="fa fa-comment ms-2"></span></a>
-			</div>
+			<hr class="my-5 opacity-0">
+
+			<!-- Ask questions -->
+			<section>
+				<h2 class="p-2 px-md-4 mb-4 text-center">Ask your question</h2>
+				<hr class="hr-md col-7 mx-auto">
+				<div class="col-sm-10 container">
+					<p class="py-3 p-lg-4 fs-5">
+						If you have any additional questions or need further assistance, please don't hesitate to reach out. Our team is here and ready to provide you with the answers and support you need.
+					</p>
+					<div class="d-md-flex justify-content-around">
+						<a href="#" class="btn btn-myBlue col-12 col-md-5 mt-2 py-3 pill trans-p3s" onclick="show_chatbot()">Ask question <span class="fa fa-paper-plane ms-2"></span></a>
+						<a href="../contact" class="btn btn-myBlue col-12 col-md-5 mt-2 py-3 pill trans-p3s">Contact us <span class="fa fa-angle-right ms-2"></span></a>
+					</div>
+				</div>
+			</section>
 			<br><br>
 		</div>
 	</div>
@@ -646,7 +665,6 @@
 		</div>
 	</footer>
 
-	<!-- <script type="text/javascript" src="jquery.num2words.js"></script> -->
-	<script src="../../MyScripts.js?v=1.0986"></script>
+	<script src="../../MyScripts.js?v=1.1027"></script>
 </body>
 </html>

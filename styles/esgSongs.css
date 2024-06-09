@@ -1,4 +1,4 @@
-@import "../all.css?v=1.0873";
+@import "../all.css?v=1.1011";
 
 /**
 * ESG_SongsNew
@@ -14,7 +14,7 @@
     align-items: center !important;
     justify-content: start !important;
     background-image: none !important;
-    /* background-color: var(--appColor); */
+    background-color: var(--bodi);
 }
 #esg-songs_nav::before {
     content: none;

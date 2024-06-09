@@ -4,7 +4,7 @@
 	<title>ESG comments</title>
 	
 	<link rel="icon" type="image/x-icon" href="../Pics/ESG_favicon1.ico">
-	<link rel="stylesheet" type="text/css" href="../styles/about.css?v=1.0885">
+	<link rel="stylesheet" type="text/css" href="../styles/about.css?v=1.1026">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width= device-width, initial-scale=1.0">
 	<meta name="author" content="Hirwa Willy">
@@ -25,7 +25,7 @@
     <!-- <script src="../bootstrap5/js/bootstrap.bundle.min.js"></script>
     <script src="../bootstrap5/js/bootstrap.bundle.min.js.map"></script> -->
 </head>
-<body id="mainBody" class="bg-bodi" data-spy="scroll" data-bs-target=".navbar" data-offset="20" style="background-size: cover;">
+<body class="bg-bodi" data-spy="scroll" data-bs-target=".navbar" data-offset="20" style="background-size: cover;">
     <!-- sm navbar -->
 	<div class="d-sm-none fix-holder inx-25 p-2">
 		<div class="nav container-xs Sbar-none bordered-end-end" id="mySidenav">
@@ -56,7 +56,7 @@
 		</div>
 	</div>
     <!-- lg navbar -->
-    <nav class="navbar navbar-expand-sm fixed-top" id="Main_nav" role="navigation">
+    <nav class="navbar navbar-expand-sm fixed-top shadow" id="Main_nav" role="navigation">
         <a href="../index" class="navbar-brand me-auto ms-0">
             <img id="brandImage" src="../Pics/ESG_favicon1.png">
         </a>
@@ -168,16 +168,16 @@
                     <div>
                         <div class="h-20 flex-center">Guide</div>
                         <div class="h-80 position-relative d-grid guider">
-                            <span class="fa fa-adjust w-100 grid-center ptr" title="Theme"></span>
+                            <span class="fa fa-moon w-100 grid-center ptr" title="Theme"></span>
                             <span class="fa fa-keyboard w-100 grid-center ptr" title="Keyboard shortcuts"></span>
-                            <span class="fa fa-check w-100 grid-center ptr" title="Tips"></span>
+                            <span class="fa fa-lightbulb w-100 grid-center ptr" title="Tips"></span>
                             <span class="w-100 grid-center ptr" tabindex="0" onclick="show_guide()">All</span>
                         </div>
                     </div>
                     <div>
-                        <div class="h-20 flex-center">Terms</div>
+                        <div class="h-20 flex-center">Terms and privacy</div>
                         <div class="h-80 position-relative">
-                            <span class="fa fa-briefcase w-100 h-100 grid-center ptr" onclick="show_terms()"></span>
+                            <span class="fa fa-shield-alt w-100 h-100 grid-center display-5 ptr" onclick="show_terms()"></span>
                         </div>
                     </div>
                     <div>
@@ -284,7 +284,7 @@
                     <ul class="mt-5">
                         <li>Theme</li>
                         <li>Animations</li>
-                        <li>Keybord shortcuts <kbd>alt + s</kbd>.</li>
+                        <li>Keybord shortcuts <kbd>alt</kbd> <kbd>s</kbd>.</li>
                     </ul>
                 </p>
             </div>
@@ -296,7 +296,7 @@
                     </span>
                     <ul class="mt-5">
                         <li>Go through web settings <span class="fa fa-gear"></span> and switch the themes, or</li>
-                        <li>Presh keybord shortcut <kbd>alt + t</kbd>.</li>
+                        <li>Presh keybord shortcut <kbd>alt</kbd> <kbd>t</kbd>.</li>
                     </ul>
                 </p>
                 <p class="p-2 mt-5">
@@ -324,7 +324,7 @@
             <div class="p-3 text-light grid-item mySbar-sm">
                 <h6 class="display-5">Tips</h6>
                 <p class="p-2 display-7 text-goldR">
-                        Navigate quickly through the pages and web items
+                    Navigate quickly through the pages and web items
                 </p>
                 <section class="p-2">
                     <table class="w-100 px-3 mb-3">
@@ -334,19 +334,19 @@
                             <th>Action</th>
                         </tr>
                         <tr>
-                            <td><kbd>alt + s</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>s</kbd></td>
                             <td>Show web settings</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + t</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>t</kbd></td>
                             <td>Change theme</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + t + a</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>t</kbd> <kbd>a</kbd></td>
                             <td>Set auto-theme</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + g</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>g</kbd></td>
                             <td>Show this guide</td>
                         </tr>
                     </table>
@@ -382,83 +382,85 @@
             </div>
         </div>
     </div>
-    <div id="main">        
-        <div class="modal fade" rol="dialod" id="qui_bene">
-            <div class="modal-dialog modal-lg bg-navi2">
-                <div class="modal-header" style="color: whitesmoke;">
-                    <h4>Bis orat qui bene cantat</h4>
-                </div>
-                <div class="modal-content">
-                    <p>
-                        Latin: <strong>Bis orat qui cantat</strong> has been traditionally attributed to <span style="color: darkgoldenrod;">St. Augustine (d. 430 CE)</span>. The version with the included “bene” is from the <span style="color: blue; font-weight: bold;">General Instruction of the Roman Missal</span> and can be translated as “Whoever sings well prays twice over”. Hence singing, as a primary form of prayer, is a very ancient tradition in Christianity indeed!<br><br>
 
-                        By the way, anyone can have problems with that “bene”! <u>How could we be required to be great singers in order to pray twice</u>? I had the question too, but soon I got it. It was my own perfectionism putting a slant on everything I hear and see. We are not asked to be professional operatic singers, but to sing well, with enthusiasm, and conviction, and joy. That is praying twice as well.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <p class="small" data-bs-dismiss="modal" data-bs-target="#qui_bene" style="color: whitesmoke; cursor: pointer;">Dusenge kabiri</p><button data-bs-dismiss="modal" data-bs-target="#qui_bene" style="color: var(--myBlue); cursor: pointer;"><span class="fa fa-check" onclick="$('#qui_bene').fadeOut();"></span></button>
+    <!-- ************************** End of navigations ************************** -->
+
+    <div id="main">
+        <div class="container d-lg-flex p-4">
+            <div class="col-lg-5 mt-lg-4 mx-auto rad-5 text-left py-2">
+                <h1>We're glad you would like to contact us</h1>
+                <small>
+                    <small>Please provide your personal information for effective communication.</small>
+                </small>
+                <hr class="hr-md d-lg-none">
+                <div class="d-none d-lg-block">
+                    <div class="flex-center">
+                        <span class="fa fa-envelope display-3 p-5 rad-50 shadow"></span>
+                    </div>
+                    <div class="p-3">
+                        <ul class="list-unstyled">
+                            <li class="py-3" style="border-bottom: 1px solid var(--black3);">
+                                <b class="me-1">Phone:</b> (+250) 783 967 092
+                            </li>
+                            <li class="py-3" style="border-bottom: 1px solid var(--black3);">
+                                <b class="me-1">Email:</b> easternsingersg@gmail.com
+                            </li>
+                            <li class="py-3" style="border-bottom: 1px solid var(--black3);">
+                                <b class="me-1">Address:</b> Rulindo - Shyorongi - Rutonde
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- ************************** End of navigations ************************** -->
-        
-        <div class="offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6 py-3 my-3 p-2 bg-grey text-light shadow" style="border-radius: 6px;">
-            <p class="offset-sm-1 col-sm-10 bordered-block border-white2 rad-5 text-left py-2">
-                We're glad you would like to contact by giving an idea to the present.<br>
-                <small><small>
-                    Please provide your personal information for effective communication.<br>
-                </small></small>
-            </p>
-            <form action="comment.php" class="form-horizontal offset-5 m-2" method="POST">
-                <div class="form-group offset-sm-1 col-sm-10">
-                    <label for="Names" class="control-label my-2">Name</label>
+            <form action="https://formspree.io/f/xleqodnn" class="col-lg-7 p-md-5 mx-auto" method="POST" id="webMailerForm">
+                <div class="mb-3">
+                    <label for="pName" class="form-label">Name *</label>
                     <div class="col-12">
-                                <input class="form-control col-sm-11" type="text" name="Names" placeholder=" " required>
+                        <input class="form-control col-sm-11" type="text" name="Person_Name" id="pName" placeholder="Enter your name" required>
                     </div>
                 </div>
-                <div class="form-group offset-sm-1 col-sm-10">
-                    <label for="Email" class="control-label my-2">Email</label>
+                <div class="mb-3">
+                    <label for="pEmail" class="form-label">Email *</label>
                     <div class="col-12">
-                            <input class="form-control col-sm-11" type="email" name="email" placeholder="@" required>
+                        <input class="form-control col-sm-11" type="email" name="Person_Email" id="pEmail" placeholder="Enter your email" required>
                     </div>
                 </div>
-                <div class="form-group offset-sm-1 col-sm-10">
-                    <label for="Phone number" class="control-label my-2">Phone number</label>
+                <div class="mb-3">
+                    <label for="pNumber" class="form-label">Phone number</label>
                     <div class="col-12">
-                            <input class="form-control col-sm-11" type="number" name="pnum" placeholder="..   optional" onkeyup="this.value = this.value.replace(/[^0-9-]/g, '');">
+                        <input class="form-control col-sm-11" type="number" name="Phone_Number" id="pNumber" placeholder="optional" onkeyup="this.value = this.value.replace(/[^0-9-]/g, '');">
                     </div>
                 </div>
-                <div class="offset-sm-1">
-                    <label for="asking" class="form-check-label ps-3">I sing in a choir/singing group.</label>
-                    <div class="radio offset-1 ps-3">
-                        <label for="radio select"><input type="radio" class="form-check-input" name="Answer">Yes</label><br>
-                        <label for="radio select"><input type="radio" class="form-check-input" name="Answer">No</label>
-                    </div>
-                </div><br>
-                <div class="form-group offset-sm-1 col-sm-10" id="inPuts">
-                    <label for="Comment" class="control-label my-2 ps-3">Message</label>
-                    <div class="col-12">
-                        <textarea id="menyesha2" name="comment" class="form-control col-sm-11" rows="5" required></textarea>
+                <div class="mb-3">
+                    <label for="cholister" class="form-check-label">I sing in a choir/singing group.</label>
+                    <div class="offset-sm-1" id="cholister">
+                        <label for="answerYes" class="me-3"><input type="radio" class="form-check-input rad-3 me-2 border-black3" name="Is_a_singer" id="answerYes">Yes</label>
+                        <label for="answerNo" class="me-3"><input type="radio" class="form-check-input rad-3 me-2 border-black3" name="Is_a_singer" id="answerNo">No</label>
                     </div>
                 </div>
-                <div class="d-flex justify-content-between offset-sm-1 col-sm-10 mt-5" style="font-size: .8rem;" id="MessengerZ">
-                    <button class="btn btn-default px-5 py-1 ptr" type="reset">
-                        Clear
-                    </button>
-                    <button class="btn btn-default px-5 py-1 ptr" type="submit" id="SendInfo">
-                        <span class="fa fa-check"></span>
+                <div class="mb-3" id="inPuts">
+                    <label for="message" class="form-label">Message *</label>
+                    <textarea id="message" name="Message" class="form-control" rows="5" placeholder="Type your message ..." required></textarea>
+                </div>
+                <div class="d-flex justify-content-between my-5" style="font-size: .8rem;">
+                    <button type="reset" class="btn border border-secondary text-muted col-4">Clear</button>
+                    <button type="submit" class="btn btn-success col-7" id="sendMessageBtn">Send <span class="fa fa-paper-plane ms-2"></span>
                     </button>
                 </div>
             </form>
         </div>
-        <div class="offset-sm-1 col-sm-10 py-5">
+        <div class="col-sm-10 mx-auto py-5">
             <p class="text-muted text-center ">Thank you for reaching out !!</p>
         </div>
+
+        <!-- Location on map -->
+        <!-- <div class="location-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116089.75402738462!2d29.913459999762754!3d-1.8708064140910492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dcbd62e50d9d89%3A0x63c62aa1823a020!2sRutonde%20Catholic%20Parish!5e0!3m2!1sen!2srw!4v1714132177721!5m2!1sen!2srw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> -->
     </div>
 
     <!-- ************************** Page end ************************** -->
     
-    <script src="../MyScripts.js?v=1.0811"></script>
+    <script src="../MyScripts.js?v=1.1026"></script>
 </body>
 </html>

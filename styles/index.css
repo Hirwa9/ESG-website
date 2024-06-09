@@ -1,4 +1,4 @@
-@import "../all.css?v=1.0811";
+@import "../all.css?v=1.1025";
 
 /**
 * ESG_index
@@ -11,7 +11,7 @@
     place-items: center;
     padding-left: 2rem;
     overflow: hidden;
-    background-image: linear-gradient(125deg, var(--white1_cons) 10%, var(--myBlue) 90%);
+    /* background-image: linear-gradient(125deg, var(--white1_cons) 10%, var(--myBlue) 90%); */
     transition: var(--trans);
 }
 #IndexNavi > .ESGlogo {
@@ -124,22 +124,22 @@
 .home-coming {
 	position: relative;
 	overflow: hidden;
+	mask-image: linear-gradient(transparent, black 60%, black);
+	background-image: linear-gradient(var(--myBlue), transparent);
+	height: calc(100vh - 5.5rem);
 }
 .home-coming_content {
 	position: absolute;
 	width: 100%;
 	height: 30%;
+	bottom: 0;
 	margin-top: 5vh;
-	background-image: linear-gradient(var(--myBlue), rgb(48, 0, 44));
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	mix-blend-mode: color-burn;
+	background-image: linear-gradient(transparent, var(--myBlue1));
+	color: var(--bs-light);
     font-size: calc(1.525rem + 3.3vw);
     font-weight: 700;
-	font-family: sans-serif, 'Roboto';
     line-height: 1.2;
-	animation: flyInTop 3s 1;
+	animation: flyInBottom 3s 1;
 	transition: var(--trans);
 }
 .home-coming_bg, .home-coming_bg1 {
@@ -153,42 +153,11 @@
 	clip-path: polygon(0 30%, 30% 75%, 42% 70%, 50% 72%, 100% 37%, 100% 100%, 0 100%);
 	animation: slideInRightSM 1s 1;
 }
-.home-coming > .home-coming_cover {
-	position: absolute;
-	pointer-events: none;
-	border-radius: 50%;
-	background-image: linear-gradient(transparent 60%, var(--myBlue1));
-	mix-blend-mode: color-dodge;
-	text-shadow: 6px 6px 0 violet;
-}
-.home-coming > .home-coming_cover.DISCLASS1 {
-	aspect-ratio: 1 / 1;
-	width: 2rem;
-	left: 5%;
-	bottom: 2%;
-	transform: skewY(30deg) skewX(-60deg) rotate(-100deg);
-}
-.home-coming > .home-coming_cover.DISCLASS2 {
-	aspect-ratio: 1 / 1;
-	width: 7rem;
-	right: 25%;
-	bottom: 5%;
-	transform: skewY(-30deg) skewX(60deg) rotate(100deg);
-}
 @media screen and (min-width: 768px) {
-	.home-coming_content {
-		bottom: 25%;
-		left: 15%;
-		width: fit-content;
-		height: 20%;
-		margin-inline: auto;
-	}
 	.home-coming_bg, .home-coming_bg1 {
-		/* background-image: url(../Pics/Es88.jpg); */
-		/* background-image: url(../Pics/events/PXL_20231228_064135.jpg); */
-		/* background-position-y: 0%; */
-		/* background-image: url(../Pics/events/PXL_20231228_112208732_1.png); */
-		background-image: url(../Pics/Es94.jpg);
+		/* background-image: url(../Pics/events/PXL_20231203_150538.jpg); */
+		background-image: url(../Pics/events/PXL_20231203_162415.jpg);
+		background-position: center 0%;
 	}
 	.home-coming_bg1 {
 		box-shadow: 0 -60px 5rem 0 var(--myBlue) inset;

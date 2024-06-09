@@ -4,7 +4,7 @@
 	<title>More documents</title>
 	
 	<link rel="icon" type="image/x-icon" href="../../Pics/ESG_favicon1.ico">
-	<link rel="stylesheet" type="text/css" href="../../styles/moreDocs.css?v=1.0886">
+	<link rel="stylesheet" type="text/css" href="../../styles/moreDocs.css?v=1.0968">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Hirwa Willy">
@@ -25,7 +25,7 @@
     <!-- <script src="../../bootstrap5/js/bootstrap.bundle.min.js"></script>
     <script src="../../bootstrap5/js/bootstrap.bundle.min.js.map"></script> -->
 </head>
-<body id="mainBody" class="bg-bodi Holy_Mass_Songs" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="20">
+<body class="bg-bodi Holy_Mass_Songs" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="20">
     <!-- sm navbar -->
 	<div class="d-sm-none fix-holder inx-25 p-2">
 		<div class="nav container-xs Sbar-none bordered-end-end" id="mySidenav">
@@ -168,16 +168,16 @@
                     <div>
                         <div class="h-20 flex-center">Guide</div>
                         <div class="h-80 position-relative d-grid guider">
-                            <span class="fa fa-adjust w-100 grid-center ptr" title="Theme"></span>
+                            <span class="fa fa-moon w-100 grid-center ptr" title="Theme"></span>
                             <span class="fa fa-keyboard w-100 grid-center ptr" title="Keyboard shortcuts"></span>
-                            <span class="fa fa-check w-100 grid-center ptr" title="Tips"></span>
+                            <span class="fa fa-lightbulb w-100 grid-center ptr" title="Tips"></span>
                             <span class="w-100 grid-center ptr" tabindex="0" onclick="show_guide()">All</span>
                         </div>
                     </div>
                     <div>
-                        <div class="h-20 flex-center">Terms</div>
+                        <div class="h-20 flex-center">Terms and privacy</div>
                         <div class="h-80 position-relative">
-                            <span class="fa fa-briefcase w-100 h-100 grid-center ptr" onclick="show_terms()"></span>
+                            <span class="fa fa-shield-alt w-100 h-100 grid-center display-5 ptr" onclick="show_terms()"></span>
                         </div>
                     </div>
                     <div>
@@ -280,7 +280,7 @@
                     <ul class="mt-5">
                         <li>Theme</li>
                         <li>Animations</li>
-                        <li>Keybord shortcuts <kbd>alt + s</kbd>.</li>
+                        <li>Keybord shortcuts <kbd>alt</kbd> <kbd>s</kbd>.</li>
                     </ul>
                 </p>
             </div>
@@ -292,7 +292,7 @@
                     </span>
                     <ul class="mt-5">
                         <li>Go through web settings <span class="fa fa-gear"></span> and switch the themes, or</li>
-                        <li>Presh keybord shortcut <kbd>alt + t</kbd>.</li>
+                        <li>Presh keybord shortcut <kbd>alt</kbd> <kbd>t</kbd>.</li>
                     </ul>
                 </p>
                 <p class="p-2 mt-5">
@@ -330,19 +330,19 @@
                             <th>Action</th>
                         </tr>
                         <tr>
-                            <td><kbd>alt + s</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>s</kbd></td>
                             <td>Show web settings</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + t</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>t</kbd></td>
                             <td>Change theme</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + t + a</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>t</kbd> <kbd>a</kbd></td>
                             <td>Set auto-theme</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + g</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>g</kbd></td>
                             <td>Show this guide</td>
                         </tr>
                     </table>
@@ -462,35 +462,33 @@
                         </div>
                         <div class="notif-body">
                             <div>
-                                <ul>
-                                    <!-- <li>
-                                        Swipe right on a song to download it
-                                    </li> -->
-                                    <li>
-                                        <kbd class="text-light">Alt + click</kbd> a song to download it.
-                                    </li>
-                                    <li>
-                                        Press <kbd class="text-light">Ctrl + /</kbd> to toggle search tool, and <kbd
-                                            class="text-light">esc</kbd>
-                                        key to hide it.<br>
-                                        <small>
-                                            This will also focus in or out of any search box.
-                                        </small>
-                                    </li>
-                                    <li>
-                                        Press <kbd class="text-light">Alt + r</kbd> to refresh songs.
-                                    </li>
-                                    <li>
-                                        Press <kbd class="text-light">Alt + h</kbd> to see help.
-                                    </li>
-                                    <li>
-                                        Press <kbd class="text-light">Alt + n</kbd> to see our notifications.
-                                    </li>
-                                    <li>
-                                        <b>Refresh this page frequently for updates.</b>
-                                    </li>
-                                    <div class="small"></div>
-                                </ul>
+                                <div class="d-lg-flex">
+                                    <ul class="col-md-9 mx-3 mx-md-auto px-lg-3">
+                                        <!-- <li>
+                                            Swipe right on a song to download it
+                                        </li> -->
+                                        <li>
+                                            <kbd class="text-light">Alt</kbd> <kbd class="text-light">click</kbd> a song to download it.
+                                        </li>
+                                        <li>
+                                            Press <kbd class="text-light">Ctrl</kbd> <kbd class="text-light">/</kbd> to toggle search tool, and <kbd class="text-light">esc</kbd>
+                                            key to hide it.<br>
+                                            <small>This will also focus in or out of any search box.</small>
+                                        </li>
+                                        <li>
+                                            Press <kbd class="text-light">Alt</kbd> <kbd class="text-light">r</kbd> to refresh songs.
+                                        </li>
+                                        <li>
+                                            Press <kbd class="text-light">Alt</kbd> <kbd class="text-light">h</kbd> to see help.
+                                        </li>
+                                        <li>
+                                            Press <kbd class="text-light">Alt</kbd> <kbd class="text-light">n</kbd> to see our notifications.
+                                        </li>
+                                        <li>
+                                            <b>Refresh this page frequently for updates.</b>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <p class="p-1 my-2 small">
                                     <a href="#" class="px-4 py-1">Got it</a>
                                 </p>
@@ -509,19 +507,21 @@
                         </div>
                         <div class="notif-body">
                             <div>
-                                <ul>
-                                    <li>
-                                        3/4, 4/4, 5/8 and more style can be found.
-                                    </li>
-                                    <li>
-                                        Liturgy documents/books and Prayers.
-                                    </li>
-                                    <div class="small">
+                                <div class="d-lg-flex">
+                                    <ul class="col-lg-6">
+                                        <li>
+                                            3/4, 4/4, 5/8 and more style can be found.
+                                        </li>
+                                        <li>
+                                            Liturgy documents/books and Prayers.
+                                        </li>
+                                    </ul>
+                                    <div class="small col-md-6 mx-3 mx-md-auto px-lg-3">
                                         You can find other documents related to the Catholic Liturgy including Liturgy
                                         books, Prayers, music styles
                                         (beats) and more.
                                     </div>
-                                </ul>
+                                </div>
                                 <p class="p-1 my-2 small">
                                     <a href="ESG_more_documents" class="px-4 py-1">Check it out</a>
                                 </p>
@@ -541,14 +541,18 @@
                         </div>
                         <div class="notif-body">
                             <div>
-                                <ul>
-                                    <li>
-                                        Jye nsanze Umwami Ijabiro _Cover_ ESG
-                                    </li>
-                                    <div class="small">Composer: Cyprien Rugamba</div>
-                                </ul>
+                                <div class="d-lg-flex">
+                                    <ul class="col-lg-6">
+                                        <li>
+                                            Ndaje Dawe unyakire - Eastern singers group
+                                        </li>
+                                    </ul>
+                                    <div class="small col-md-6 mx-3 mx-md-auto px-lg-3">
+                                        Composer: Erneste Nzabahimana
+                                    </div>
+                                </div>
                                 <p class="p-1 my-2 small">
-                                    <a href="https://youtu.be/9n8bp3o8LzA" target="_blank" class="px-4 py-1">Watch</a>
+                                    <a href="https://youtu.be/6xnzzSRdBrI" target="_blank" class="px-4 py-1">Watch</a>
                                 </p>
                             </div>
                         </div>
@@ -565,22 +569,17 @@
                         </div>
                         <div class="notif-body">
                             <div>
-                                <ul>
-                                    <li>
-                                        At the top of it, one needs to find enough time for Solfeggio,
-                                    </li>
-                                    <li>
-                                        Your patience and focus will help to know things better, not only knowing.
-                                    </li>
-                                    <li>
-                                        You might need to be creative to understand some key concepts of reading difficult
-                                        compositions.<br>
-                                        But let's not worry, you got it.
-                                    </li>
-                                    <div class="small"></div>
-                                </ul>
+                                <div class="d-lg-flex">
+                                    <ul class="col-md-9 mx-3 mx-md-auto px-lg-3">
+                                        <li>First and foremost, allocate sufficient time for your Solfeggio practice,</li>
+                                        <li>Your patience and focused attention are invaluable assets for comprehensive learning,</li>
+                                        <li>
+                                            Creativity may play a role in grasping intricate concepts, especially when dealing with complex musical compositions.<br> But rest assured, with commitment and dedication, you've got this.
+                                        </li>                                        
+                                    </ul>
+                                </div>
                                 <p class="p-1 my-2 small">
-                                    <a href="ESG_Solfeggio" class="px-4 py-1">Go for it</a>
+                                    <a href="../solfeggio" class="px-4 py-1">Go for it</a>
                                 </p>
                             </div>
                         </div>
@@ -732,26 +731,26 @@
                     <span class="fa fa-warning w-20 ratio-1-1 flex-center rad-50 display-5 warningICN"></span>
                 </div>
                 <div class="p-3">
-                    <ul>
-                        <li>Calendrier liturgique</li>
-                        <li>Typed books of Holy Mass songs (lyrics)</li>
-                        <li>Music notation books of Holy Mass songs</li>
-                        <li>Universal Prayers</li>
-                        <li>Psalms</li>
-                        <li>More Prayers</li>
+                    <ul class="list-style-square">
+                        <li class="py-2">Calendrier liturgique</li>
+                        <li class="py-2">Typed books of Holy Mass songs (lyrics)</li>
+                        <li class="py-2">Music notation books of Holy Mass songs</li>
+                        <li class="py-2">Universal Prayers</li>
+                        <li class="py-2">Psalms</li>
+                        <li class="py-2">More Prayers</li>
                     </ul>
                 </div>
             </section>
             <div class="row m-0 BookElemS">
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Abatagatifu Kiliziya yibuka mu mwaka.jpg" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Abatagatifu Kiliziya yibuka mu mwaka
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -766,15 +765,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Le calendrier liturgique 2024.jpg" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Calendrier liturgique du 1er Décembre 2023 au 31 Décembre 2024
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -789,15 +788,15 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <!-- <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/ORDO 2022_2023 Année A.PNG" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             ORDO 2022_2023 Année A (Calendrier Nouveaux Saints avec nouveau Sanctoral)
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -812,15 +811,15 @@
                         </div>
                     </div>
                 </div> -->
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Dusingize Imana - Umwaka A.PNG" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Dusingize Imana - Umwaka A
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -835,15 +834,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Dusingize Imana - Umwaka B.png" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Dusingize Imana - Umwaka B
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -858,15 +857,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Dusingize Imana - Umwaka C.png" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Dusingize Imana - Umwaka C
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -881,15 +880,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Zaburi - Umwaka A.PNG" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Igitabo cya Zaburi - Umwaka A
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -904,15 +903,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Zaburi - Umwaka B.jpg" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Igitabo cya Zaburi - Umwaka B
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -927,15 +926,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Salve Domine A (igitabo cy'indirimbo).PNG" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Salve Domine A (igitabo cy'indirimbo)
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -950,15 +949,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Ni muzima.PNG" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Ni muzima
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -973,15 +972,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Indirimbo za Missa (Turirimbire Nyagasani).PNG" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Indirimbo za Missa (Turirimbire Nyagasani)
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -996,15 +995,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Intambwe y'Intore.PNG" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Intambwe y'Intore 3-1-1
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -1019,15 +1018,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Gatigisimu.PNG" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Gatigisimu
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -1042,15 +1041,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Inzira y'Umusaraba.jpg" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Inzira y'Umusaraba
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -1065,15 +1064,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Isengesho ryatoraguwe mumva ya Yezu.PNG" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Isengesho ryatoraguwe mumva ya Yezu
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -1088,15 +1087,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 p-0">
-                    <div class="BookElement m-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3 p-0 mb-5">
+                    <div class="BookElement">
                         <div class="book-holder">
                             <img src="../../Pics/Mass responses prayers.PNG" alt="Book cover">
                         </div>
                         <div class="p-3 book-title">
                             Mass responses Prayers - FAITHGR
                         </div>
-                        <div class="position-absolute rad-10 book-tools">
+                        <div class="position-absolute book-tools">
                             <div class="flex-center h-100 w-100">
                                 <div class="w-50">
                                     <p class="d-flex justify-content-between h-2rem mb-5">
@@ -1127,23 +1126,25 @@
                     <span class="fa fa-warning w-20 ratio-1-1 flex-center rad-50 display-5 warningICN"></span>
                 </div>
                 <div class="p-3">
-                    <ul class="row m-0">
-                        <li class="col-3 col-sm-2">2/2</li>
-                        <li class="col-3 col-sm-2">2/4</li>
-                        <li class="col-3 col-sm-2" data-scrollto="#style-3_4">3/4</li>
-                        <li class="col-3 col-sm-2" data-scrollto="#style-3_4">6/8</li>
-                        <li class="col-3 col-sm-2" data-scrollto="#style-3_4">12/8</li>
-                        <li class="col-3 col-sm-2">3/8</li>
-                        <li class="col-3 col-sm-2" data-scrollto="#style-5_8">5/8</li>
-                        <li class="col-3 col-sm-2" data-scrollto="#style-4_4">4/4</li>
+                    <ul class="row m-0 list-style-square">
+                        <li class="py-2 col-3 col-sm-2">2/2</li>
+                        <li class="py-2 col-3 col-sm-2">2/4</li>
+                        <li class="py-2 col-3 col-sm-2" data-scrollto="#style-3_4">3/4</li>
+                        <li class="py-2 col-3 col-sm-2" data-scrollto="#style-3_4">6/8</li>
+                        <li class="py-2 col-3 col-sm-2" data-scrollto="#style-3_4">12/8</li>
+                        <li class="py-2 col-3 col-sm-2">3/8</li>
+                        <li class="py-2 col-3 col-sm-2" data-scrollto="#style-5_8">5/8</li>
+                        <li class="py-2 col-3 col-sm-2" data-scrollto="#style-4_4">4/4</li>
                     </ul>
-                    <h5 class="my-3">What to do after downloading an STY file</h5>
-                    <div class="rad-5 pNl-2 bg-navi text-light">
-                        <ul class="list-style-square">
-                            <li>Transfer your style file (.STY) to a USB flash directly using OTG adapter or use a laptop/desktop.</li>
-                            <li>Remember to keep a copy of the style on a storage device for further use or reference.</li>
-                            <li>Plug the USB flash on a synthetizer, paste your style in a <b>User folder</b> and then use it from there. While plugged, you can also play the style directly from your USB flash disk (Not recommended).</li>
-                            <li>Enjoy the music!</li>
+                    <h4 class="my-4 text-black1">What you can do after downloading an STY file</h4>
+                    <div class="rad-5 pNl-2 text-black1">
+                        <ul class="list-style-tick small">
+                            <li class="py-1">Transfer your style file to a USB flash drive using an OTG adapter or a laptop/desktop computer.</li>
+                            <li class="py-1">Remember to retain a copy of the style on a storage device for future use or reference.</li>
+                            <li class="py-1">
+                                Connect the USB flash drive on your synthesizer and paste the file(s) somehwere into <b>User folders</b> of the synthesizer and access it from there. While connected, you can also play the style directly from your USB flash drive (although this is not recommended).
+                            </li>
+                            <li class="py-1">Enjoy the music!</li>
                         </ul>
                     </div>
                 </div>
@@ -1170,11 +1171,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/3-4/Ikinimba _ 1.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1ASKWQaOTQHqrnIgtJNX826jbtNxjfVWj" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1194,11 +1194,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/3-4/Ikinimba _ 2.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1HpXg0pOFh4fFMaY7uJDkROfafuLFQSv9" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1218,11 +1217,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/3-4/Ikinimba _ 3.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1CunJhSPvukU3yKmJmCXyRn2Oxxc7A31i" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1242,11 +1240,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/3-4/Ikinimba _ 4.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1mrhWNszb3FOYkaJREsa5OzgtKHoYuqYD" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1266,11 +1263,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/3-4/Ikinimba _ 10.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1WORbbYyq650bdNfHzbP7xFNsY8ORZ66z" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1290,11 +1286,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/3-4/Ikinimba _ 12.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1cR_aBDaymGQatm9PLURLM1E8-Vae3ApR" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1318,11 +1313,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/4-4 _ 1.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1mnC5b0AqkozJ9pCAX7pel-46GItpwzby" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1342,11 +1336,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/4-4 _ 10.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1QFG7ABKSCAOllcyM0airfg4Mn0Hesnir" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1366,11 +1359,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/6 beats.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=18_wnkRRFAxkt5jWbCDy77BMDy_jpRqay" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1390,11 +1382,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/Abatagatifu.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1AkamiUMkTRhHp-exLt_CO4Rf1Dxhz0GZ" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1414,11 +1405,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/Jazz +Zouk _ Main B.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1iemw8Wp9Z9c0RZo2YiqsdbS_6SmZYaoG" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1438,11 +1428,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/Mambo _ Main B.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1a2o2iAAQAjeKkiEWU4V0qtjTDCpQs40K" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1462,11 +1451,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/Rumba _ 1.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1rV_6oljUTwX_YO8uYeOEqgqAKpsQOHOr" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1486,11 +1474,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/Rumba _ 2.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1KlL0d9ToZB7amkCLteJqYw14JmkndT2r" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1510,11 +1497,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/Turaje Yezu.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=14rz5fFU72V7BYDEnEoln_WBbDfif58cE" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1534,11 +1520,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/Twaje Mbyeyi _ Main A.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1LwPS8i-6L5f3UWmS11jfZ7WdVXY1Gfxe" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1558,11 +1543,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/Zouk _ 1.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=19HaBpS2w48VjJml1jwIbf2QAYeXkAvP8" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1582,11 +1566,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/Zouk _ 2.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=19T2huxWw4A9PqdbyqfnAT-KLMgJnGDrB" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1606,11 +1589,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/Zouk _ 3.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=17Ux3Jg7M7Yzbek-mfhoR1F86LnGBk8S1" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1630,11 +1612,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/Zouk _ 4.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1s5QjGvbDsBSR-AI9CH8Gh39pOHQ9QOCa" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1654,11 +1635,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/Zouk _ 5.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1VaM41Ycepgve0TbXu_gTcbnpPHKSwE9b" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1678,11 +1658,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/Zouk _ 12.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1gnoYeiOWc1w1Fp0gBOSkKXPbIjw2Tp2a" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1702,11 +1681,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/Zouk boom.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1ZGKUZ7lUfvdKtShBBzGxz0AnkXg8OYum" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1726,11 +1704,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/More styles/Congolai.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1lix9VD5WDG4JxK_65DjRxhAxhoQrobfs" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1750,11 +1727,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/2 Measure 4-4  _ 1.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1KTbsAqacovCkp4q9NcTouBHfsh0oG3Ru" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1774,11 +1750,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/4-4/2 Measure 4-4  _ 2.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=11gQmg684uw1iXUILvPMGJJ_hoZOHcEaR" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1802,11 +1777,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/5-8/5-8 _ 1.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1o4Uu9HnOa48x7mqaeTIKnu29jMOgznrn" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1826,11 +1800,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/5-8/Rwandese 5-8.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1w0bLSoRmOi2mf5qWtuGCW3tMEjO3IwIu" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1854,11 +1827,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/More styles/4-4 __1.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=12Gu5LI-91BJKpx9uJ_fWBLW8tylzpJbx" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1878,11 +1850,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/More styles/4-4 __2.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1O_r1rlddtA0DWyWSG8NixNIHETggNRav" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1902,11 +1873,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/More styles/4-4 __3.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1I4kWgWbmIT_SfcJPYREy991IBJ9rL1Hw" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1926,11 +1896,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/More styles/4-4.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1raJL7d9czDCp0q35N49Vp9-xqzeuRbWm" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1950,11 +1919,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/More styles/Ceben.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1DS9uyCzazZgKDmDp_rYBB9e9o-cKizLf" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1974,11 +1942,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/More styles/Full Reggae.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1MrD8qF_kKucRYBAvwb6Z0XkehqW-dboh" class="col-2 flex-center show-touch">
                         <span class="fa fa-download flex-center"></span>
@@ -1998,11 +1965,10 @@
                         </span>
                     </div>
                     <div class="col-2 p-0 justify-content-center text-muted sty_tll">
-                        <span class="fa fa-play h-50 ptr display-10 flex-center"></span>
+                        <span class="fa fa-play h-100 ptr display-10 flex-center"></span>
                         <span class="fa w-0 h-0 d-none">
                             <audio controls src="Beat_styles/More styles/Reggae.mp3" class="rad-0 THIS_AUD"></audio>
                         </span>
-                        <span class="fa fa-info-circle h-50 display-10 flex-center"></span>
                     </div>
                     <a href="https://drive.google.com/uc?export=download&id=1D4kneZ5JI2ZSPajVjdRjEXtTvzFB9xQ8" class="col-2 flex-center">
                         <span class="fa fa-download flex-center"></span>
@@ -2092,8 +2058,8 @@
 			</div>
 		</div>
 	</footer>
-    <script src="../../MyScripts.js?v=1.0873"></script>
-    <!-- <script src="moreDocs.js?v=1.0873"></script> -->
+    <script src="../../MyScripts.js?v=1.0968"></script>
+    <!-- <script src="moreDocs.js?v=1.0968"></script> -->
 	<script>
 		create_current_month();
 	</script>

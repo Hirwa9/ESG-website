@@ -21,3 +21,5 @@ RewriteCond %{REQUEST_URI} !\.(css|js|jpg|png)$ [NC]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html
+RedirectMatch 301 ^/CHM_Songs$ /esgrp/services/CHM_Songs
+RedirectMatch 301 ^/services$ /esgrp/services

@@ -4,7 +4,7 @@
 	<title>ESG calendar</title>
 
 	<link rel="icon" type="image/x-icon" href="../../Pics/ESG_favicon1.ico">
-	<link rel="stylesheet" type="text/css" href="../../styles/calendar.css?v=1.0885">
+	<link rel="stylesheet" type="text/css" href="../../styles/calendar.css?v=1.0999">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Hirwa Willy">
@@ -26,7 +26,7 @@
     <script src="../../bootstrap5/js/bootstrap.bundle.min.js.map"></script> -->
     <!-- <script src="../../jq/jquery-3.7.1.js"></script> -->
 </head>
-<body id="mainBody" class="bg-bodi" data-bs-spy="scroll" data-bs-target="#scrollSpy" data-bs-offset="200" tabindex="0">
+<body class="bg-bodi" data-bs-spy="scroll" data-bs-target="#scrollSpy" data-bs-offset="200" tabindex="0">
 	<!-- sm navbar -->
 	<div class="d-sm-none fix-holder inx-25 p-2">
 		<div class="nav container-xs Sbar-none bordered-end-end" id="mySidenav">
@@ -73,7 +73,7 @@
 				<li class="nav-item"><a class="nav-link" href="../about">About</a></li>
 				<li class="nav-item"><a class="nav-link" href="ESG_Songs">Songs</a></li>
 				<li class="nav-item"><a class="nav-link" href="../services">Services</a></li>
-				<li class="nav-item"><a class="nav-link" href="ESG_Calendar">Calendar</a></li>
+				<li class="nav-item Here"><a class="nav-link" href="ESG_Calendar">Calendar</a></li>
 				<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
 					<div class="dropdown-menu">
 						<a href="../events" class="dropdown-item">ESG events</a>
@@ -171,16 +171,16 @@
                     <div>
                         <div class="h-20 flex-center">Guide</div>
                         <div class="h-80 position-relative d-grid guider">
-                            <span class="fa fa-adjust w-100 grid-center ptr" title="Theme"></span>
+                            <span class="fa fa-moon w-100 grid-center ptr" title="Theme"></span>
                             <span class="fa fa-keyboard w-100 grid-center ptr" title="Keyboard shortcuts"></span>
-                            <span class="fa fa-check w-100 grid-center ptr" title="Tips"></span>
+                            <span class="fa fa-lightbulb w-100 grid-center ptr" title="Tips"></span>
                             <span class="w-100 grid-center ptr" tabindex="0" onclick="show_guide()">All</span>
                         </div>
                     </div>
                     <div>
-                        <div class="h-20 flex-center">Terms</div>
+                        <div class="h-20 flex-center">Terms and privacy</div>
                         <div class="h-80 position-relative">
-                            <span class="fa fa-briefcase w-100 h-100 grid-center ptr" onclick="show_terms()"></span>
+                            <span class="fa fa-shield-alt w-100 h-100 grid-center display-5 ptr" onclick="show_terms()"></span>
                         </div>
                     </div>
                     <div>
@@ -287,7 +287,7 @@
                     <ul class="mt-5">
                         <li>Theme</li>
                         <li>Animations</li>
-                        <li>Keybord shortcuts <kbd>alt + s</kbd>.</li>
+                        <li>Keybord shortcuts <kbd>alt</kbd> <kbd>s</kbd>.</li>
                     </ul>
                 </p>
             </div>
@@ -299,7 +299,7 @@
                     </span>
                     <ul class="mt-5">
                         <li>Go through web settings <span class="fa fa-gear"></span> and switch the themes, or</li>
-                        <li>Presh keybord shortcut <kbd>alt + t</kbd>.</li>
+                        <li>Presh keybord shortcut <kbd>alt</kbd> <kbd>t</kbd>.</li>
                     </ul>
                 </p>
                 <p class="p-2 mt-5">
@@ -337,19 +337,19 @@
                             <th>Action</th>
                         </tr>
                         <tr>
-                            <td><kbd>alt + s</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>s</kbd></td>
                             <td>Show web settings</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + t</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>t</kbd></td>
                             <td>Change theme</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + t + a</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>t</kbd> <kbd>a</kbd></td>
                             <td>Set auto-theme</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + g</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>g</kbd></td>
                             <td>Show this guide</td>
                         </tr>
                     </table>
@@ -413,15 +413,24 @@
 	
 	<!-- ************************** End of fixed Elements ************************** -->
 	
-	<main class="d-lg-flex">
-		<nav class="align-items-baseline" id="sideNav">
-			<ul class="blur-bg-5px list-group" id="scrollSpy">
-				<li><a class="list-group-item list-group-item-action" href="#calendarTable">Activities</a></li>
-				<li><a class="list-group-item list-group-item-action" href="#year2023">2023</a></li>
-				<li><a class="list-group-item list-group-item-action" href="#year2022">2022</a></li>
-			</ul>
-			<!-- <div class="p-3 flex-center text-wheat display-5 d-none d-xl-flex clock">
-				<div class="rad-10 blur-bg-20px clock_sticks" style="background-color: var(--black2_cons); pointer-events: none;">
+	<main class="grids-main">
+
+		<!-- ************************** 1 Page header ************************** -->
+
+		<div id="pageHeader">
+			<h1 class="page-heading">ESG Calendar</h1>
+			<div>
+				<p class="p-4 text-justify">
+					Our desire to engage in various spiritual activities motivates us to carefully choose and allocate time for each endeavor. This decision is driven by our commitment to achieving the goals of our singing group. We envision enhancing the spiritual lives of everyone who hears or witnesses our songs dedicated to God
+				</p>
+			</div>
+		</div>
+
+		<!-- ************************** 2 Page navigator ************************** -->
+
+		<nav class="container px-lg-0" id="pageSidenav" style="perspective: 12rem; perspective-origin: center 30%">
+			<div class="p-3 my-3 flex-center text-wheat display-5 d-none d-xl-flex clock" style="transform: rotateY(20deg); transform-origin: 0 center;">
+				<div class="rad-10 blur-bg-20px clock_sticks" style="pointer-events: none; opacity: .6;">
 					<div class="position-absolute center rad-50 bg-danger clock-around-nums">
 						<div class="twelve">12</div>
 						<div class="one">1</div>
@@ -442,26 +451,32 @@
 						<div class="position-absolute b-middle rad-50 ratio-1-1 rad-50 bg-black"></div>
 					</div>
 				</div>
-			</div> -->
+			</div>
+			<ul class="blur-bg-5px list-group list-unstyled" id="scrollSpy">
+				<li><a class="list-group-item list-group-item-action" href="#calendarTable">Activities</a></li>
+				<li><a class="list-group-item list-group-item-action" href="#year2023">2023</a></li>
+				<li><a class="list-group-item list-group-item-action" href="#year2022">2022</a></li>
+			</ul>
 		</nav>
-		
-		<!-- ************************** Main content ************************** -->
-		<div id="mainContent">
+
+		<!-- ************************** 3 Main content ************************** -->
+
+		<div id="pageMainContent">
 			<!-- Event highlights -->
 			<div class="fix-holder blur-bg-3px fade-to-bottom fix-Wed1">
 				<div class="offset-md-2 col-md-8 offset-lg-3 col-lg-6 p-0 bg-white1 eventDetails">
 					<h3 class="m-0 p-2 eventDet-title"><span class="fa fa-calendar-check me-3"></span> Wedding</h3>
 					<div class="p-2 Sbar-none eventDet-body">
-						<div class="h-100 p-1 p-sm-3">
+						<div class="px-sm-2">
 							<div class="eventDet-imgs">
 								<img src="../../Pics/Wedding.jpg" alt="event">
 								<img src="../../Pics/Wedding2.jpg" alt="event">
 								<img src="../../Pics/Wedding1.jpg" alt="event">
 							</div>
 							<i class="mx-3 text-muted">InShot</i>
-							<p class="p-2">
+							<p class="my-3 p-3 my-3">
 								It was a wedding for Singizwa and Augustin. An amazing one that put a smile on everyones's face and happiness in everyone's heart by seeing the two getting married in front of God and people.<br>
-								The look of everything was so stunning and no one would wish to miss out any of the events as they took place so peacefully and also in beautiful places that no one could imagine!!<br>
+								The look of everything was so stunning and no one would wish to miss out any of the events as they took place so peacefully and also in beautiful places that no one could imagine!!<br><br>
 								<a href="../Events/ESG_Gallery" class="pill bordered">See more ...</a>
 							</p>
 						</div>
@@ -473,15 +488,15 @@
 				<div class="offset-md-2 col-md-8 offset-lg-3 col-lg-6 p-0 bg-white1 eventDetails">
 					<h3 class="m-0 p-2 eventDet-title"><span class="fa fa-calendar-check me-3"></span> Song recording</h3>
 					<div class="p-2 Sbar-none eventDet-body">
-						<div class="h-100 p-1 p-sm-3">
+						<div class="px-sm-2">
 							<div class="eventDet-imgs">
 								<img src="../../Pics/Es7.png" alt="event">
 								<img src="../../Pics/Es10.jpg" alt="event">
 								<img src="../../Pics/Es8.png" alt="event">
 							</div>
 							<i class="mx-3 text-muted">InShot</i>
-							<p class="p-2">
-								This was the time when we published our first two songs which are; <i>Yezu Ndamira</i> and <i>Mubyeyi Mwiza</i> to the community. It was a not-easy task for everyone among group members because it has been years without stepping into a studio for both audio and video song recordings.<br>But though, these days were so exciting and cheerful to both the group and christians at large!!<br>
+							<p class="my-3 p-3 my-3">
+								This was the time when we published our first two songs, <i>Yezu Ndamira</i> and <i>Mubyeyi Mwiza</i>, to the community. It was not an easy task for any of the group members because it had been years since we last stepped into a studio for both audio and video song recordings. However, despite the challenges, those days were filled with excitement and joy for both the group and Christians at large!<br><br>
 								<a href="../Events/ESG_Gallery" class="pill bordered">See more ...</a>
 							</p>
 						</div>
@@ -493,16 +508,16 @@
 				<div class="offset-md-2 col-md-8 offset-lg-3 col-lg-6 p-0 bg-white1 eventDetails">
 					<h3 class="m-0 p-2 eventDet-title"><span class="fa fa-calendar-check me-3"></span> Wedding</h3>
 					<div class="p-2 Sbar-none eventDet-body">
-						<div class="h-100 p-1 p-sm-3">
+						<div class="px-sm-2">
 							<div class="eventDet-imgs">
 								<img src="../../Pics/events/IMG_20220716_131646.jpg" alt="event">
 								<img src="../../Pics/events/IMG_20220716_123810.jpg" alt="event">
 								<img src="../../Pics/events/IMG_20220716_134033.jpg" alt="event">
 							</div>
 							<i class="mx-3 text-muted">InShot</i>
-							<p class="p-2">
+							<p class="my-3 p-3 my-3">
 								It was a wedding for U. Pauline and N. Oreste. An amazing one that put a smile on everyones's face and happiness in everyone's heart by seeing the two getting married in front of God and people.<br>
-								The look of everything was so stunning and no one would wish to miss out any of the events as they took place so peacefully and also in beautiful places that no one could imagine!!<br>
+								The look of everything was so stunning and no one would wish to miss out any of the events as they took place so peacefully and also in beautiful places that no one could imagine!!<br><br>
 								<a href="../Events/ESG_Gallery" class="pill bordered">See more ...</a>
 							</p>
 						</div>
@@ -514,16 +529,16 @@
 				<div class="offset-md-2 col-md-8 offset-lg-3 col-lg-6 p-0 bg-white1 eventDetails">
 					<h3 class="m-0 p-2 eventDet-title"><span class="fa fa-calendar-check me-3"></span> Song recording</h3>
 					<div class="p-2 Sbar-none eventDet-body">
-						<div class="h-100 p-1 p-sm-3">
+						<div class="px-sm-2">
 							<div class="eventDet-imgs">
 								<img src="../../Pics/Es29.png" alt="event">
 								<img src="../../Pics/Es12_2.jpg" alt="event">
 								<img src="../../Pics/Es20.png" alt="event">
 							</div>
 							<i class="mx-3 text-muted">InShot</i>
-							<p class="p-2">
+							<p class="my-3 p-3 my-3">
 								The second time when we published our songs to the community. ESG enjoyed the moments more than ever for we have been receiving support from everywhere and the group's size was also growing.<br>
-								Again we had to perform many songs which was worth the spirit and energy we had to finish up all songs with perfection.<br>
+								Again we had to perform many songs which was worth the spirit and energy we had to finish up all songs with perfection.<br><br>
 								<a href="../Events/ESG_Gallery" class="pill bordered">See more ...</a>
 							</p>
 						</div>
@@ -535,16 +550,16 @@
 				<div class="offset-md-2 col-md-8 offset-lg-3 col-lg-6 p-0 bg-white1 eventDetails">
 					<h3 class="m-0 p-2 eventDet-title"><span class="fa fa-calendar-check me-3"></span> Studio</h3>
 					<div class="p-2 Sbar-none eventDet-body">
-						<div class="h-100 p-1 p-sm-3">
+						<div class="px-sm-2">
 							<div class="eventDet-imgs">
 								<img src="../../Pics/Es88.jpg" alt="event">
 								<img src="../../Pics/Es77.jpg" alt="event">
 								<img src="../../Pics/Es75.jpg" alt="event">
 							</div>
 							<i class="mx-3 text-muted">InShot</i>
-							<p class="p-2">
+							<p class="my-3 p-3 my-3">
 								The second time when we published our songs to the community. ESG enjoyed the moments more than ever for we have been receiving support from everywhere and the group's size was also growing.<br>
-								Again we had to perform many songs which was worth the spirit and energy we had to finish up all songs with perfection.<br>
+								Again we had to perform many songs which was worth the spirit and energy we had to finish up all songs with perfection.<br><br>
 								<a href="../Events/ESG_Gallery" class="pill bordered">See more ...</a>
 							</p>
 						</div>
@@ -556,16 +571,16 @@
 				<div class="offset-md-2 col-md-8 offset-lg-3 col-lg-6 p-0 bg-white1 eventDetails">
 					<h3 class="m-0 p-2 eventDet-title"><span class="fa fa-calendar-check me-3"></span> Wedding</h3>
 					<div class="p-2 Sbar-none eventDet-body">
-						<div class="h-100 p-1 p-sm-3">
+						<div class="px-sm-2">
 							<div class="eventDet-imgs">
 								<img src="../../Pics/Wedding6.jpg" alt="event">
 								<img src="../../Pics/Wedding5.jpg" alt="event">
 								<img src="../../Pics/Wedding7.jpg" alt="event">
 							</div>
 							<i class="mx-3 text-muted">InShot</i>
-							<p class="p-2">
+							<p class="my-3 p-3 my-3">
 								It was a wedding for M. Lydie and H. Erasme. An amazing one that put a smile on everyones's face and happiness in everyone's heart by seeing the two getting married in front of God and people.<br>
-								The look of everything was so stunning and no one would wish to miss out any of the events as they took place so peacefully and also in beautiful places that no one could imagine!!<br>
+								The look of everything was so stunning and no one would wish to miss out any of the events as they took place so peacefully and also in beautiful places that no one could imagine!!<br><br>
 								<a href="https://we.tl/b-kyvbbMD2Sj" target="_blank" class="pill bordered">See more ...</a>
 							</p>
 						</div>
@@ -573,37 +588,18 @@
 					<span class="w-100 grid-center fa fa-angle-down eventDet-footer ptr"></span>
 				</div>
 			</div>
-			<div class="fix-holder blur-bg-3px fade-to-bottom fix-TV">
+			<!-- <div class="fix-holder blur-bg-3px fade-to-bottom fix-TV">
 				<div class="offset-md-2 col-md-8 offset-lg-3 col-lg-6 p-0 bg-white1 eventDetails">
 					<h3 class="m-0 p-2 eventDet-title"><span class="fa fa-calendar-check me-3"></span> Pacis TV</h3>
 					<div class="p-2 Sbar-none eventDet-body">
-						<div class="h-100 p-1 p-sm-3">
+						<div class="px-sm-2">
 							<div class="eventDet-imgs">
 								<img src="../../Pics/Es94.jpg" alt="event">
 								<img src="../../Pics/Es96.jpg" alt="event">
 								<img src="../../Pics/Es93.jpg" alt="event">
 							</div>
 							<i class="mx-3 text-muted">InShot</i>
-							<p class="p-2">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde laudantium ab deserunt atque tenetur, consequuntur nulla reiciendis, iure vitae molestiae nihil, eveniet eaque deleniti quas consectetur corporis temporibus repudiandae dignissimos molestias placeat. Enim tempore quis accusamus. Iure assumenda aperiam nemo! Dolorum vero autem consequuntur quam explicabo repellat earum blanditiis laborum.
-							</p>
-						</div>
-					</div>
-					<span class="w-100 grid-center fa fa-angle-down eventDet-footer ptr"></span>
-				</div>
-			</div>
-			<!-- <div class="fix-holder blur-bg-3px fade-to-bottom fix-Star">
-				<div class="offset-md-2 col-md-8 offset-lg-3 col-lg-6 p-0 bg-white1 eventDetails">
-					<h3 class="m-0 p-2 eventDet-title"><span class="fa fa-calendar-check me-3"></span> The stars</h3>
-					<div class="p-2 Sbar-none eventDet-body">
-						<div class="h-100 p-1 p-sm-3">
-							<div class="eventDet-imgs">
-								<img src="../../Pics/Ore_Rwab_1.jpg" alt="event">
-								<img src="../../Pics/ChristelleI_2.jpg" alt="event">
-								<img src="../../Pics/DenisN_6.jpg" alt="event">
-							</div>
-							<i class="mx-3 text-muted">InShot</i>
-							<p class="p-2">
+							<p class="my-3 p-3 my-3">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde laudantium ab deserunt atque tenetur, consequuntur nulla reiciendis, iure vitae molestiae nihil, eveniet eaque deleniti quas consectetur corporis temporibus repudiandae dignissimos molestias placeat. Enim tempore quis accusamus. Iure assumenda aperiam nemo! Dolorum vero autem consequuntur quam explicabo repellat earum blanditiis laborum.
 							</p>
 						</div>
@@ -611,20 +607,33 @@
 					<span class="w-100 grid-center fa fa-angle-down eventDet-footer ptr"></span>
 				</div>
 			</div> -->
+			<div class="fix-holder blur-bg-3px fade-to-bottom fix-Comp3">
+				<div class="offset-md-2 col-md-8 offset-lg-3 col-lg-6 p-0 bg-white1 eventDetails">
+					<h3 class="m-0 p-2 eventDet-title"><span class="fa fa-calendar-check me-3"></span> Song recording</h3>
+					<div class="p-2 Sbar-none eventDet-body">
+						<div class="px-sm-2">
+							<div class="eventDet-imgs">
+								<img src="../../Pics/events/PXL_20231203_162415.jpg" alt="event">
+								<img src="../../Pics/events/PXL_20231203_173700.jpg" alt="event">
+								<img src="../../Pics/events/PXL_20231203_150538.jpg" alt="event">
+							</div>
+							<i class="mx-3 text-muted">InShot</i>
+							<p class="p-2">
+								Our journey to record the captivating song cover "Jye nsanze Umwami Ijabiro" was filled with anticipation and excitement. In the studio, creativity and passion flowed as we poured our hearts into every note and lyric, striving for perfection.<br>
+								With every harmony and rhythm, we felt a deep connection to the essence of the song, allowing its spirit to resonate through our voices and instruments<br><br>
+								<a href="../Events/ESG_Gallery" class="pill bordered">See more ...</a>
+							</p>
+						</div>
+					</div>
+					<span class="w-100 grid-center fa fa-angle-down eventDet-footer ptr"></span>
+				</div>
+			</div>
 
 			<!-- Calendar -->
 			<!-- <div id="Schedule" class="col-12 p-0 offset-md-1 offset-lg-2 col-md-10 px-md-3"> -->
 			<div id="Schedule" class="p-0 px-md-3">
-				<h1 class="page-heading">ESG Calendar</h1>
-				<div>
-					<p class="p-4 text-justify">
-						Our desire to engage in various spiritual activities motivates us to carefully choose and allocate time for each endeavor. This decision is driven by our commitment to achieving the goals of our singing group. We envision enhancing the spiritual lives of everyone who hears or witnesses our songs dedicated to God
-					</p>
-				</div>
 				<div class="my-3 mx-4">
-					<h5 class="mb-0 text-center text-muted">
-						Planned annual activities.
-					</h5>
+					<h2 class="mb-0 text-center text-muted display-6">Planned annual activities.</h2>
 					<div id="noted">
 						<span>✍</span>
 					</div>
@@ -670,7 +679,7 @@
 				</div>
 				<div class="p-1">
 					<table class="w-100 my-4 calendarTable" id="calendarTable">
-						<caption class="h3" style="caption-side: top;">Recent activities</caption>
+						<caption class="h2 ps-3 ps-md-0 my-5 display-6" style="caption-side: top;">Recent activities</caption>
 						<hr>
 						<tr>
 							<th class="p-3">
@@ -684,19 +693,19 @@
 							</th>
 						</tr>
 						<tr>
-							<td>Jun 03, 2023</td>
-							<td>ESG president wedding</td>
-							<td>Rutonde parish</td>
-						</tr>
-						<tr>
 							<td>Nov 26, 2023</td>
 							<td>New song publishment</td>
 							<td>Emmy pro</td>
 						</tr>
+						<tr>
+							<td>Jun 03, 2023</td>
+							<td>ESG president wedding</td>
+							<td>Rutonde parish</td>
+						</tr>
 					</table>
 				</div>
 	
-				<h3 class="ps-3">Past events</h3>
+				<h2 class="ps-3 ps-md-0 my-5 display-6 text-muted">Past events</h2>
 				<hr>
 				<!-- 2023 -->
 				<div class="d-flex flex-align-center flex-wrap rad-100vw bordered bordered-top border-black4" id="year2023">
@@ -846,10 +855,10 @@
 										<span class="col-1">22</span>
 										<span class="col-1">23</span>
 										<span class="col-1">24</span>
-										<span class="col-1 daySPC">25</span>
+										<span class="col-1 daySPC" data-totoggle=".fix-Comp3">25</span>
 									</div>
 									<div class="row monthDates d-flex justify-content-between">
-										<span class="col-1 daySPC">26</span>
+										<span class="col-1 daySPC" data-totoggle=".fix-Comp3">26</span>
 										<span class="col-1">27</span>
 										<span class="col-1">28</span>
 										<span class="col-1">29</span>
@@ -876,7 +885,7 @@
 				</div>
 				
 				<!-- 2022 -->
-				<div class="d-flex flex-align-center flex-wrap rad-100vw bordered bordered-top border-black4" id="year202">
+				<div class="d-flex flex-align-center flex-wrap rad-100vw bordered bordered-top border-black4" id="year2022">
 					<div class="w-5rem ratio-1-1 flex-shrink-0 ms-3 rad-inherit bg-no-repeat-cover-center bg-image"
 						style="--bgImage: url(../../Pics/events/IMG_20220922_103145.jpg); background-color: var(--myBlue3_cons);"></div>
 					<h4 class="flex-center flex-grow-1 m-0 p-2 text-success fw-bold ptr" data-bs-toggle="collapse" data-bs-target="#accordion22">2022</h4>
@@ -1233,7 +1242,6 @@
 				</div>
 			</div><br><br>
 		</div>
-
 	</main>
 
 	<!-- ************************** Page Ending ************************** -->
@@ -1317,7 +1325,7 @@
 		</div>
 	</footer>
 	
-	<script src="../../MyScripts.js?v=1.0885"></script>
+	<script src="../../MyScripts.js?v=1.0999"></script>
 	<script>
 		create_current_month();
 	</script>

@@ -3,12 +3,20 @@
 <head>
 	<title>Upload Holy Mass songs</title>
 	
-	<link rel="icon" type="image/x-icon" href="../../Pics/ESG_favicon1.ico">
-	<link rel="stylesheet" type="text/css" href="../../styles/uploads.css?v=1.0885">
-	<meta charset="UTF-8">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
 	<meta name="viewport" content="width= device-width, initial-scale=1.0">
 	<meta name="author" content="Hirwa Willy">
 	<meta name="keywords" content="HTML, CSS">
+    <style>
+        body * {
+            font-family: "Jost", sans-serif;
+            font-optical-sizing: auto;
+        }
+    </style>
     
     <!-- online -->
     
@@ -25,8 +33,11 @@
     <!-- <script src="../../bootstrap5/js/bootstrap.bundle.min.js"></script>
     <script src="../../bootstrap5/js/bootstrap.bundle.min.js.map"></script> -->
     <!-- <script src="../../jq/jquery-3.7.1.js"></script> -->
+    <!-- Custom -->
+	<link rel="icon" type="image/x-icon" href="../../Pics/ESG_favicon1.ico">
+	<link rel="stylesheet" type="text/css" href="../../styles/uploads.css?v=1.1043">
 </head>
-<body id="mainBody" class="bg-bodi" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="20" style="background-size: cover;">
+<body class="bg-bodi" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="20" style="background-size: cover;">
     <!-- sm navbar -->
 	<div class="d-sm-none fix-holder inx-25 p-2">
 		<div class="nav container-xs Sbar-none bordered-end-end" id="mySidenav">
@@ -169,16 +180,16 @@
                     <div>
                         <div class="h-20 flex-center">Guide</div>
                         <div class="h-80 position-relative d-grid guider">
-                            <span class="fa fa-adjust w-100 grid-center ptr" title="Theme"></span>
+                            <span class="fa fa-moon w-100 grid-center ptr" title="Theme"></span>
                             <span class="fa fa-keyboard w-100 grid-center ptr" title="Keyboard shortcuts"></span>
-                            <span class="fa fa-check w-100 grid-center ptr" title="Tips"></span>
+                            <span class="fa fa-lightbulb w-100 grid-center ptr" title="Tips"></span>
                             <span class="w-100 grid-center ptr" tabindex="0" onclick="show_guide()">All</span>
                         </div>
                     </div>
                     <div>
-                        <div class="h-20 flex-center">Terms</div>
+                        <div class="h-20 flex-center">Terms and privacy</div>
                         <div class="h-80 position-relative">
-                            <span class="fa fa-briefcase w-100 h-100 grid-center ptr" onclick="show_terms()"></span>
+                            <span class="fa fa-shield-alt w-100 h-100 grid-center display-5 ptr" onclick="show_terms()"></span>
                         </div>
                     </div>
                     <div>
@@ -281,7 +292,7 @@
                     <ul class="mt-5">
                         <li>Theme</li>
                         <li>Animations</li>
-                        <li>Keybord shortcuts <kbd>alt + s</kbd>.</li>
+                        <li>Keybord shortcuts <kbd>alt</kbd> <kbd>s</kbd>.</li>
                     </ul>
                 </p>
             </div>
@@ -293,7 +304,7 @@
                     </span>
                     <ul class="mt-5">
                         <li>Go through web settings <span class="fa fa-gear"></span> and switch the themes, or</li>
-                        <li>Presh keybord shortcut <kbd>alt + t</kbd>.</li>
+                        <li>Presh keybord shortcut <kbd>alt</kbd> <kbd>t</kbd>.</li>
                     </ul>
                 </p>
                 <p class="p-2 mt-5">
@@ -331,19 +342,19 @@
                             <th>Action</th>
                         </tr>
                         <tr>
-                            <td><kbd>alt + s</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>s</kbd></td>
                             <td>Show web settings</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + t</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>t</kbd></td>
                             <td>Change theme</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + t + a</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>t</kbd> <kbd>a</kbd></td>
                             <td>Set auto-theme</td>
                         </tr>
                         <tr>
-                            <td><kbd>alt + g</kbd></td>
+                            <td><kbd>alt</kbd> <kbd>g</kbd></td>
                             <td>Show this guide</td>
                         </tr>
                     </table>
@@ -380,198 +391,91 @@
         </div>
     </div>
     
+    <!-- ************************** End of navigations ************************** -->
     <div id="main">        
-        <!-- <div class="w-100 collapse" id="Users">
-            <div class="w-100 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6 align-items-center">
-                <div class="modal-content" id="LogIn">
-                    <span class="position-absolute d-flex justify-content-center align-items-center p-3 bg-black3 ptr" id="LigInClose"  data-bs-toggle="collapse" data-bs-target="#Users">&times;</span>
-                    <h5 class="col-xs-12 text-center modal-header align-self-center">Log in</h5>
-                    
-                    <form id="LogInForm" action="" method="POST" class="LogForm pb-3">
-                        <div class="d-flex justify-content-between mb-2 offset-sm-1 col-sm-10 small p-2 p-sm-0">
-                            <span class="ps-2 ps-sm-0">
-                                Log in to view and download songs.
-                            </span>
-                        <span class="pe-2 pe-sm-0">
-                                <a href="#" id="Signer">Sign Up</a>
-                            </span>
-                        </div>
-                        <div class="offset-sm-1 col-sm-10 p-2">
-                            <div class="offset-1">
-                                <label for="name" class="text-MTgrey small">Username</label><br>
-                                <input type="text" name="UserName" class="px-3 py-1 w-100 col-10" id="" required oninvalid="this.setCustomValidity('Enter the username')" oninput="setCustomValidity('')"><br>
-                                <label for="password" class="text-MTgrey small">Password</label><br>
-                                <input type="password" name="UserNamePW" class="px-3 py-1 w-100 col-10" id="" required oninvalid="this.setCustomValidity('Enter the password')" oninput="setCustomValidity('')"><br>
-                                <button class="btn btn-primary my-3 w-100 col-10" type="submit">Login</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-content" id="SignUp">
-                    <span class="position-absolute d-flex justify-content-center align-items-center p-3 bg-black3 ptr" id="SignUpClose"  data-bs-toggle="collapse" data-bs-target="#Users">&times;</span>
-                    <h5 class="col-xs-12 text-center modal-header align-self-center">Sign Up</h5>
-                    
-                    <form id="SignUpForm" action="" method="POST" class="SIGNUpForm pb-3">
-                        <div class="d-flex justify-content-between mb-2 offset-sm-1 col-sm-10 small p-2 p-sm-0">
-                            <span class="text-start ps-3 ps-sm-0">
-                                Create an account to access songs and more features.
-                            </span>
-                            <span class="text-start">
-                                <a href="#" id="LOGGER">I have account</a>
-                            </span>
-                        </div>
-                        <div class="offset-sm-1 col-sm-10 p-2">
-                            <div class="offset-1">
-                                    <label for="name" class="text-MTgrey small">First name</label><br>
-                                    <input type="text" name="UserName" class="px-3 py-1 w-100 col-10" id="" required oninvalid="this.setCustomValidity('Enter the first name')" oninput="setCustomValidity('')"><br>
-                                    <label for="name" class="text-MTgrey small">Last name</label><br>
-                                    <input type="text" name="UserName" class="px-3 py-1 w-100 col-10" id="" required oninvalid="this.setCustomValidity('Enter the last name')" oninput="setCustomValidity('')"><br><br>
-    
-                                <label for="name" class="text-MTgrey small">Username</label><br>
-                                <input type="text" name="UserName" class="px-3 py-1 w-100 col-10" id="" required oninvalid="this.setCustomValidity('Enter the username')" oninput="setCustomValidity('')"><br>
-                                <label for="password" class="text-MTgrey small">Password</label><br>
-                                <input type="password" name="UserNamePW" id="UserPW" placeholder="Enter password" class="px-3 py-1 mb-2 w-100 col-10" id="" required oninvalid="this.setCustomValidity('Please enter password')" oninput="setCustomValidity('')"><br>
-                                <input type="password" name="UserNamePW1" id="UserPW1" placeholder="Confirm password" class="px-3 py-1 w-100 col-10" id="" required oninvalid="this.setCustomValidity('Please confirm password')" oninput="setCustomValidity('')"><br>
-                                <div class="px-3 py-1 my-2 w-100 offset-1 col-8 bg-warning align-items-center PassVerifier">
-                                    <p class="p-2 small">
-                                    </p>
-                                </div>
-                                <label for="name" class="text-MTgrey small">Email</label><br>
-                                <input type="email" name="UserEmail" class="px-3 py-1 w-100 col-10" id="" required oninvalid="this.setCustomValidity('Enter personal email')" oninput="setCustomValidity('')"><br>
-                            </div>
-                        </div>
-                        <div class="offset-sm-1 col-sm-10 small p-2 mt-4">
-                            <p class="ps-3 ps-sm-0">
-                                <input type="checkbox" name="AcceptTERMS" id="AcceptTrms" class="pe-3 ptr"> I agree with terms and conditions.
-                            </p>
-                            <p class="">
-                                <ul class="termsANDc">
-                                    <li>Repect song ownership rights.</li>
-                                    <li>Trading copies is prohibited.</li>
-                                </ul>
-                            </p>
-                        </div>
-                        <div class="d-flex justify-content-center offset-sm-1 col-sm-10 mt-5 p-2 p-sm-0">
-                            <button class="btn btn-default col-6" type="reset" id="CancelSIGNbtn">Cancel</button>
-                            <button class="btn btn-success col-6 disabled" type="submit" id="ConfirmSIGNbtn">Create account</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div> -->
-        
-        <div class="navigate position-fixed col-2 d-none d-sm-block align-items-baseline">
-            <p class="p-2" id="upDown" data-bs-toggle="modal" data-bs-target="#qui_bene" style="opacity: 0;">Bis orat qui bene cantat !!</p>
-            <p class="p-2" id="upDown1" data-bs-toggle="modal" data-bs-target="#qui_bene" style="opacity: 0;">Bis orat qui bene cantat !!</p>
-        </div>
-        
-        <div class="modal fade" rol="dialod" id="qui_bene">
-            <div class="modal-dialog modal-lg bg-navi2">
-                <div class="modal-header" style="color: whitesmoke;">
-                    <h4>Bis orat qui bene cantat</h4>
-                </div>
-                <div class="modal-content">
-                    <p>
-                        Latin: <strong>Bis orat qui cantat</strong> has been traditionally attributed to <span style="color: darkgoldenrod;">St. Augustine (d. 430 CE)</span>. The version with the included “bene” is from the <span style="color: blue; font-weight: bold;">General Instruction of the Roman Missal</span> and can be translated as “Whoever sings well prays twice over”. Hence singing, as a primary form of prayer, is a very ancient tradition in Christianity indeed!<br><br>
-    
-                        By the way, anyone can have problems with that “bene”! <u>How could we be required to be great singers in order to pray twice</u>? I had the question too, but soon I got it. It was my own perfectionism putting a slant on everything I hear and see. We are not asked to be professional operatic singers, but to sing well, with enthusiasm, and conviction, and joy. That is praying twice as well.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <p class="small" data-bs-dismiss="modal" data-bs-target="#qui_bene" style="color: whitesmoke; cursor: pointer;">Dusenge kabiri</p><button data-bs-dismiss="modal" data-bs-target="#qui_bene" style="color: var(--myBlue); cursor: pointer;"><span class="fa fa-check" onclick="$('#qui_bene').fadeOut();"></span></button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ************************** End of navigations ************************** -->
-        
-        <div class="offset-sm-1 offset-md-2 col-sm-10 px-2 px-md-3">
+        <div class="container">
             <h1 class="page-heading">New songs upload</h1>
-            <div class="offset-lg-1 col-lg-10 px-0 my-lg-5" id="UploadS1">
-                <div class="ps-1 pb-1">
-                    <p class="p-4 display-7" style="animation: flyInBottomSM 1s 1; animation-timing-function: ease-out;">
-                        We aim to facilitate access to widely used songs in the Catholic Church for various musicians and choirs. When you contribute a song here, it becomes part of a shared list accessible to everyone. This ensures easy and cost-effective discovery from a centralized location.
-                    </p>
-                    <span class="display-4">Note</span><br>
-                    <div class="card p-2">
-                        <p>
-                            Before uploading a song, please ensure the following:
-                        </p>
-                        <ul class="">
-                            <li>Confirm that the song is not already included in <a href="CHM_Songs">our shared collection</a>.</li>
-                            <li>Provide a readable music sheet in PDF format.</li>
-                            <li>Specify whether it is an additional song or a new composition.</li>
-                            <li>If it is your composition, ensure it's not in a trial phase, as trial songs can significantly impact the composer in various ways.</li>
-                        </ul>
-                    </div>
-                    <!-- <div class="card p-2 my-1">
-                        <p>
-                            After successively uploading <u>a brand new song</u>, our users are notified and this will smoothen the spreading of God's will by  music means.
-                        </p>
-                    </div> -->
-                </div>
+            <p class="p-4 display-7" style="animation: flyInBottomSM 1s 1; animation-timing-function: ease-out;">
+                We aim to facilitate access to widely used songs in the Catholic Church for various musicians and choirs. When you contribute a song here, it becomes part of a shared list accessible to everyone. This ensures easy and cost-effective discovery from a centralized location.
+            </p>
+            <div class="d-lg-flex mb-5 col-lg-10 mx-auto">
+                <section class="col-lg-8">
+                    <h2 class="display-4">Note</h2><br>
+                    <p>Before uploading a song, please ensure the following:</p>
+                    <ul class="list-style-tick">
+                        <li>Confirm that the song is not already included in <a href="CHM_Songs">our shared collection</a>.</li>
+                        <li>Provide a readable music sheet in PDF format.</li>
+                    </ul>
+                </section>
+                <button class="btn btn-lg btn-outline-secondary align-self-center d-block mx-auto mx-lg-0" data-bs-toggle="collapse" data-bs-target=".fileUploader" onclick="$('html,body').animate({scrollTop: $(this).offset().top - 50}, 1000);">Start uploading</button>
             </div>
-    
-            <button class="btn btn-lg btn-success offset-1 col-10 my-4" data-bs-toggle="collapse" data-bs-target=".fileUploader" onclick="$(this).slideUp() , $('html,body').animate({scrollTop: $(this).offset().top - 50}, 1000);">Start uploading ...</button>
-    
-            <div class="offset-sm-1 col-sm-10 offset-lg-2 col-lg-8 p-3 my-4 collapse rounded fileUploader">
-                <p class="p-2 rad-inherit">
-                    Upload a clear (readable) music sheet &#119071;&#119066;&#119066; of a song in <u class="text-light">pdf format</u>.<br>
-                    <small>
-                        Unclear songs are rejected after checkings.
-                    </small>
+            <div class="col-lg-6 mx-auto mb-5 p-3 p-md-4 rounded shadow collapse bg-black4 fileUploader">
+                <p class="pb-3 rad-inherit fs-5">
+                    Upload a clear and readable music sheet of the song in <span style="text-decoration: underline dashed; text-underline-offset: 3px;">PDF format</span>. Unclear submissions will be rejected upon review.
                 </p>
-                <form action="SUpload.php" method="post" enctype="multipart/form-data" class="p-2 mb-2">
-                    <p class="text-MTgrey">Song category: 
-                        <select required style="width:40%; color: whitesmoke;" class="bg-grey1 small" id="SongCategoryUp">
-                            <option value="" >Not selected</option>
-                            <option value="Kwinjira" >Kwinjira</option>
-                            <option value="Kyrie" >Kyrie</option>
-                            <option value="Gloria" >Imana nisinginzwe</option>
-                            <option value="Isomo ray mbere" >Nyuma y'Isomo rya mbere</option>
-                            <option value="Alleluia" >Alleluia</option>
-                            <option value="Amasezerano" >Amasakaramentu n'amasezerano</option>
-                            <option value="Ndemera" >Indangakwemera</option>
-                            <option value="Ibisabisho" >Ibisabisho</option>
+                <form action="song_upload.php" method="post" enctype="multipart/form-data" id="newSongUploadForm">
+                    <div class="mb-3">
+                        <label for="SongCategoryUp" class="form-label fw-bold">Song category</label>
+                        <select required name="songCategory" class="form-select" id="SongCategoryUp">
+                            <option value="">Not selected</option>
+                            <option value="Kwinjira">Kwinjira</option>
+                            <option value="Kyrie">Kyrie</option>
+                            <option value="Gloria">Imana nisinginzwe</option>
+                            <option value="Isomo ray mbere">Nyuma y'Isomo rya mbere</option>
+                            <option value="Alleluia">Alleluia</option>
+                            <option value="Amasezerano">Amasakaramentu n'amasezerano</option>
+                            <option value="Ndemera">Indangakwemera</option>
+                            <option value="Ibisabisho">Ibisabisho</option>
                             <option value="Gutura">Gutura</option>
-                            <option value="Sanctus" >Sanctus</option>
-                            <option value="Agnus Dei" >Ntama w'Imana</option>
-                            <option value="Guhazwa" >Guhazwa</option>
-                            <option value="Gushimira" >Gushimira</option>
-                            <option value="Gutaha" >Gutaha</option>
-                            <option value="Mariya" >Bikiramariya</option>
-                            <option value="Pasika" style="color:black;">Pasika</option>
-                            <option value="Noheli" style="color:black;">Noheli</option>
-                            <option value="Others" >Others</option>
+                            <option value="Sanctus">Sanctus</option>
+                            <option value="Agnus Dei">Ntama w'Imana</option>
+                            <option value="Guhazwa">Guhazwa</option>
+                            <option value="Gushimira">Gushimira</option>
+                            <option value="Gutaha">Gutaha</option>
+                            <option value="Mariya">Bikiramariya</option>
+                            <option value="Pasika">Pasika</option>
+                            <option value="Noheli">Noheli</option>
+                            <option value="Others">Others</option>
                         </select>
-                    </p>
-                    <p class="" id="OtherCat" style="display: none;">
-                        <label for="SCatgUp"><small>Song category</small> :<br>
-                        <input type="text" name="SCatgUp" id="SCT" class="bg-myBlue2 text-black border-none"></label>
-                    </p>
-                    <p class="">
-                        <div class="col-sm-9 px-0">
-                            <div class="text-MTgrey text-start">Song is mine:</div>
-                            <div class="radio text-end d-flex justify-content-left" id="checkSong">
-                                <label for="radio select" class="text-MTgrey small ms-2"> <input type="radio" class="radio-inine" name="ownerChoice" id="SongMine"> Yes</label>
-                                <label for="radio select" class="text-MTgrey small ms-2"> <input type="radio" class="radio-inine" name="ownerChoice" id="SongNotMine"> No</label>
+                    </div>
+                
+                    <div class="mb-3" id="OtherCat" style="display: none;">
+                        <label for="SCT" class="form-label fw-bold">Song category</label>
+                        <input type="text" name="otherSongCategory" id="SCT" class="form-control" placeholder="Enter other category">
+                    </div>
+                
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Song is mine</label>
+                        <div class="d-flex gap-3 flex-wrap px-3">
+                            <div class="form-check d-flex align-items-baseline gap-2">
+                                <input type="radio" class="form-check-input w-1_5rem h-1_5rem" name="ownerChoice" id="SongMine" value="yes">
+                                <label for="SongMine" class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check d-flex align-items-baseline gap-2">
+                                <input type="radio" class="form-check-input w-1_5rem h-1_5rem" name="ownerChoice" id="SongNotMine" value="no">
+                                <label for="SongNotMine" class="form-check-label">No</label>
                             </div>
                         </div>
-                    </p>
-                    <p class="col-12" id="OWNER" style="display: none;">
-                        <label for="name">Composer: <br>
-                            <input type="text" name="owner" id="SongOwner" class="bg-myBlue2 text-black border-none col-12"></label>
-                        <label for="name">Email: <br>
-                            <input type="email" name="ownerEmail" id="SongOwnerEmail" class="bg-myBlue2 text-black border-none col-12"></label>
-                    </p>
-                    <p class="pb-4" style="position: relative">
-                        <input type="file" required class="ptr mb-3 w-100" name="SToUpload" id="newSongSelect" accept="application/pdf, application/vnd.ms-excel"><br>
-                    </p>
-                    <p class="d-flex justify-content-between p-2">
-                    <button type="reset" class="btn btn-default bg-black2" onclick="$(this).parents('.fileUploader').collapse('hide'), $(this).parents('.fileUploader').prev().slideDown();">Cancel</button>
-                    <button type="submit" class="btn btn-success" id="newSongUpload" >Upload</button>
-                    </p>
-                </form>
+                    </div>
+                
+                    <div class="mb-3" id="OWNER" style="display: none;">
+                        <label for="SongOwner" class="form-label fw-bold">Composer</label>
+                        <input type="text" name="owner" id="SongOwner" class="form-control mb-3" placeholder="Enter name">
+                        
+                        <label for="SongOwnerEmail" class="form-label fw-bold">Email</label>
+                        <input type="email" name="ownerEmail" id="SongOwnerEmail" class="form-control" placeholder="Enter email">
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="newSongSelect" class="form-label fw-bold">Song file</label>
+                        <input type="file" required class="form-control" name="song_file" id="newSongSelect" accept="application/pdf, application/vnd.ms-excel">
+                    </div>
+                
+                    <div class="d-flex justify-content-between mt-5">
+                        <button type="reset" class="btn btn-outline-danger col-4" onclick="$('.fileUploader').collapse('hide');">Cancel</button>
+                        <button type="submit" class="btn btn-outline-success col-7">Upload <span class="fa fa-cloud-upload ms-2"></span></button>
+                    </div>
+                </form>                
             </div>
         </div>
     </div>
@@ -664,9 +568,6 @@
             }
         }
     </style>
-    <script type="text/javascript">
-        $("[data-toggle='popover']").popover();
-    </script>
-    <script src="../../MyScripts.js?v=1.0873"></script>
+    <script src="../../MyScripts.js?v=1.1043"></script>
 </body>
 </html>
